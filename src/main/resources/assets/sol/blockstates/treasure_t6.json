@@ -1,0 +1,20 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "facing=north": { 
+			"model": "sol:treasure_t6"
+		},
+        "facing=east":  { 
+			"model": "sol:treasure_t6",
+			"y": 90
+		},
+        "facing=south": { 
+			"model": "sol:treasure_t6", 
+			"y": 180
+		},
+        "facing=west":  { 
+			"model": "sol:treasure_t6", 
+			"y": 270
+		}
+    }
+}

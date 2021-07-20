@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "sol:mercury_aluminum_ore" }
+    }
+}

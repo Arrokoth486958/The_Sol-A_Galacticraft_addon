@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "sol:pluto_sub_surface_rock" }
+    }
+}

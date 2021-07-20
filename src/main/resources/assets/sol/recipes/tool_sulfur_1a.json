@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "##",
+        "#/",
+		" /"
+    ],
+    
+    "key":
+    {
+        "#":
+        {
+            "item": "sol:compressed_sulfur"
+        },
+		"/":
+        {
+            "item": "sol:stick_sulfur"
+        }
+    },
+    
+    "result":
+    {
+        "item":  "sol:sulfur_axe",
+        "count": 1
+    }
+}

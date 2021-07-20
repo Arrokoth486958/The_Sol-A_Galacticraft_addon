@@ -1,0 +1,32 @@
+{
+	"result": {
+		"item": "sol:engine_booster_t5",
+		"data": 0,
+		"count": 1
+	},
+	"pattern": [
+		"ZYZ",
+		"ZWZ",
+		"XVX"
+	],
+	"type": "galacticraftcore:replacable",
+	"key": {
+		"V": {
+			"item": "galacticraftcore:air_vent"
+		},
+		"W": {
+			"item": "galacticraftcore:fuel_canister_partial",
+			"data": 1
+		},
+		"X": {
+			"item": "sol:reinforced_plate_t5"
+		},
+		"Y": {
+			"item": "minecraft:wool",
+			"data": 3
+		},
+		"Z": {
+			"item": "sol:compressed_sulfur"
+		}
+	}
+}

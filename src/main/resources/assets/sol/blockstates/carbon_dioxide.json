@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "sol:carbon_dioxide" }
+    }
+}

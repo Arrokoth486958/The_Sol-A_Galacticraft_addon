@@ -1,0 +1,20 @@
+{
+	"result": {
+		"item": "sol:rocket_fins_t4"
+	},
+	"pattern": [
+		" Y ",
+		"XYX",
+		"X X"
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"X": {
+			"item": "sol:reinforced_plate_t4"
+		},
+		"Y": {
+		"type": "forge:ore_dict",
+		"ore": "compressedTitanium"
+		}
+	}
+}

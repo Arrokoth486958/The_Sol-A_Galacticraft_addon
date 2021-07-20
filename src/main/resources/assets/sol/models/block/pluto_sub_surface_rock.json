@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "sol:blocks/pluto_sub_surface_rock"
+    }
+}

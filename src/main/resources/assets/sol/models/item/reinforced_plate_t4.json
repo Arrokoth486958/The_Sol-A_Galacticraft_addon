@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "sol:items/reinforced_plate_t4"
+    },
+    "display": { }
+}
