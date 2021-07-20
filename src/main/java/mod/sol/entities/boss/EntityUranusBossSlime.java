@@ -39,9 +39,9 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.storage.loot.LootTableList;
 
-public class EntityUranusBossSnowman extends EntitySlime implements IEntityBreathable
+public class EntityUranusBossSlime extends EntitySlime implements IEntityBreathable
 {
-    public EntityUranusBossSnowman(World worldIn) {
+    public EntityUranusBossSlime(World worldIn) {
         super(worldIn);
     }
 
