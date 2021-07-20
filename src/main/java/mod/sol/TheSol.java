@@ -126,13 +126,15 @@ import mod.sol.tile.TileEntityTreasureChestTier6;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:galacticraftcore; required-after:realistic_galaxy_map")
 public class TheSol 
 {
-	public static final CreativeTabs ITEM_TAB = new CreativeTabs("sol_items") {
+	public static final CreativeTabs ITEM_TAB = new CreativeTabs("sol_items")
+	{
 		@Override
 		public ItemStack getTabIconItem() {
 			return new ItemStack(SolItems.ROCKET_T4);
 		}
 	};
-	public static final CreativeTabs BLOCK_TAB = new CreativeTabs("sol_blocks") {
+	public static final CreativeTabs BLOCK_TAB = new CreativeTabs("sol_blocks")
+	{
 		@Override
 		public ItemStack getTabIconItem() {
 			return new ItemStack(SolBlocks.MERCURY_DUNGEON_BRICK);

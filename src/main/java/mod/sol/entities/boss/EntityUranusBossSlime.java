@@ -29,8 +29,7 @@ import java.util.List;
 import java.util.Random;
 
 //public class EntityUranusBossSlime extends EntitySlime implements IEntityBreathable, IBoss
-public class EntityUranusBossSlime
-{
+public class EntityUranusBossSlime {
     /*protected Random rand;
 
     public EntityUranusBossSlime(World worldIn)
