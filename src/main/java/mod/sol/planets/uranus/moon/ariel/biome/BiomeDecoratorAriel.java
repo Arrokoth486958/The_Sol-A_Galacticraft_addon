@@ -29,6 +29,7 @@ public class BiomeDecoratorAriel extends BiomeDecorator
     private WorldGenerator ilmenitGen;
     private WorldGenerator ironGen;
     private WorldGenerator lithosGen;
+    private WorldGenerator surfaceCarbonGen;
     private WorldGenerator tinGen;
 
     public BiomeDecoratorAriel()
@@ -39,6 +40,7 @@ public class BiomeDecoratorAriel extends BiomeDecorator
         this.ilmenitGen = new WorldGenMinableMeta(SolBlocks.ARIEL_ILMENITE_ORE, 6, 0, true, SolBlocks.ARIEL_ROCK, 0);
         this.lithosGen = new WorldGenMinableMeta(SolBlocks.ARIEL_LITHOS_ORE, 4, 0, true, SolBlocks.ARIEL_ROCK, 0);
         this.tinGen = new WorldGenMinableMeta(SolBlocks.ARIEL_TIN_ORE, 6, 0, true, SolBlocks.ARIEL_ROCK, 0);
+        this.surfaceCarbonGen = new WorldGenMinableMeta(SolBlocks.CARBON_DIOXIDE, 8, 0, true, SolBlocks.ARIEL_TURF, 0);
         this.dirtGen = new WorldGenMinableMeta(SolBlocks.ARIEL_DIRT, 10, 0, true, SolBlocks.ARIEL_ROCK, 0);
     }
 
@@ -79,6 +81,7 @@ public class BiomeDecoratorAriel extends BiomeDecorator
         this.genStandardOre(18, this.ironGen, 0, 60);
         this.genStandardOre(12, this.lithosGen, 0, 60);
         this.genStandardOre(26, this.tinGen, 0, 60);
+        this.genStandardOre(4, this.surfaceCarbonGen, 55, 70);
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.world, this.randomGenerator, chunkPos));
     }
 }

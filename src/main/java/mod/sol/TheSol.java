@@ -30,9 +30,11 @@ import micdoodle8.mods.galacticraft.planets.mars.world.gen.BiomeMars;
 import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.TeleportTypeVenus;
 import micdoodle8.mods.galacticraft.planets.venus.world.gen.BiomeVenus;
+import mod.sol.entities.boss.EntityUranusBossSlime;
 import mod.sol.planets.uranus.moon.ariel.biome.BiomeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
+import mod.sol.render.entity.*;
 import mod.sol.util.Reference;
 import mod.sol.util.SolEntityRegistry;
 import mod.sol.util.SolTreasureChestRegistry;
@@ -106,10 +108,6 @@ import mod.sol.recipe.RecipeManagerRocketsTier5;
 import mod.sol.recipe.RecipeManagerRocketsTier6;
 import mod.sol.recipe.SolRecipeCompressor;
 import mod.sol.recipe.SolRecipeSmelting;
-import mod.sol.render.entity.RenderHugeFireball;
-import mod.sol.render.entity.RenderJupiterBossGhast;
-import mod.sol.render.entity.RenderMercuryBossBlaze;
-import mod.sol.render.entity.RenderSaturnBossStray;
 import mod.sol.render.tile.TileEntityTreasureTier4ChestRenderer;
 import mod.sol.render.tile.TileEntityTreasureTier5ChestRenderer;
 import mod.sol.render.tile.TileEntityTreasureTier6ChestRenderer;
@@ -189,7 +187,7 @@ public class TheSol
 
 	@Instance
 	public static TheSol instance;
-	
+
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static SolCommonProxy proxy;
 	
@@ -207,7 +205,8 @@ public class TheSol
 
         RenderingRegistry.registerEntityRenderingHandler(EntityMercuryBossBlaze.class, (RenderManager manager) -> new RenderMercuryBossBlaze(manager));
         RenderingRegistry.registerEntityRenderingHandler(EntityJupiterBossGhast.class, (RenderManager manager) -> new RenderJupiterBossGhast(manager));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySaturnBossStray.class, (RenderManager manager) -> new RenderSaturnBossStray(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntitySaturnBossStray.class, (RenderManager manager) -> new RenderSaturnBossStray(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityUranusBossSlime.class, (RenderManager manager) -> new RenderUranusBossSlime(manager));
 	}
 	
 	@EventHandler

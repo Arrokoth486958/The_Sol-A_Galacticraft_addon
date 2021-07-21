@@ -86,7 +86,7 @@ public class EntitySaturnBossStray extends EntityBossBase implements IEntityBrea
     protected void onDeathUpdate()
     {
         super.onDeathUpdate();
-
+        
         if (!this.world.isRemote)
         {
             if (this.deathTicks == 100)
