@@ -76,10 +76,10 @@ public class ChunkProviderIo extends ChunkProviderBase
 
     public void setBlocksInChunk(int chunkX, int chunkZ, ChunkPrimer primer)
     {
-    	this.noiseGen1.setFrequency(0.055F);
-        this.noiseGen2.setFrequency(0.05F);
-        this.noiseGen3.setFrequency(0.04F);
-        this.noiseGen4.setFrequency(0.06F);
+    	this.noiseGen1.setFrequency(0.03F);
+        this.noiseGen2.setFrequency(0.025F);
+        this.noiseGen3.setFrequency(0.02F);
+        this.noiseGen4.setFrequency(0.03F);
         
         this.biomesForGeneration = this.world.getBiomeProvider().getBiomesForGeneration(this.biomesForGeneration, chunkX * 4 - 2, chunkZ * 4 - 2, 10, 10);
 
@@ -87,10 +87,10 @@ public class ChunkProviderIo extends ChunkProviderBase
         {
             for (int z = 0; z < ChunkProviderIo.CHUNK_SIZE_Z; z++)
             {
-                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 8;
+                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 64;
                 final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
                 double d3 = this.noiseGen3.getNoise(x + chunkX * 16, z + chunkZ * 16) - 0.1;
-                d3 *= 4;
+                d3 *= 6;
 
                 double yDev;
 
