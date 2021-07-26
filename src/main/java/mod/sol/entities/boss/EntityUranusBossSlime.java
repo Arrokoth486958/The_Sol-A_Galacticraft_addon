@@ -1,12 +1,14 @@
 package mod.sol.entities.boss;
 
 
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import mod.sol.init.SolItems;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
@@ -20,21 +22,40 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathNavigateGround;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
-import javax.annotation.Nullable;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 
 public class EntityUranusBossSlime extends EntityBossBase implements IMob, IEntityBreathable
 {
+    protected int attackTimer = 0;
+
     public EntityUranusBossSlime(World worldIn) {
         super(worldIn);
         this.setSize(5, 5);
         this.moveHelper = new EntityUranusBossSlime.SlimeMoveHelper(this);
+    }
+
+    @Override
+    public void onCollideWithPlayer(EntityPlayer entityIn) {
+        if (!entityIn.isCreative() && !this.isDead && !this.onGround && attackTimer > 20) {
+            entityIn.attackEntityFrom(new DamageSource("generic").causeMobDamage(this).setDamageBypassesArmor(), 2);
+            this.attackTimer = 0;
+        }
+    }
+
+    @Override
+    public void onUpdate() {
+        super.onUpdate();
+        this.attackTimer += 1;
     }
 
     @Override
@@ -365,11 +386,14 @@ public class EntityUranusBossSlime extends EntityBossBase implements IMob, IEnti
 
     @Override
     public ItemStack getGuaranteedLoot(Random rand) {
-        return ItemStack.EMPTY;
+        List<ItemStack> stackList = new LinkedList<>();
+        stackList.addAll(GalacticraftRegistry.getDungeonLoot(7));
+        return stackList.get(rand.nextInt(stackList.size())).copy();
     }
 
     @Override
     public void dropKey() {
+        this.entityDropItem(new ItemStack(SolItems.KEY_TIER_7), 0.5F);
     }
 
     @Override
