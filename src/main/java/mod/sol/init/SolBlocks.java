@@ -73,6 +73,9 @@ public class SolBlocks
 	public static final Block TITAN_ILMENITE_ORE = new BlockBaseIlmeniteOre("titan_iron_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TITAN_MAGANESE_ORE = new BlockBase("titan_manganese_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block TITAN_TIN_ORE = new BlockBase("titan_tin_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	//uranus
+	public static final Block URANUS_DUNGEON_BRICK = new BlockBase("uranus_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
+	public static final Block TREASURE_CHEST_T7 = new BlockTier7TreasureChest("treasure_t7");
 	//ariel
 	public static final Block ARIEL_TURF = new BlockBase("ariel_turf", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
 	public static final Block ARIEL_DIRT = new BlockBase("ariel_dirt", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);

@@ -35,6 +35,8 @@ import mod.sol.planets.uranus.moon.ariel.biome.BiomeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
 import mod.sol.render.entity.*;
+import mod.sol.render.tile.TileEntityTreasureTier7ChestRenderer;
+import mod.sol.tile.*;
 import mod.sol.util.Reference;
 import mod.sol.util.SolEntityRegistry;
 import mod.sol.util.SolTreasureChestRegistry;
@@ -114,12 +116,6 @@ import mod.sol.render.tile.TileEntityTreasureTier6ChestRenderer;
 import mod.sol.schematic.SchematicRocketT4;
 import mod.sol.schematic.SchematicRocketT5;
 import mod.sol.schematic.SchematicRocketT6;
-import mod.sol.tile.TileEntityDungeonSpawnerJupiter;
-import mod.sol.tile.TileEntityDungeonSpawnerMercury;
-import mod.sol.tile.TileEntityDungeonSpawnerSaturn;
-import mod.sol.tile.TileEntityTreasureChestTier4;
-import mod.sol.tile.TileEntityTreasureChestTier5;
-import mod.sol.tile.TileEntityTreasureChestTier6;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:galacticraftcore; required-after:realistic_galaxy_map")
 public class TheSol 
@@ -625,7 +621,8 @@ public class TheSol
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier4.class, new TileEntityTreasureTier4ChestRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier5.class, new TileEntityTreasureTier5ChestRenderer());
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier7.class, new TileEntityTreasureTier7ChestRenderer());
 	}
 	
 	public static void registerNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel)
