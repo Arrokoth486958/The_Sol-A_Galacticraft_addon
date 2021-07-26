@@ -12,13 +12,14 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ConfigManagerSol {
 	private static Configuration config;
 
-	public static int disableDynamicTierSystem;
+	public static int dimensionidMercury;
 	
 	public static void init(File file) {
 		config = new Configuration(file);
-		
 		config.addCustomCategoryComment("The Sol", "Config");
-		
+
+		dimensionidMercury = config.getInt("Mercury dimension id", "The Sol", (-(Reference.MOD_ID.hashCode() + 100)), -16777216, 16777216, "Dimension id for Mercury");
+
 		config.save();
 	}
 	
