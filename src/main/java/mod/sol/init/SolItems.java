@@ -12,14 +12,7 @@ import micdoodle8.mods.galacticraft.planets.mars.items.ItemSpadeMars;
 import micdoodle8.mods.galacticraft.planets.mars.items.ItemSwordMars;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import mod.sol.TheSol;
-import mod.sol.items.ItemAdvancedBattery;
-import mod.sol.items.ItemBase;
-import mod.sol.items.ItemKeyTier4;
-import mod.sol.items.ItemKeyTier5;
-import mod.sol.items.ItemKeyTier6;
-import mod.sol.items.ItemSchematicTier4;
-import mod.sol.items.ItemSchematicTier5;
-import mod.sol.items.ItemSchematicTier6;
+import mod.sol.items.*;
 import mod.sol.items.armor.sulfur.ItemArmorSulfur;
 import mod.sol.items.rocket.ItemTier4Rocket;
 import mod.sol.items.rocket.ItemTier5Rocket;
@@ -38,7 +31,7 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
-public class SolItems 
+public class SolItems
 {
 	
 	public static final List<Item> ITEMS = new ArrayList<Item>();
@@ -79,7 +72,7 @@ public class SolItems
 	/*public static final Item KEY_TIER_7 = new ItemKeyTier7("key_t7");
 	public static final Item SCHEMATIC_T7 = new ItemSchematicTier7("schematic_rocket_t7");
 	public static final Item ROCKET_T7 = new ItemTier7Rocket("rocket_t7");*/
-	public static final Item KEY_TIER_7 = new ItemBase("key_t7", TheSol.ITEM_TAB);
+	public static final Item KEY_TIER_7 = new ItemKeyTier7("key_t7");
 	public static final Item SCHEMATIC_T7 = new ItemBase("schematic_rocket_t7", TheSol.ITEM_TAB);
 	public static final Item ROCKET_T7 = new ItemBase("rocket_t7", TheSol.ITEM_TAB);
 	// t8
