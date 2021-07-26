@@ -10,6 +10,7 @@ import mod.sol.init.SolBlocks;
 import mod.sol.tile.TileEntityTreasureChestTier4;
 import mod.sol.tile.TileEntityTreasureChestTier5;
 import mod.sol.tile.TileEntityTreasureChestTier6;
+import mod.sol.tile.TileEntityTreasureChestTier7;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -21,6 +22,7 @@ public class SolTreasureChestRegistry {
         GameRegistry.registerTileEntity(TileEntityTreasureChestTier4.class, "Sol Tier 4 Treasure Chest");
         GameRegistry.registerTileEntity(TileEntityTreasureChestTier5.class, "Sol Tier 5 Treasure Chest");
         GameRegistry.registerTileEntity(TileEntityTreasureChestTier6.class, "Sol Tier 6 Treasure Chest");
+        GameRegistry.registerTileEntity(TileEntityTreasureChestTier7.class, "Sol Tier 7 Treasure Chest");
 	}
 	
 	private static void registerBlock(Block block, Class<? extends ItemBlock> itemClass)
