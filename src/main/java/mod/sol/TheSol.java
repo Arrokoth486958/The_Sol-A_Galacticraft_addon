@@ -596,7 +596,8 @@ public class TheSol
     	
         GalacticraftRegistry.addDungeonLoot(4, new ItemStack(SolItems.SCHEMATIC_T4, 1));
         GalacticraftRegistry.addDungeonLoot(5, new ItemStack(SolItems.SCHEMATIC_T5, 1));
-        GalacticraftRegistry.addDungeonLoot(6, new ItemStack(SolItems.SCHEMATIC_T6, 1));
+		GalacticraftRegistry.addDungeonLoot(6, new ItemStack(SolItems.SCHEMATIC_T6, 1));
+		GalacticraftRegistry.addDungeonLoot(7, new ItemStack(SolItems.SCHEMATIC_T7, 1));
         // entity
         SolEntityRegistry.register();
         // dungeon
