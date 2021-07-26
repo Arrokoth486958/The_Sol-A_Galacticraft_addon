@@ -38,6 +38,7 @@ public class RenderUranusBossSlime extends RenderLiving<EntityUranusBossSlime>
     {
         float f = 0.999F;
         GlStateManager.scale(10F, 10F, 10F);
+        GlStateManager.rotate((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
     }
 
     /**
