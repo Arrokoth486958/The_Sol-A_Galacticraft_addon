@@ -219,9 +219,6 @@ public class TheSol
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
 		MinecraftForge.EVENT_BUS.register(this);
 
-//		  GalacticraftPlanets.clientModules.add(new MercuryModuleClient());
-//        GalacticraftPlanets.clientModules.add(new JupiterModuleClient());
-//        GalacticraftPlanets.clientModules.add(new SaturnModuleClient());
         RenderingRegistry.registerEntityRenderingHandler(EntityHugeFireball.class, (RenderManager manager) -> new RenderHugeFireball(manager, 1));
 
         RenderingRegistry.registerEntityRenderingHandler(EntityMercuryBossBlaze.class, (RenderManager manager) -> new RenderMercuryBossBlaze(manager));
