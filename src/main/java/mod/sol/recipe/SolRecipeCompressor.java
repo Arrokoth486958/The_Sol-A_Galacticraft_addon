@@ -23,6 +23,6 @@ public class SolRecipeCompressor {
 		CompressorRecipes.addShapelessRecipe(new ItemStack(MarsItems.carbonFragments, 2), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1));
 		CompressorRecipes.addShapelessRecipe(new ItemStack(Items.COAL, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1));
 		//manganese
-		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.MANGANESE_INGOT), new ItemStack(SolItems.MANGANESE_INGOT), new ItemStack(SolItems.COMPRESSED_MANGANESE));
+		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.MANGANESE_INGOT), new ItemStack(SolItems.COMPRESSED_MANGANESE));
 	}
 }
