@@ -3,17 +3,16 @@ package mod.sol.planets.uranus.moon.ariel.world.gen;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.api.world.ChunkProviderBase;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockBasicMoon;
 import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import mod.sol.init.SolBlocks;
+import mod.sol.planets.uranus.world.gen.MapGenDungeonUranus;
+import mod.sol.planets.uranus.world.gen.RoomBossUranus;
+import mod.sol.planets.uranus.world.gen.RoomTreasureUranus;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
@@ -43,7 +42,7 @@ public class ChunkProviderAriel extends ChunkProviderBase
 
     private final World world;
 
-    private final MapGenDungeon dungeonGeneratorMoon = new MapGenDungeon(new DungeonConfiguration(GCBlocks.blockMoon.getDefaultState().withProperty(BlockBasicMoon.BASIC_TYPE_MOON, BlockBasicMoon.EnumBlockBasicMoon.MOON_DUNGEON_BRICK), 25, 8, 16, 5, 6, RoomBoss.class, RoomTreasure.class));
+    private final MapGenDungeonUranus dungeonGeneratorMoon = new MapGenDungeonUranus(new DungeonConfiguration(SolBlocks.URANUS_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossUranus.class, RoomTreasureUranus.class));
 
     private Biome[] biomesForGeneration = { BiomeAdaptive.biomeDefault };
 

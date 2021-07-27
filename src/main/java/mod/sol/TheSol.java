@@ -601,8 +601,10 @@ public class TheSol
         GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_MERCURY);
         GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, "Sol Jupiter Dungeon Spawner");
         GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_JUPITER);
-        GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, "Sol Saturn Dungeon Spawner");
-        GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_SATURN);
+		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, "Sol Saturn Dungeon Spawner");
+		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_SATURN);
+		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, "Sol Uranus Dungeon Spawner");
+		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_URANUS);
 	}
 	
 	@EventHandler
