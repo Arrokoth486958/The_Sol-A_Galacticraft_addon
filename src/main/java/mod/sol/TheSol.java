@@ -654,21 +654,21 @@ public class TheSol
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier7.class, new TileEntityTreasureTier7ChestRenderer());
 	}
 
-	@SubscribeEvent
+	/*@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event) {
-		GalacticraftCore.proxy.registerVariants();
+		// GalacticraftCore.proxy.registerVariants();
 		if (GalacticraftCore.isPlanetsLoaded) {
 			ModelResourceLocation modelResourceLocationTier4Rocket = new ModelResourceLocation(Reference.MOD_ID + ":" + "rocket_t4", "inventory");
 			ModelResourceLocation modelResourceLocationTier5Rocket = new ModelResourceLocation(Reference.MOD_ID + ":" + "rocket_t5", "inventory");
 			ModelResourceLocation modelResourceLocationTier6Rocket = new ModelResourceLocation(Reference.MOD_ID + ":" + "rocket_t6", "inventory");
 			for (int i = 0; i < 5; ++i)
 			{
-				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T4, i, modelResourceLocationTier4Rocket);
-				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T5, i, modelResourceLocationTier5Rocket);				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T6, i, modelResourceLocationTier6Rocket);
-				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T6, i, modelResourceLocationTier6Rocket);
+				//ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T4, i, new ModelResourceLocation("sol:rocket_t4", "inventory"));
+				//ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T5, i, new ModelResourceLocation("sol:rocket_t5", "inventory"));
+				//ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T6, i, new ModelResourceLocation("sol:rocket_t6", "inventory"));
 			}
 		}
-	}
+	}*/
 
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
