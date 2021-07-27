@@ -7,8 +7,6 @@ import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
 import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import mod.sol.init.SolBlocks;
 import mod.sol.planets.uranus.world.gen.MapGenDungeonUranus;
 import mod.sol.planets.uranus.world.gen.RoomBossUranus;
@@ -77,8 +75,8 @@ public class ChunkProviderAriel extends ChunkProviderBase
         {
             for (int z = 0; z < ChunkProviderAriel.CHUNK_SIZE_Z; z++)
             {
-                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 8;
-                final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
+                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 16;
+                final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 48;
                 double d3 = this.noiseGen3.getNoise(x + chunkX * 16, z + chunkZ * 16) - 0.1;
                 d3 *= 4;
 

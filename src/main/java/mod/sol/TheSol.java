@@ -1,7 +1,9 @@
 package mod.sol;
 
 import java.io.File;
+import java.util.List;
 
+import com.google.common.collect.ImmutableList;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -18,8 +20,10 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedEnderman;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
+import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import micdoodle8.mods.galacticraft.planets.asteroids.ConfigManagerAsteroids;
 import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAsteroids;
@@ -35,6 +39,12 @@ import mod.sol.planets.uranus.moon.ariel.biome.BiomeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
 import mod.sol.render.entity.*;
+import mod.sol.render.model.item.ItemModelRocketT4;
+import mod.sol.render.model.item.ItemModelRocketT5;
+import mod.sol.render.model.item.ItemModelRocketT6;
+import mod.sol.render.rocket.RenderTier4Rocket;
+import mod.sol.render.rocket.RenderTier5Rocket;
+import mod.sol.render.rocket.RenderTier6Rocket;
 import mod.sol.render.tile.TileEntityTreasureTier7ChestRenderer;
 import mod.sol.tile.*;
 import mod.sol.util.Reference;
@@ -48,6 +58,7 @@ import mod.realistic_galaxy_map.api.client.galaxy.StarRealistic;
 import mod.realistic_galaxy_map.dimension.WorldProviderRealisticMars;
 import mod.realistic_galaxy_map.dimension.WorldProviderRealisticMoon;
 import mod.realistic_galaxy_map.dimension.WorldProviderRealisticVenus;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -56,7 +67,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.SpawnListEntry;
+import net.minecraftforge.client.event.ModelBakeEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.event.TextureStitchEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.model.IModelState;
+import net.minecraftforge.common.model.TRSRTransformation;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -67,6 +84,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import mod.sol.config.ConfigManagerSol;
@@ -116,6 +134,8 @@ import mod.sol.render.tile.TileEntityTreasureTier6ChestRenderer;
 import mod.sol.schematic.SchematicRocketT4;
 import mod.sol.schematic.SchematicRocketT5;
 import mod.sol.schematic.SchematicRocketT6;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:galacticraftcore; required-after:realistic_galaxy_map")
 public class TheSol 
@@ -186,7 +206,7 @@ public class TheSol
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static SolCommonProxy proxy;
-	
+
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event)
 	{
@@ -194,9 +214,14 @@ public class TheSol
 		RealisticGalaxyMap.disableoverrideDefaultPlanets = true;
 		RealisticGalaxyMap.disableDynamicTierSystem = true;
         OBJLoaderGC.instance.addDomain(Reference.MOD_ID);
-        GalacticraftPlanets.clientModules.add(new MercuryModuleClient());
-        GalacticraftPlanets.clientModules.add(new JupiterModuleClient());
-        GalacticraftPlanets.clientModules.add(new SaturnModuleClient());
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
+		MinecraftForge.EVENT_BUS.register(this);
+
+//		  GalacticraftPlanets.clientModules.add(new MercuryModuleClient());
+//        GalacticraftPlanets.clientModules.add(new JupiterModuleClient());
+//        GalacticraftPlanets.clientModules.add(new SaturnModuleClient());
         RenderingRegistry.registerEntityRenderingHandler(EntityHugeFireball.class, (RenderManager manager) -> new RenderHugeFireball(manager, 1));
 
         RenderingRegistry.registerEntityRenderingHandler(EntityMercuryBossBlaze.class, (RenderManager manager) -> new RenderMercuryBossBlaze(manager));
@@ -605,6 +630,8 @@ public class TheSol
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_SATURN);
 		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, "Sol Uranus Dungeon Spawner");
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_URANUS);
+
+		MinecraftForge.EVENT_BUS.register(new TheSol());
 	}
 	
 	@EventHandler
@@ -626,7 +653,51 @@ public class TheSol
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier7.class, new TileEntityTreasureTier7ChestRenderer());
 	}
-	
+
+	@SubscribeEvent
+	public static void registerModels(ModelRegistryEvent event) {
+		GalacticraftCore.proxy.registerVariants();
+		if (GalacticraftCore.isPlanetsLoaded) {
+			ModelResourceLocation modelResourceLocationTier4Rocket = new ModelResourceLocation(Reference.MOD_ID + ":" + "rocket_t4", "inventory");
+			ModelResourceLocation modelResourceLocationTier5Rocket = new ModelResourceLocation(Reference.MOD_ID + ":" + "rocket_t5", "inventory");
+			ModelResourceLocation modelResourceLocationTier6Rocket = new ModelResourceLocation(Reference.MOD_ID + ":" + "rocket_t6", "inventory");
+			for (int i = 0; i < 5; ++i)
+			{
+				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T4, i, modelResourceLocationTier4Rocket);
+				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T5, i, modelResourceLocationTier5Rocket);				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T6, i, modelResourceLocationTier6Rocket);
+				ModelLoader.setCustomModelResourceLocation(SolItems.ROCKET_T6, i, modelResourceLocationTier6Rocket);
+			}
+		}
+	}
+
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public void onModelBakeEvent(ModelBakeEvent event)
+	{
+		replaceModelDefault(event, "rocket_t4", "tier4rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT4.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t5", "tier5rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT5.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t6", "tier6rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT6.class, TRSRTransformation.identity());
+	}
+
+	private void replaceModelDefault(ModelBakeEvent event, String resLoc, String objLoc, List<String> visibleGroups, Class<? extends ModelTransformWrapper> clazz, IModelState parentState, String... variants)
+	{
+		ClientUtil.replaceModel(Reference.MOD_ID, event, resLoc, objLoc, visibleGroups, clazz, parentState, variants);
+	}
+
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public void loadTextures(TextureStitchEvent.Pre event)
+	{
+		registerTexture(event, "tier4rocket");
+		registerTexture(event, "tier5rocket");
+		registerTexture(event, "tier6rocket");
+	}
+
+	private void registerTexture(TextureStitchEvent.Pre event, String texture)
+	{
+		event.getMap().registerSprite(new ResourceLocation(Reference.MOD_ID + ":" + "rockets/" + texture));
+	}
+
 	public static void registerNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel)
     {
         ResourceLocation registryName = new ResourceLocation(Reference.MOD_ID, var1);
