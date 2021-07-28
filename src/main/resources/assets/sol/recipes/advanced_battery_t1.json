@@ -1,0 +1,26 @@
+{
+  "result": {
+    "item": "sol:advanced_baterry_t1",
+    "data": 100,
+    "count": 2
+  },
+  "pattern": [
+    " T ",
+    "TRT",
+    "TCT"
+  ],
+  "type": "galacticraftcore:replacable",
+  "key": {
+    "R": {
+      "type": "forge:ore_dict",
+      "ore": "dustRedstone"
+    },
+    "C": {
+      "item": "galacticraftcore:battery"
+    },
+    "T": {
+      "type": "forge:ore_dict",
+      "ore": "compressedSulfur"
+    }
+  }
+}
