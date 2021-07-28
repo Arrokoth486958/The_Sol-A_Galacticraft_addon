@@ -30,6 +30,7 @@ public class SolOreDict
 		//compressed
 		//sulfur
 		OreDictionary.registerOre("compressedSulfur", SolItems.COMPRESSED_SULFUR);
+		OreDictionary.registerOre("compressedLithos", SolItems.COMPRESSED_LITHOS);
 		//shard
 		//sulfur
 		OreDictionary.registerOre("shardSulfur", SolItems.SULFUR_SHARD);

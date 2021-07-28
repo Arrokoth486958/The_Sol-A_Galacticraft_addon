@@ -25,7 +25,6 @@ public class ItemAdvancedBattery extends ItemElectricBase implements ISortableIt
         this.setMaxStackSize(4);
         this.setRegistryName(assetName);
         this.setUnlocalizedName(assetName);
-        this.maxStackSize = 1;
         this.batteryTier = tier;
         //this.setTextureName(Constants.TEXTURE_PREFIX + assetName);
         

@@ -79,6 +79,7 @@ public class SolItems
 	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
 	// battery
 	public static final Item ADVANCED_BATERRY_TIER_1 = new ItemAdvancedBattery("advanced_baterry_t1", 1);
+	public static final Item ADVANCED_BATERRY_TIER_2 = new ItemAdvancedBattery("advanced_baterry_t2", 2);
 	// oxygen tank
 	// public static final Item ADVANCED_OXYGEN_TANK = new ItemOxygenTankAdvanced(4, "advanced_oxygen_tank");
 	// crafting material
@@ -90,7 +91,9 @@ public class SolItems
 	// manganese
 	public static final Item MANGANESE_INGOT = new ItemBase("ingot_manganese", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_MANGANESE = new ItemBase("compressed_manganese", TheSol.ITEM_TAB);
-
+	// lithos
+	public static final Item LITHOS_INGOT = new ItemBase("ingot_lithos", TheSol.ITEM_TAB);
+	public static final Item COMPRESSED_LITHOS = new ItemBase("compressed_lithos", TheSol.ITEM_TAB);
 	// armor
 	public static final ArmorMaterial ARMOR_SULFUR  = EnumHelper.addArmorMaterial("SULFUR", "", 42, new int[] { 5, 8, 9, 5 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0F);
 	public static final Item SULFUR_HELMET = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.HEAD).setUnlocalizedName("sulfur_helmet").setRegistryName("sulfur_helmet");
