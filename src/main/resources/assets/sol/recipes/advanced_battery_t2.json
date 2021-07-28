@@ -16,7 +16,7 @@
       "ore": "dustRedstone"
     },
     "C": {
-      "item": "sol:advanced_baterry_t1",
+      "item": "sol:advanced_baterry_t1"
     },
     "T": {
       "type": "forge:ore_dict",
