@@ -16,7 +16,8 @@
       "ore": "dustRedstone"
     },
     "C": {
-      "item": "galacticraftcore:battery"
+      "item": "galacticraftcore:battery",
+      "data": 100
     },
     "T": {
       "type": "forge:ore_dict",

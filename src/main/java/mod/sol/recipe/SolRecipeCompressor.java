@@ -24,5 +24,7 @@ public class SolRecipeCompressor {
 		CompressorRecipes.addShapelessRecipe(new ItemStack(Items.COAL, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1), new ItemStack(SolBlocks.IO_ASH_BLOCK, 1));
 		//manganese
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.MANGANESE_INGOT), new ItemStack(SolItems.COMPRESSED_MANGANESE));
+		//lithium
+		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.LITHIUM_INGOT), new ItemStack(SolItems.COMPRESSED_LITHIUM));
 	}
 }

@@ -23,6 +23,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -36,7 +37,7 @@ public class BlockBaseIlmeniteOre extends Block implements IHasModel
 		setRegistryName(name);
 		setHarvestLevel(toolClass, harvestLevel);
 		setCreativeTab(tab);
-		
+
 		SolBlocks.Blocks.add(this);
 		SolItems.ITEMS.add(new ItemBlockBaseSol(this).setRegistryName(this.getRegistryName()));
 	}

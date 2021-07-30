@@ -28,7 +28,7 @@ public class BiomeDecoratorAriel extends BiomeDecorator
     private WorldGenerator deshGen;
     private WorldGenerator ilmenitGen;
     private WorldGenerator ironGen;
-    private WorldGenerator lithosGen;
+    private WorldGenerator lithiumGen;
     private WorldGenerator surfaceCarbonGen;
     private WorldGenerator tinGen;
 
@@ -38,7 +38,7 @@ public class BiomeDecoratorAriel extends BiomeDecorator
         this.deshGen = new WorldGenMinableMeta(SolBlocks.ARIEL_DESH_ORE, 6, 0, true, SolBlocks.ARIEL_ROCK, 0);
         this.ironGen = new WorldGenMinableMeta(SolBlocks.ARIEL_IRON_ORE, 6, 0, true, SolBlocks.ARIEL_ROCK, 0);
         this.ilmenitGen = new WorldGenMinableMeta(SolBlocks.ARIEL_ILMENITE_ORE, 6, 0, true, SolBlocks.ARIEL_ROCK, 0);
-        this.lithosGen = new WorldGenMinableMeta(SolBlocks.ARIEL_LITHOS_ORE, 4, 0, true, SolBlocks.ARIEL_ROCK, 0);
+        this.lithiumGen = new WorldGenMinableMeta(SolBlocks.ARIEL_LITHIUM_ORE, 4, 0, true, SolBlocks.ARIEL_ROCK, 0);
         this.tinGen = new WorldGenMinableMeta(SolBlocks.ARIEL_TIN_ORE, 6, 0, true, SolBlocks.ARIEL_ROCK, 0);
         this.surfaceCarbonGen = new WorldGenMinableMeta(SolBlocks.CARBON_DIOXIDE, 8, 0, true, SolBlocks.ARIEL_TURF, 0);
         this.dirtGen = new WorldGenMinableMeta(SolBlocks.ARIEL_DIRT, 10, 0, true, SolBlocks.ARIEL_ROCK, 0);
@@ -79,7 +79,7 @@ public class BiomeDecoratorAriel extends BiomeDecorator
         this.genStandardOre(16, this.deshGen, 0, 60);
         this.genStandardOre(16, this.ilmenitGen, 0, 60);
         this.genStandardOre(18, this.ironGen, 0, 60);
-        this.genStandardOre(12, this.lithosGen, 0, 60);
+        this.genStandardOre(12, this.lithiumGen, 0, 60);
         this.genStandardOre(26, this.tinGen, 0, 60);
         this.genStandardOre(4, this.surfaceCarbonGen, 55, 70);
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.world, this.randomGenerator, chunkPos));

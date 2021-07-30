@@ -64,11 +64,11 @@ public class SolItems
 	public static final Item SCHEMATIC_T6 = new ItemSchematicTier6("schematic_rocket_t6");
 	public static final Item ROCKET_T6 = new ItemTier6Rocket("rocket_t6");
 	// t7
-	public static final Item ROCKET_ENGINE_T7 = new ItemBase("rocket_engine_t7", TheSol.ITEM_TAB);
+	/**public static final Item ROCKET_ENGINE_T7 = new ItemBase("rocket_engine_t7", TheSol.ITEM_TAB);
 	public static final Item REINFORCED_PLATE_T7 = new ItemBase("reinforced_plate_t7", TheSol.ITEM_TAB);
 	public static final Item NOSE_CONE_T7 = new ItemBase("nose_cone_t7", TheSol.ITEM_TAB);
 	public static final Item ROCKET_FINS_T7 = new ItemBase("rocket_fins_t7", TheSol.ITEM_TAB);
-	public static final Item ENGINE_BOOSTER_T7 = new ItemBase("engine_booster_t7", TheSol.ITEM_TAB);
+	public static final Item ENGINE_BOOSTER_T7 = new ItemBase("engine_booster_t7", TheSol.ITEM_TAB);**/
 	/*public static final Item KEY_TIER_7 = new ItemKeyTier7("key_t7");
 	public static final Item SCHEMATIC_T7 = new ItemSchematicTier7("schematic_rocket_t7");
 	public static final Item ROCKET_T7 = new ItemTier7Rocket("rocket_t7");*/
@@ -91,9 +91,9 @@ public class SolItems
 	// manganese
 	public static final Item MANGANESE_INGOT = new ItemBase("ingot_manganese", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_MANGANESE = new ItemBase("compressed_manganese", TheSol.ITEM_TAB);
-	// lithos
-	public static final Item LITHOS_INGOT = new ItemBase("ingot_lithos", TheSol.ITEM_TAB);
-	public static final Item COMPRESSED_LITHOS = new ItemBase("compressed_lithos", TheSol.ITEM_TAB);
+	// lithium
+	public static final Item LITHIUM_INGOT = new ItemBase("ingot_lithium", TheSol.ITEM_TAB);
+	public static final Item COMPRESSED_LITHIUM = new ItemBase("compressed_lithium", TheSol.ITEM_TAB);
 	// armor
 	public static final ArmorMaterial ARMOR_SULFUR  = EnumHelper.addArmorMaterial("SULFUR", "", 42, new int[] { 5, 8, 9, 5 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0F);
 	public static final Item SULFUR_HELMET = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.HEAD).setUnlocalizedName("sulfur_helmet").setRegistryName("sulfur_helmet");

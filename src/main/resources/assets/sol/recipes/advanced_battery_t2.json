@@ -16,11 +16,12 @@
       "ore": "dustRedstone"
     },
     "C": {
-      "item": "sol:advanced_baterry_t1"
+      "item": "sol:advanced_baterry_t1",
+      "data": 100
     },
     "T": {
       "type": "forge:ore_dict",
-      "ore": "compressedLithos"
+      "ore": "compressedLithium"
     }
   }
 }
