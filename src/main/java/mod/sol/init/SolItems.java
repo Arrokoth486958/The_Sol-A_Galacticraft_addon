@@ -74,7 +74,7 @@ public class SolItems
 	public static final Item ROCKET_T7 = new ItemTier7Rocket("rocket_t7");*/
 	public static final Item KEY_TIER_7 = new ItemKeyTier7("key_t7");
 	public static final Item SCHEMATIC_T7 = new ItemBase("schematic_rocket_t7", TheSol.ITEM_TAB);
-	public static final Item ROCKET_T7 = new ItemBase("rocket_t7", TheSol.ITEM_TAB);
+	//public static final Item ROCKET_T7 = new ItemBase("rocket_t7", TheSol.ITEM_TAB);
 	// t8
 	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
 	// battery
