@@ -95,13 +95,13 @@ public class SolItems
 	public static final Item LITHIUM_INGOT = new ItemBase("ingot_lithium", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_LITHIUM = new ItemBase("compressed_lithium", TheSol.ITEM_TAB);
 	// armor
-	public static final ArmorMaterial ARMOR_SULFUR  = EnumHelper.addArmorMaterial("SULFUR", "", 42, new int[] { 5, 8, 9, 5 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 4.0F);
+	public static final ArmorMaterial ARMOR_SULFUR  = EnumHelper.addArmorMaterial("SULFUR", "", 42, new int[] { 5, 8, 9, 5 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F);
 	public static final Item SULFUR_HELMET = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.HEAD).setUnlocalizedName("sulfur_helmet").setRegistryName("sulfur_helmet");
 	public static final Item SULFUR_CHESTPLATE = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.CHEST).setUnlocalizedName("sulfur_chestplate").setRegistryName("sulfur_chestplate");
 	public static final Item SULFUR_LEGGINGS = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.LEGS).setUnlocalizedName("sulfur_leggings").setRegistryName("sulfur_leggings");
 	public static final Item SULFUR_BOOTS = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.FEET).setUnlocalizedName("sulfur_boots").setRegistryName("sulfur_boots");
 	// tools
-	public static final ToolMaterial TOOL_SULFUR = EnumHelper.addToolMaterial("SULFUR", 4, 1280, 6.0F, 4.5F, 12);
+	public static final ToolMaterial TOOL_SULFUR = EnumHelper.addToolMaterial("SULFUR", 3, 780, 8.0F, 6.5F, 12);
 	public static final Item SULFUR_AXE = new ItemAxeSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_axe").setRegistryName("sulfur_axe");
 	public static final Item SULFUR_HOE = new ItemHoeSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_hoe").setRegistryName("sulfur_hoe");
 	public static final Item SULFUR_PICKAXE = new ItemPickaxeSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_pickaxe").setRegistryName("sulfur_pickaxe");
