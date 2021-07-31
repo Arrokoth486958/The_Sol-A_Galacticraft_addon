@@ -3,27 +3,14 @@ package mod.sol.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.planets.mars.items.ItemArmorMars;
-import micdoodle8.mods.galacticraft.planets.mars.items.ItemAxeMars;
-import micdoodle8.mods.galacticraft.planets.mars.items.ItemHoeMars;
-import micdoodle8.mods.galacticraft.planets.mars.items.ItemPickaxeMars;
-import micdoodle8.mods.galacticraft.planets.mars.items.ItemPickaxeStickyMars;
-import micdoodle8.mods.galacticraft.planets.mars.items.ItemSpadeMars;
-import micdoodle8.mods.galacticraft.planets.mars.items.ItemSwordMars;
-import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import mod.sol.TheSol;
 import mod.sol.items.*;
 import mod.sol.items.armor.sulfur.ItemArmorSulfur;
 import mod.sol.items.rocket.ItemTier4Rocket;
 import mod.sol.items.rocket.ItemTier5Rocket;
 import mod.sol.items.rocket.ItemTier6Rocket;
-import mod.sol.items.rocket.ItemTier8Rocket;
-import mod.sol.items.tools.sulfur.ItemAxeSulfur;
-import mod.sol.items.tools.sulfur.ItemHoeSulfur;
-import mod.sol.items.tools.sulfur.ItemPickaxeSulfur;
-import mod.sol.items.tools.sulfur.ItemShovelSulfur;
-import mod.sol.items.tools.sulfur.ItemSwordSulfur;
-import net.minecraft.creativetab.CreativeTabs;
+import mod.sol.items.tools.*;
+import mod.sol.items.tools.ItemHoeBase;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -102,9 +89,9 @@ public class SolItems
 	public static final Item SULFUR_BOOTS = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.FEET).setUnlocalizedName("sulfur_boots").setRegistryName("sulfur_boots");
 	// tools
 	public static final ToolMaterial TOOL_SULFUR = EnumHelper.addToolMaterial("SULFUR", 3, 780, 8.0F, 6.5F, 12);
-	public static final Item SULFUR_AXE = new ItemAxeSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_axe").setRegistryName("sulfur_axe");
-	public static final Item SULFUR_HOE = new ItemHoeSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_hoe").setRegistryName("sulfur_hoe");
-	public static final Item SULFUR_PICKAXE = new ItemPickaxeSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_pickaxe").setRegistryName("sulfur_pickaxe");
-	public static final Item SULFUR_SHOVEL = new ItemShovelSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_shovel").setRegistryName("sulfur_shovel");
-	public static final Item SULFUR_SWORD = new ItemSwordSulfur(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_sword").setRegistryName("sulfur_sword");
+	public static final Item SULFUR_AXE = new ItemAxeBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_axe").setRegistryName("sulfur_axe");
+	public static final Item SULFUR_HOE = new ItemHoeBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_hoe").setRegistryName("sulfur_hoe");
+	public static final Item SULFUR_PICKAXE = new ItemPickaxeBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_pickaxe").setRegistryName("sulfur_pickaxe");
+	public static final Item SULFUR_SHOVEL = new ItemShovelBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_shovel").setRegistryName("sulfur_shovel");
+	public static final Item SULFUR_SWORD = new ItemSwordBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_sword").setRegistryName("sulfur_sword");
 }

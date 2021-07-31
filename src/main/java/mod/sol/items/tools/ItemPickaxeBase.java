@@ -1,4 +1,4 @@
-package mod.sol.items.tools.sulfur;
+package mod.sol.items.tools;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
@@ -15,9 +15,9 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemPickaxeSulfur extends ItemPickaxe implements ISortableItem, IHasModel
+public class ItemPickaxeBase extends ItemPickaxe implements ISortableItem, IHasModel
 {
-    public ItemPickaxeSulfur(ToolMaterial par2EnumToolMaterial)
+    public ItemPickaxeBase(ToolMaterial par2EnumToolMaterial)
     {
         super(par2EnumToolMaterial);
         

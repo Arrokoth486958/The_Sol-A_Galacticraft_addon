@@ -1,4 +1,4 @@
-package mod.sol.items.tools.sulfur;
+package mod.sol.items.tools;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
@@ -14,9 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemHoeSulfur extends ItemHoe implements ISortableItem, IHasModel
+public class ItemHoeBase extends ItemHoe implements ISortableItem, IHasModel
 {
-    public ItemHoeSulfur(ToolMaterial par2EnumToolMaterial)
+    public ItemHoeBase(ToolMaterial par2EnumToolMaterial)
     {
         super(par2EnumToolMaterial);
         

@@ -1,4 +1,4 @@
-package mod.sol.items.tools.sulfur;
+package mod.sol.items.tools;
 
 import com.google.common.collect.Sets;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -21,11 +21,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Set;
 
-public class ItemAxeSulfur extends ItemTool implements ISortableItem, IHasModel
+public class ItemAxeBase extends ItemTool implements ISortableItem, IHasModel
 {
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] { Blocks.PLANKS, Blocks.BOOKSHELF, Blocks.LOG, Blocks.LOG2, Blocks.CHEST, Blocks.PUMPKIN, Blocks.LIT_PUMPKIN, Blocks.MELON_BLOCK, Blocks.LADDER, Blocks.WOODEN_BUTTON, Blocks.WOODEN_PRESSURE_PLATE});
 
-    public ItemAxeSulfur(ToolMaterial material)
+    public ItemAxeBase(ToolMaterial material)
     {
         super(material, EFFECTIVE_ON);
         this.attackDamage = 6.0F;
