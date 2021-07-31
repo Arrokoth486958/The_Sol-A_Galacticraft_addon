@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "sol:items/lithium_ingot"
+        "layer0": "sol:items/advanced_battery_t1"
     },
     "display": { }
 }

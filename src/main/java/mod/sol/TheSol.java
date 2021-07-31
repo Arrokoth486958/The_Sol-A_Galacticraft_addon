@@ -27,8 +27,6 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
 import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
-import micdoodle8.mods.galacticraft.planets.asteroids.ConfigManagerAsteroids;
-import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAsteroids;
 import micdoodle8.mods.galacticraft.planets.mars.ConfigManagerMars;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import micdoodle8.mods.galacticraft.planets.mars.dimension.TeleportTypeMars;
@@ -155,7 +153,7 @@ public class TheSol
 	// solarsystem
 	// gccore
 	public static Planet planetVenus;
-	public static Planet planetMars;
+	//public static Planet planetMars;
 	// planets
 	public static Planet planetMercury;
 	public static Planet planetCeres;
@@ -225,7 +223,7 @@ public class TheSol
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-    	TheSol.planetMars = (Planet) new Planet("mars").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.67F, 0.1F, 0.1F).setPhaseShift(0.1667F).setRelativeSize(0.5319F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.25F, 1.25F)).setRelativeOrbitTime(1.8811610076670317634173055859803F);
+    	/*TheSol.planetMars = (Planet) new Planet("mars").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.67F, 0.1F, 0.1F).setPhaseShift(0.1667F).setRelativeSize(0.5319F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.25F, 1.25F)).setRelativeOrbitTime(1.8811610076670317634173055859803F);
         TheSol.planetMars.setBiomeInfo(BiomeMars.marsFlat);
     	TheSol.planetMars.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/mars.png"));
         TheSol.planetMars.setDimensionInfo(ConfigManagerMars.dimensionIDMars, WorldProviderMars.class).setTierRequired(2);
@@ -238,7 +236,7 @@ public class TheSol
         TheSol.planetMars.addMobInfo(new Biome.SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
         TheSol.planetMars.addChecklistKeys("equip_oxygen_suit", "thermal_padding");
         GalaxyRegistry.registerPlanet(TheSol.planetMars);
-        GalacticraftRegistry.registerTeleportType(WorldProviderMars.class, new TeleportTypeMars());
+        GalacticraftRegistry.registerTeleportType(WorldProviderMars.class, new TeleportTypeMars());*/
 
         TheSol.planetVenus = (Planet) new Planet("venus").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.0F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.75F, 0.75F)).setRelativeOrbitTime(0.61527929901423877327491785323111F);
         TheSol.planetVenus.setBiomeInfo(BiomeVenus.venusFlat, BiomeVenus.venusMountain, BiomeVenus.venusValley);

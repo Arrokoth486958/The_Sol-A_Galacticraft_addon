@@ -1,34 +1,20 @@
 package mod.sol.util.handler;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
-import micdoodle8.mods.galacticraft.planets.mars.client.jei.methanesynth.MethaneSynthRecipeCategory;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import mod.sol.blocks.*;
-import mod.sol.entities.rocket.EntityTier4Rocket;
 import mod.sol.init.SolBlocks;
-import mod.sol.init.SolDimensions;
 import mod.sol.init.SolFluid;
 import mod.sol.init.SolItems;
 import mod.sol.util.IHasModel;
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.WorldServerMulti;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidRegistry.FluidRegisterEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -48,14 +34,6 @@ public class RegistryHandler
 		SolFluid.registerFluids();
 		RenderHandler.registerCustomMeshesAndStates();
 		event.getRegistry().registerAll(SolBlocks.Blocks.toArray(new Block[0]));
-	}
-	
-	public static void initRegistry() 
-	{
-	}
-	
-	public static void preInitRegistries(FMLPreInitializationEvent event) 
-	{
 	}
 	
 	@SubscribeEvent

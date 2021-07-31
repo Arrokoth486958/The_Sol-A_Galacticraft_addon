@@ -1,7 +1,8 @@
 package mod.sol.util.handler;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
+import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
+import mod.sol.planets.uranus.moon.ariel.sky.SkyProviderAriel;
 import org.lwjgl.opengl.GL11;
 
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
@@ -109,6 +110,18 @@ public class SolEventHandlerClient {
                         world.provider.setCloudRenderer(new CloudRenderer());
                     }
                 }
+                if (world.provider instanceof WorldProviderAriel)
+                {
+                    if (world.provider.getSkyRenderer() == null)
+                    {
+                        world.provider.setSkyRenderer(new SkyProviderAriel());
+                    }
+
+                    if (world.provider.getCloudRenderer() == null)
+                    {
+                        world.provider.setCloudRenderer(new CloudRenderer());
+                    }
+                }
                 if (world.provider instanceof WorldProviderPluto)
                 {
                     if (world.provider.getSkyRenderer() == null)
@@ -185,84 +198,6 @@ public class SolEventHandlerClient {
 
                 GL11.glEnd();
                 GL11.glColor4f(0.0F, 0.7F, 0.0F, alpha / 10.0F);
-                GL11.glBegin(GL11.GL_QUADS);
-
-                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
-                y = 0;
-                float x2 = max * body.getRelativeDistanceFromCenter().unScaledDistance;
-                float y2 = 0;
-
-                for (int i = 0; i < 90; i++)
-                {
-                    GL11.glVertex2f(x2, y2);
-                    GL11.glVertex2f(x, y);
-
-                    temp = x;
-                    x = cos * x - sin * y;
-                    y = sin * temp + cos * y;
-                    temp = x2;
-                    x2 = cos * x2 - sin * y2;
-                    y2 = sin * temp + cos * y2;
-
-                    GL11.glVertex2f(x, y);
-                    GL11.glVertex2f(x2, y2);
-                }
-
-                GL11.glEnd();
-            }
-        	else if (body.equals(AsteroidsModule.planetAsteroids) || body.getUnlocalizedName() == "asteroids")
-            {
-                float alpha = 1.0F;
-                GuiScreen screen = FMLClientHandler.instance().getClient().currentScreen;
-                if (screen instanceof GuiCelestialSelection)
-                {
-                    alpha = ((GuiCelestialSelection) screen).getAlpha(body);
-                    GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 2.0F);
-                }
-                else
-                {
-                    GL11.glColor4f(0.3F, 0.1F, 0.1F, 1.0F);
-                }
-                renderEvent.setCanceled(true);
-                GL11.glBegin(GL11.GL_LINE_LOOP);
-
-                final float theta = Constants.twoPI / 90;
-                final float cos = MathHelper.cos(theta);
-                final float sin = MathHelper.sin(theta);
-
-                float min = 62.0F;
-                float max = 86.0F;
-
-                float x = max * body.getRelativeDistanceFromCenter().unScaledDistance;
-                float y = 0;
-
-                float temp;
-                for (int i = 0; i < 90; i++)
-                {
-                    GL11.glVertex2f(x, y);
-
-                    temp = x;
-                    x = cos * x - sin * y;
-                    y = sin * temp + cos * y;
-                }
-
-                GL11.glEnd();
-                GL11.glBegin(GL11.GL_LINE_LOOP);
-
-                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
-                y = 0;
-
-                for (int i = 0; i < 90; i++)
-                {
-                    GL11.glVertex2f(x, y);
-
-                    temp = x;
-                    x = cos * x - sin * y;
-                    y = sin * temp + cos * y;
-                }
-
-                GL11.glEnd();
-                GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 10.0F);
                 GL11.glBegin(GL11.GL_QUADS);
 
                 x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
@@ -563,8 +498,7 @@ public class SolEventHandlerClient {
         public void onRenderPlanetPost(CelestialBodyRenderEvent.Post event)
         {
             final Minecraft minecraft = FMLClientHandler.instance().getClient();
-            final FontRenderer fontRenderer = minecraft.fontRenderer;
-            
+
             if (FMLClientHandler.instance().getClient().currentScreen instanceof GuiCelestialSelection)
             {
                 if (event.celestialBody == TheSol.planetSaturn)

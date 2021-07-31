@@ -78,8 +78,8 @@ public class SolItems
 	// t8
 	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
 	// battery
-	public static final Item ADVANCED_BATERRY_TIER_1 = new ItemAdvancedBattery("advanced_baterry_t1", 1);
-	public static final Item ADVANCED_BATERRY_TIER_2 = new ItemAdvancedBattery("advanced_baterry_t2", 2);
+	public static final Item ADVANCED_BATTERY_TIER_1 = new ItemAdvancedBattery("advanced_battery_t1", 1);
+	public static final Item ADVANCED_BATTERY_TIER_2 = new ItemAdvancedBattery("advanced_battery_t2", 2);
 	// oxygen tank
 	// public static final Item ADVANCED_OXYGEN_TANK = new ItemOxygenTankAdvanced(4, "advanced_oxygen_tank");
 	// crafting material

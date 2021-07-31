@@ -16,6 +16,5 @@ public class SolRecipeSmelting {
 	public static void registryRecipe() 
 	{
 		GameRegistry.addSmelting(SolItems.SULFUR_SHARD, new ItemStack(SolItems.SULFUR_INGOT, 1, 0), 1F);
-		GameRegistry.addSmelting(SolBlocks.ARIEL_LITHIUM_ORE, new ItemStack(SolItems.MANGANESE_INGOT), 1F);
 	}
 }
