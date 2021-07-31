@@ -34,8 +34,6 @@ public class SolBlocks
 	public static final Block MERCURY_DUNGEON_BRICK = new BlockBase("mercury_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
 	public static final Block TREASURE_CHEST_T4 = new BlockTier4TreasureChest("treasure_t4");
 	//jupiter
-	public static final Block JUPITER_DUNGEON_BRICK = new BlockBase("jupiter_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
-	public static final Block TREASURE_CHEST_T5 = new BlockTier5TreasureChest("treasure_t5");
 	//io
 	public static final Block IO_SURFACE_ROCK = new BlockBase("io_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
 	public static final Block IO_SULFUR_BLOCK = new BlockBase("io_sulfur_block", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1F).setResistance(2F);
@@ -53,9 +51,10 @@ public class SolBlocks
 	public static final Block EUROPA_ALUMINUM_ORE = new BlockBaseAluminumOre("europa_aluminum_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block EUROPA_COPPER_ORE = new BlockBaseCopperOre("europa_copper_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block EUROPA_IRON_ORE = new BlockBaseIronOre("europa_iron_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	//jupiter misc
+	public static final Block JUPITER_DUNGEON_BRICK = new BlockBase("jupiter_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
+	public static final Block TREASURE_CHEST_T5 = new BlockTier5TreasureChest("treasure_t5");
 	//saturn
-	public static final Block SATURN_DUNGEON_BRICK = new BlockBase("saturn_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
-	public static final Block TREASURE_CHEST_T6 = new BlockTier6TreasureChest("treasure_t6");
 	//mimas
 	public static final Block MIMAS_TURF = new BlockBase("mimas_turf", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(0.75F).setResistance(2F);
 	public static final Block MIMAS_DIRT = new BlockBase("mimas_dirt", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1F).setResistance(3F);
@@ -74,9 +73,10 @@ public class SolBlocks
 	public static final Block TITAN_ILMENITE_ORE = new BlockBaseIlmeniteOre("titan_iron_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TITAN_MAGANESE_ORE = new BlockBaseManganeseOre("titan_manganese_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block TITAN_TIN_ORE = new BlockBaseTinOre("titan_tin_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	//saturn misc
+	public static final Block SATURN_DUNGEON_BRICK = new BlockBase("saturn_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
+	public static final Block TREASURE_CHEST_T6 = new BlockTier6TreasureChest("treasure_t6");
 	//uranus
-	public static final Block URANUS_DUNGEON_BRICK = new BlockBase("uranus_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
-	public static final Block TREASURE_CHEST_T7 = new BlockTier7TreasureChest("treasure_t7");
 	//ariel
 	public static final Block ARIEL_TURF = new BlockBase("ariel_turf", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
 	public static final Block ARIEL_DIRT = new BlockBase("ariel_dirt", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);
@@ -88,6 +88,9 @@ public class SolBlocks
 	public static final Block ARIEL_LITHIUM_ORE = new BlockBaseLithiumOre("ariel_lithium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block ARIEL_TIN_ORE = new BlockBaseTinOre("ariel_tin_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block CARBON_DIOXIDE = new BlockGas("carbon_dioxide", TheSol.BLOCK_TAB).setHardness(0.0F).setResistance(0F);
+	//uranus misc
+	public static final Block URANUS_DUNGEON_BRICK = new BlockBase("uranus_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
+	public static final Block TREASURE_CHEST_T7 = new BlockTier7TreasureChest("treasure_t7");
 	//pluto
 	public static final Block PLUTO_SURFACE_ROCK = new BlockBase("pluto_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
 	public static final Block PLUTO_SUB_SURFACE_ROCK = new BlockBase("pluto_sub_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);

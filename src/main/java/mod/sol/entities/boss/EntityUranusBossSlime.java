@@ -398,7 +398,7 @@ public class EntityUranusBossSlime extends EntityBossBase implements IMob, IEnti
 
     @Override
     public BossInfo.Color getHealthBarColor() {
-        return BossInfo.Color.GREEN;
+        return BossInfo.Color.BLUE;
     }
 
     @Override

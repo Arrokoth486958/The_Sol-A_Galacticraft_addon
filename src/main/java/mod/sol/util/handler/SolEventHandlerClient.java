@@ -1,15 +1,9 @@
 package mod.sol.util.handler;
 
+import mod.sol.config.ConfigManagerSol;
 import org.lwjgl.opengl.GL11;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
-
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -17,18 +11,7 @@ import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
-import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
-import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelAstroMiner;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelBeamReceiver;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelBeamReflector;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelGrapple;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelRocketT3;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelTelepad;
 import mod.sol.TheSol;
-import mod.sol.entities.rocket.EntityTier4Rocket;
-import mod.sol.init.SolItems;
 import mod.sol.planets.jupiter.moons.europa.dimension.WorldProviderEuropa;
 import mod.sol.planets.jupiter.moons.europa.sky.SkyProviderEuropa;
 import mod.sol.planets.jupiter.moons.io.dimension.WorldProviderIo;
@@ -41,21 +24,12 @@ import mod.sol.planets.saturn.moons.mimas.dimension.WorldProviderMimas;
 import mod.sol.planets.saturn.moons.mimas.sky.SkyProviderMimas;
 import mod.sol.planets.saturn.moons.titan.dimension.WorldProviderTitan;
 import mod.sol.planets.saturn.moons.titan.sky.SkyProviderTitan;
-import mod.sol.util.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.multiplayer.WorldClient;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.client.event.ModelBakeEvent;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.common.model.IModelState;
-import net.minecraftforge.common.model.TRSRTransformation;
 import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -68,6 +42,7 @@ public class SolEventHandlerClient {
         @SubscribeEvent
         public void onClientTick(ClientTickEvent event)
         {
+            //System.out.println(ConfigManagerSol.dimensionidMercury);
             final Minecraft minecraft = FMLClientHandler.instance().getClient();
 
             final WorldClient world = minecraft.world;

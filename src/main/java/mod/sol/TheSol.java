@@ -1,6 +1,5 @@
 package mod.sol;
 
-import java.io.File;
 import java.util.List;
 
 import com.google.common.collect.ImmutableList;
@@ -57,7 +56,6 @@ import mod.realistic_galaxy_map.api.client.galaxy.StarRealistic;
 import mod.realistic_galaxy_map.dimension.WorldProviderRealisticMars;
 import mod.realistic_galaxy_map.dimension.WorldProviderRealisticMoon;
 import mod.realistic_galaxy_map.dimension.WorldProviderRealisticVenus;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -67,9 +65,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.SpawnListEntry;
 import net.minecraftforge.client.event.ModelBakeEvent;
-import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.model.IModelState;
 import net.minecraftforge.common.model.TRSRTransformation;
@@ -86,7 +82,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import mod.sol.config.ConfigManagerSol;
 import mod.sol.entities.EntityHugeFireball;
 import mod.sol.entities.boss.EntityJupiterBossGhast;
 import mod.sol.entities.boss.EntityMercuryBossBlaze;
@@ -150,9 +145,7 @@ public class TheSol
 			return new ItemStack(SolBlocks.MERCURY_DUNGEON_BRICK);
 		}
 	};
-	
-	public static File configSol;
-	
+
 	static { FluidRegistry.enableUniversalBucket(); }
 	
 	// solarsystem
@@ -206,7 +199,6 @@ public class TheSol
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event)
 	{
-    	ConfigManagerSol.registerConfig(event);
 		RealisticGalaxyMap.disableoverrideDefaultPlanets = true;
 		RealisticGalaxyMap.disableDynamicTierSystem = true;
         OBJLoaderGC.instance.addDomain(Reference.MOD_ID);
