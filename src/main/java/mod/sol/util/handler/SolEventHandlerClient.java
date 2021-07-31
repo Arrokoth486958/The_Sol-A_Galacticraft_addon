@@ -1,6 +1,7 @@
 package mod.sol.util.handler;
 
-import mod.sol.config.ConfigManagerSol;
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
 import org.lwjgl.opengl.GL11;
 
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
@@ -42,7 +43,6 @@ public class SolEventHandlerClient {
         @SubscribeEvent
         public void onClientTick(ClientTickEvent event)
         {
-            //System.out.println(ConfigManagerSol.dimensionidMercury);
             final Minecraft minecraft = FMLClientHandler.instance().getClient();
 
             final WorldClient world = minecraft.world;
@@ -128,13 +128,17 @@ public class SolEventHandlerClient {
         @SubscribeEvent
         public void onRingRender(CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre renderEvent)
         {
-        	if (renderEvent.celestialBody.equals(GalacticraftCore.planetOverworld))
+            CelestialBody body = renderEvent.celestialBody;
+            if (body.equals(TheSol.planetCeres) || body.equals(TheSol.planetPluto) || body.equals(TheSol.planetSedna)) {
+                renderEvent.setCanceled(true);
+            }
+        	else if (body.equals(GalacticraftCore.planetOverworld))
             {
                 float alpha = 1.0F;
                 GuiScreen screen = FMLClientHandler.instance().getClient().currentScreen;
                 if (screen instanceof GuiCelestialSelection)
                 {
-                    alpha = ((GuiCelestialSelection) screen).getAlpha(renderEvent.celestialBody);
+                    alpha = ((GuiCelestialSelection) screen).getAlpha(body);
                     GL11.glColor4f(0.0F, 0.7F, 0.0F, alpha / 2.0F);
                 }
                 else
@@ -151,7 +155,7 @@ public class SolEventHandlerClient {
                 float min = 68.0F;
                 float max = 82.0F;
 
-                float x = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y = 0;
 
                 float temp;
@@ -167,7 +171,7 @@ public class SolEventHandlerClient {
                 GL11.glEnd();
                 GL11.glBegin(GL11.GL_LINE_LOOP);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -183,9 +187,9 @@ public class SolEventHandlerClient {
                 GL11.glColor4f(0.0F, 0.7F, 0.0F, alpha / 10.0F);
                 GL11.glBegin(GL11.GL_QUADS);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
-                float x2 = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x2 = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y2 = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -206,13 +210,13 @@ public class SolEventHandlerClient {
 
                 GL11.glEnd();
             }
-        	else if (renderEvent.celestialBody.equals(TheSol.planetAsteroids))
+        	else if (body.equals(AsteroidsModule.planetAsteroids) || body.getUnlocalizedName() == "asteroids")
             {
                 float alpha = 1.0F;
                 GuiScreen screen = FMLClientHandler.instance().getClient().currentScreen;
                 if (screen instanceof GuiCelestialSelection)
                 {
-                    alpha = ((GuiCelestialSelection) screen).getAlpha(renderEvent.celestialBody);
+                    alpha = ((GuiCelestialSelection) screen).getAlpha(body);
                     GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 2.0F);
                 }
                 else
@@ -229,7 +233,7 @@ public class SolEventHandlerClient {
                 float min = 62.0F;
                 float max = 86.0F;
 
-                float x = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y = 0;
 
                 float temp;
@@ -245,7 +249,7 @@ public class SolEventHandlerClient {
                 GL11.glEnd();
                 GL11.glBegin(GL11.GL_LINE_LOOP);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -261,9 +265,9 @@ public class SolEventHandlerClient {
                 GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 10.0F);
                 GL11.glBegin(GL11.GL_QUADS);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
-                float x2 = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x2 = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y2 = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -284,13 +288,13 @@ public class SolEventHandlerClient {
 
                 GL11.glEnd();
             }
-        	else if (renderEvent.celestialBody.equals(TheSol.planetKuiperBelt))
+        	else if (body.equals(TheSol.planetKuiperBelt))
             {
                 float alpha = 1.0F;
                 GuiScreen screen = FMLClientHandler.instance().getClient().currentScreen;
                 if (screen instanceof GuiCelestialSelection)
                 {
-                    alpha = ((GuiCelestialSelection) screen).getAlpha(renderEvent.celestialBody);
+                    alpha = ((GuiCelestialSelection) screen).getAlpha(body);
                     GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 2.0F);
                 }
                 else
@@ -307,7 +311,7 @@ public class SolEventHandlerClient {
                 float min = 66.0F;
                 float max = 84.0F;
 
-                float x = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y = 0;
 
                 float temp;
@@ -323,7 +327,7 @@ public class SolEventHandlerClient {
                 GL11.glEnd();
                 GL11.glBegin(GL11.GL_LINE_LOOP);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -339,9 +343,9 @@ public class SolEventHandlerClient {
                 GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 10.0F);
                 GL11.glBegin(GL11.GL_QUADS);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
-                float x2 = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x2 = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y2 = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -362,13 +366,13 @@ public class SolEventHandlerClient {
 
                 GL11.glEnd();
             }
-        	else if (renderEvent.celestialBody.equals(TheSol.planetOortCloud))
+        	else if (body.equals(TheSol.planetOortCloud))
             {
                 float alpha = 1.0F;
                 GuiScreen screen = FMLClientHandler.instance().getClient().currentScreen;
                 if (screen instanceof GuiCelestialSelection)
                 {
-                    alpha = ((GuiCelestialSelection) screen).getAlpha(renderEvent.celestialBody);
+                    alpha = ((GuiCelestialSelection) screen).getAlpha(body);
                     GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 2.0F);
                 }
                 else
@@ -385,7 +389,7 @@ public class SolEventHandlerClient {
                 float min = 62.0F;
                 float max = 90.0F;
 
-                float x = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y = 0;
 
                 float temp;
@@ -401,7 +405,7 @@ public class SolEventHandlerClient {
                 GL11.glEnd();
                 GL11.glBegin(GL11.GL_LINE_LOOP);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -417,9 +421,9 @@ public class SolEventHandlerClient {
                 GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 10.0F);
                 GL11.glBegin(GL11.GL_QUADS);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
-                float x2 = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x2 = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y2 = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -440,13 +444,13 @@ public class SolEventHandlerClient {
 
                 GL11.glEnd();
             }
-            else if (renderEvent.celestialBody.equals(TheSol.moonRingsOfSaturn))
+            else if (body.equals(TheSol.moonRingsOfSaturn))
             {
                 float alpha = 1.0F;
                 GuiScreen screen = FMLClientHandler.instance().getClient().currentScreen;
                 if (screen instanceof GuiCelestialSelection)
                 {
-                    alpha = ((GuiCelestialSelection) screen).getAlpha(renderEvent.celestialBody);
+                    alpha = ((GuiCelestialSelection) screen).getAlpha(body);
                     GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 2.0F);
                 }
                 else
@@ -463,7 +467,7 @@ public class SolEventHandlerClient {
                 float min = 72.0F;
                 float max = 78.0F;
 
-                float x = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y = 0;
 
                 float temp;
@@ -479,7 +483,7 @@ public class SolEventHandlerClient {
                 GL11.glEnd();
                 GL11.glBegin(GL11.GL_LINE_LOOP);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -495,9 +499,9 @@ public class SolEventHandlerClient {
                 GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 10.0F);
                 GL11.glBegin(GL11.GL_QUADS);
 
-                x = min * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
                 y = 0;
-                float x2 = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
+                float x2 = max * body.getRelativeDistanceFromCenter().unScaledDistance;
                 float y2 = 0;
 
                 for (int i = 0; i < 90; i++)
@@ -519,15 +523,15 @@ public class SolEventHandlerClient {
                 GL11.glEnd();
             }
         }
-        
+
         /*@SideOnly(Side.CLIENT)
         @SubscribeEvent
-        public void renderBodyName(CelestialBodyRenderEvent.Post event) 
+        public void renderBodyName(CelestialBodyRenderEvent.Post event)
         {
             List<CelestialBody> fontsToRender = Lists.newArrayList();
             final Minecraft minecraft = FMLClientHandler.instance().getClient();
             final FontRenderer fontRenderer = minecraft.fontRenderer;
-            
+
             if (FMLClientHandler.instance().getClient().currentScreen instanceof GuiCelestialSelection && !(fontsToRender.contains((Object) event.celestialBody)))
             {
                 float size = ((GuiCelestialSelection)FMLClientHandler.instance().getClient().currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
@@ -540,15 +544,16 @@ public class SolEventHandlerClient {
         @SubscribeEvent
         public void onBodyRender(CelestialBodyRenderEvent.Pre renderEvent)
         {
-            if (renderEvent.celestialBody.equals(TheSol.planetKuiperBelt))
+            CelestialBody body = renderEvent.celestialBody;
+            if (body.equals(TheSol.planetKuiperBelt))
             {
                 GL11.glRotatef(ClientUtil.getClientTimeTotal() / 10.0F % 360, 0, 0, 1);
             }
-            else if (renderEvent.celestialBody.equals(TheSol.planetOortCloud))
+            else if (body.equals(TheSol.planetOortCloud))
             {
                 GL11.glRotatef(ClientUtil.getClientTimeTotal() / 10.0F % 360, 0, 0, 1);
             }
-            else if (renderEvent.celestialBody.equals(TheSol.moonRingsOfSaturn))
+            else if (body.equals(TheSol.moonRingsOfSaturn))
             {
                 GL11.glRotatef(ClientUtil.getClientTimeTotal() / 10.0F % 360, 0, 0, 1);
             }

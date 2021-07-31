@@ -2,6 +2,7 @@ package mod.sol.init;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
+import mod.sol.config.ConfigManagerSol;
 import mod.sol.planets.jupiter.moons.europa.dimension.WorldProviderEuropa;
 import mod.sol.planets.jupiter.moons.io.dimension.WorldProviderIo;
 import mod.sol.planets.mercury.dimension.WorldProviderMercury;
@@ -17,7 +18,7 @@ import net.minecraftforge.common.DimensionManager;
 public class SolDimensions
 {
 	//planets
-	public static DimensionType Mercury = GalacticraftRegistry.registerDimension("mercury", "_mercury", -(Reference.MOD_ID.hashCode() + 100), WorldProviderMercury.class, false);
+	public static DimensionType Mercury = GalacticraftRegistry.registerDimension("mercury", "_mercury", ConfigManagerSol.dimensionidMercury, WorldProviderMercury.class, false);
 	public static DimensionType Pluto = GalacticraftRegistry.registerDimension("pluto", "_pluto", -(Reference.MOD_ID.hashCode() + 900), WorldProviderPluto.class, false);
 	//public static DimensionType KuiperBelt = GalacticraftRegistry.registerDimension("kuiper_belt", "_kuiper_belt", -(Reference.MOD_ID.hashCode() + 1000), WorldProviderKuiperBelt.class, false);
 	//moons
