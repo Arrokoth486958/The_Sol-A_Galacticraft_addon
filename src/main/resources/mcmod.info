@@ -2,13 +2,13 @@
 {
   "modid": "sol",
   "name": "The Sol",
-  "description": "A Galacticraft Addon",
-  "version": "${version}",
+  "description": "This mod is a Galacticraft Addon, which added a lot of celestialbodies for Galacticraft Solar system",
+  "version": "1.0.0",
   "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
   "authorList": ["Arrokoth_486958"],
-  "credits": "Thanks the Galacticraft - Team for give me help",
+  "credits": "Thanks a loooooot of guys who give me help",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
