@@ -169,3 +169,11 @@ tile.carbon_dioxide.name=Carbon Dioxide
 // Uranus Misc
 tile.uranus_dungeon_brick.name=Uranus Dungeon Brick
 tile.treasure_t7.name=Tier 7 Treasure Chest
+
+// Pluto
+tile.pluto_surface_rock.name=Pluto Surface Rock
+tile.pluto_sub_surface_rock.name=Pluto Sub-surface Rock
+tile.pluto_rock.name=Pluto Rock
+tile.pluto_copper_ore.name=Copper Ore (Pluto)
+tile.pluto_iron_ore.name=Iron Ore (Pluto)
+tile.pluto_tin_ore.name=Tin Ore (Pluto)
