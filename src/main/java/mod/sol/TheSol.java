@@ -159,6 +159,7 @@ public class TheSol
 	public static Planet planetCeres;
 	public static Planet planetPluto;
 	public static Planet planetKuiperBelt;
+	public static Planet planetHaumea;
 	public static Planet planetSedna;
 	public static Planet planetOortCloud;
 	// override
