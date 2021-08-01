@@ -11,8 +11,7 @@ itemGroup.sol_blocks=The Sol - Blocks
 
 // Celestialbodies
 
-
-// Items
+////////////////           Items            ////////////////
 
 // Tier 4 Items
 item.reinforced_plate_t4.name=Tier 4 Duty-Plate
@@ -59,6 +58,110 @@ item.ingot_sulfur.name=Sulfur Ingot
 item.ingot_manganese.name=Manganese Ingot
 item.ingot_lithium.name=Lithium Ingot
 
+item.shard_sulfur.name=Sulfur Shard
+
 item.compressed_sulfur.name=Compressed Sulfur
 item.compressed_manganese.name=Compressed Manganese
 item.compressed_lithium=Compressed Lithium
+
+item.stick_sulfur.name=Sulfur Stick
+item.stick_manganese.name=Manganese Stick
+
+// Armor
+item.sulfur_helmet.name=Sulfur Helmet
+item.sulfur_chestplate.name=Sulfur Chestplate
+item.sulfur_leggings=Manganese Leggings
+item.sulfur_boots.name=Sulfur Boots
+
+item.manganese_helmet.name=Manganese Helmet
+item.manganese_chestplate.name=Manganese Chestplate
+item.manganese_leggings.name=Manganese Leggings
+item.manganese_boots.name=Manganese Boots
+
+// Tools
+item.sulfur_axe.name=Sulfur Axe
+item.sulfur_hoe.name=Sulfur Hoe
+item.sulfur_pickaxe.name=Sulfur Pickaxe
+item.sulfur_shovel.name=Sulfur Shovel
+item.sulfur_sword.name=Sulfur Sword
+
+item.manganese_axe.name=Manganese Axe
+item.manganese_hoe.name=Manganese Hoe
+item.manganese_pickaxe.name=Manganese Pickaxe
+item.manganese_shovel.name=Manganese Shovel
+item.manganese_sword.name=Manganese Sword
+
+////////////////           Blocks            ////////////////
+
+// Mercury
+tile.mercury_turf.name=Mercury Turf
+tile.mercury_dirt.name=Mercury Dirt
+tile.mercury_rock.name=Mercury Rock
+tile.mercury_aluminum_ore.name=Aluminum Ore (Mercury)
+tile.mercury_copper_ore.name=Copper Ore (Mercury)
+tile.mercury_desh_ore.name=Desh Ore (Mercury)
+tile.mercury_ilmenite_ore.name=Ilmenite Ore (Mercury)
+tile.mercury_iron_ore.name=Iron Ore (Mercury)
+tile.mercury_silicon_ore.name=Silicon Ore (Mercury)
+tile.mercury_tin_ore.name=Tin Ore (Mercury)
+tile.mercury_dungeon_brick.name=Mercury Dungeon Brick
+tile.treasure_t4.name=Tier 4 Treasure Chest
+
+// Io
+tile.io_surface_rock.name=Io Surface Rock
+tile.io_sulfur_block.name=Io Sulfur Block
+tile.io_ash_rock.name=Io Ash Rock
+tile.io_sub_surface_rock.name=Io Sub-surface Rock
+tile.io_rock.name=Io Rock
+tile.io_aluminum_ore.name=Aluminum Ore (Io)
+tile.io_copper_ore.name=Copper Ore (Io)
+tile.io_iron_ore.name=Iron Ore (Io)
+tile.io_sulfur_ore.name=Sulfur Ore (Io)
+
+// Europa
+tile.europa_surface_rock.name=Europa Surface Rock
+tile.europa_sub_surface_rock.name=Europa Sub-surface Rock
+tile.europa_rock.name=Europa Rock
+tile.europa_aluminum_ore.name=Aluminum Ore (Europa)
+tile.europa_copper_ore.name=Copper Ore (Europa)
+tile.europa_iron_ore.name=Iron Ore (Europa)
+
+// Jupiter Misc
+tile.jupiter_dungeon_brick.name=Jupiter Dungeon Brick
+tile.treasure_t5.name=Tier 5 Treasure Chest
+
+// Io
+tile.mimas_turf.name=Mimas Turf
+tile.mimas_dirt.name=Mimas Dirt
+tile.mimas_rock.name=Mimas Rock
+tile.mimas_copper_ore.name=Copper Ore (Mimas)
+tile.mimas_desh_ore.name=Desh Ore (Mimas)
+tile.mimas_iron_ore.name=Iron Ore (Mimas)
+tile.mimas_manganese_ore.name=Manganese Ore (Mimas)
+tile.mimas_tin_ore.name=Tin Ore (Mimas)
+
+// Europa
+tile.titan_surface_rock.name=Titan Surface Rock
+tile.titan_sub_surface_rock.name=Titan Sub-surface Rock
+tile.titan_rock.name=Titan Rock
+tile.titan_aluminum_ore.name=Copper Ore (Titan)
+tile.titan_desh_ore.name=Desh Ore (Titan)
+tile.titan_iron_ore.name=Iron Ore (Titan)
+tile.titan_manganese_ore.name=Manganese Ore (Titan)
+tile.titan_tin_ore.name=Tin Ore (Titan)
+
+// Saturn Misc
+tile.saturn_dungeon_brick.name=Saturn Dungeon Brick
+tile.treasure_t6.name=Tier 6 Treasure Chest
+
+// Mercury
+tile.ariel_turf.name=Ariel Turf
+tile.ariel_dirt.name=Ariel Dirt
+tile.ariel_rock.name=Ariel Rock
+tile.ariel_aluminum_ore.name=Aluminum Ore (Ariel)
+tile.ariel_desh_ore.name=Desh Ore (Ariel)
+tile.ariel_iron_ore.name=Iron Ore (Ariel)
+tile.ariel_ilmenite_ore.name=Ilmenite Ore (Ariel)
+tile.ariel_lithium_ore.name=Lithium Ore (Ariel)
+tile.ariel_tin_ore.name=Silicon Ore (Ariel)
+tile.carbon_dioxide.name=Carbon Dioxide
