@@ -27,7 +27,6 @@ import mod.sol.planets.saturn.moons.mimas.sky.SkyProviderMimas;
 import mod.sol.planets.saturn.moons.titan.dimension.WorldProviderTitan;
 import mod.sol.planets.saturn.moons.titan.sky.SkyProviderTitan;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.util.math.MathHelper;
@@ -381,81 +380,7 @@ public class SolEventHandlerClient {
             }
             else if (body.equals(TheSol.moonRingsOfSaturn))
             {
-                float alpha = 1.0F;
-                GuiScreen screen = FMLClientHandler.instance().getClient().currentScreen;
-                if (screen instanceof GuiCelestialSelection)
-                {
-                    alpha = ((GuiCelestialSelection) screen).getAlpha(body);
-                    GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 2.0F);
-                }
-                else
-                {
-                    GL11.glColor4f(0.3F, 0.1F, 0.1F, 1.0F);
-                }
                 renderEvent.setCanceled(true);
-                GL11.glBegin(GL11.GL_LINE_LOOP);
-
-                final float theta = Constants.twoPI / 90;
-                final float cos = MathHelper.cos(theta);
-                final float sin = MathHelper.sin(theta);
-
-                float min = 72.0F;
-                float max = 78.0F;
-
-                float x = max * body.getRelativeDistanceFromCenter().unScaledDistance;
-                float y = 0;
-
-                float temp;
-                for (int i = 0; i < 90; i++)
-                {
-                    GL11.glVertex2f(x, y);
-
-                    temp = x;
-                    x = cos * x - sin * y;
-                    y = sin * temp + cos * y;
-                }
-
-                GL11.glEnd();
-                GL11.glBegin(GL11.GL_LINE_LOOP);
-
-                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
-                y = 0;
-
-                for (int i = 0; i < 90; i++)
-                {
-                    GL11.glVertex2f(x, y);
-
-                    temp = x;
-                    x = cos * x - sin * y;
-                    y = sin * temp + cos * y;
-                }
-
-                GL11.glEnd();
-                GL11.glColor4f(0.7F, 0.0F, 0.0F, alpha / 10.0F);
-                GL11.glBegin(GL11.GL_QUADS);
-
-                x = min * body.getRelativeDistanceFromCenter().unScaledDistance;
-                y = 0;
-                float x2 = max * body.getRelativeDistanceFromCenter().unScaledDistance;
-                float y2 = 0;
-
-                for (int i = 0; i < 90; i++)
-                {
-                    GL11.glVertex2f(x2, y2);
-                    GL11.glVertex2f(x, y);
-
-                    temp = x;
-                    x = cos * x - sin * y;
-                    y = sin * temp + cos * y;
-                    temp = x2;
-                    x2 = cos * x2 - sin * y2;
-                    y2 = sin * temp + cos * y2;
-
-                    GL11.glVertex2f(x, y);
-                    GL11.glVertex2f(x2, y2);
-                }
-
-                GL11.glEnd();
             }
         }
 
@@ -469,7 +394,7 @@ public class SolEventHandlerClient {
 
             if (FMLClientHandler.instance().getClient().currentScreen instanceof GuiCelestialSelection && !(fontsToRender.contains((Object) event.celestialBody)))
             {
-                float size = ((GuiCelestialSelection)FMLClientHandler.instance().getClient().currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
+                float size = ((GuiCelestialSelection) FMLClientHandler.instance().getClient().currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
                 ((GuiCelestialSelection) FMLClientHandler.instance().getClient().currentScreen).drawCenteredString(fontRenderer, event.celestialBody.getLocalizedName(), (int) size, (int) size + 5, 14737632);
                 fontsToRender.add(event.celestialBody);
             }
