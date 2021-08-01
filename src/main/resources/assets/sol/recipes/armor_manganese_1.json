@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "###",
+        "# #"
+    ],
+    
+    "key":
+    {
+        "#":
+        {
+            "item": "sol:compressed_manganese"
+        }
+    },
+
+    "result":
+    {
+        "item":  "sol:manganese_helmet",
+        "count": 1
+    }
+}

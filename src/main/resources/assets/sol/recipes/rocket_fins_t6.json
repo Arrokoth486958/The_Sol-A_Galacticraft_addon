@@ -1,6 +1,6 @@
 {
 	"result": {
-		"item": "sol:rocket_fins_t5"
+		"item": "sol:rocket_fins_t6"
 	},
 	"pattern": [
 		" Y ",
@@ -10,10 +10,10 @@
 	"type": "forge:ore_shaped",
 	"key": {
 		"X": {
-			"item": "sol:reinforced_plate_t5"
+			"item": "sol:reinforced_plate_t6"
 		},
 		"Y": {
-			"item": "sol:compressed_sulfur"
+			"item": "sol:compressed_manganese"
 		}
 	}
 }

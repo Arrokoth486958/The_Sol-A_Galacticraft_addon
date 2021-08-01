@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "###",
+        " / ",
+		" / "
+    ],
+    
+    "key":
+    {
+        "#":
+        {
+            "item": "sol:compressed_manganese"
+        },
+		"/":
+        {
+            "item": "sol:stick_manganese"
+        }
+    },
+    
+    "result":
+    {
+        "item":  "sol:manganese_pickaxe",
+        "count": 1
+    }
+}

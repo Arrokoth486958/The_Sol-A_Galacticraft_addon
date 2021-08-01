@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "#",
+        "#"
+    ],
+    
+    "key":
+    {
+        "#":
+        {
+            "item": "sol:ingot_manganese"
+        }
+    },
+    
+    "result":
+    {
+        "item":  "sol:stick_manganese",
+        "count": 4
+    }
+}
