@@ -39,10 +39,10 @@ moon.triton=Triton
 moon.charon=Charon
 
 # Entities
-entity.mercury_blaze_boss=Mercury Blaze Boss
-entity.jupiter_ghast_boss=Jupiter Ghast Boss
-entity.saturn_stray_boss=Saturn Stray Boss
-entity.uranus_slime_boss=Uranus Slime Boss
+entity.mercury_blaze_boss.name=Mercury Blaze Boss
+entity.jupiter_ghast_boss.name=Jupiter Ghast Boss
+entity.saturn_stray_boss.name=Saturn Stray Boss
+entity.uranus_slime_boss.name=Uranus Slime Boss
 
 # Fluid
 fluid.liquid_methane=Liquid Methane

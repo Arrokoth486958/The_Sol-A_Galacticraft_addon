@@ -39,10 +39,10 @@ moon.triton=天卫四
 moon.charon=冥卫一
 
 # Entities
-entity.mercury_blaze_boss=水星烈焰人之王
-entity.jupiter_ghast_boss=木星恶魂之王
-entity.saturn_stray_boss=土星流浪者之王
-entity.uranus_slime_boss=天王星史莱姆之王
+entity.mercury_blaze_boss.name=水星烈焰人之王
+entity.jupiter_ghast_boss.name=木星恶魂之王
+entity.saturn_stray_boss.name=土星流浪者之王
+entity.uranus_slime_boss.name=天王星史莱姆之王
 
 # Fluid
 fluid.liquid_methane=液态甲烷
