@@ -19,14 +19,14 @@ public class SolDimensions
 {
 	//planets
 	public static DimensionType Mercury = GalacticraftRegistry.registerDimension("mercury", "_mercury", ConfigManagerSol.dimensionidMercury, WorldProviderMercury.class, false);
-	public static DimensionType Pluto = GalacticraftRegistry.registerDimension("pluto", "_pluto", -(Reference.MOD_ID.hashCode() + 900), WorldProviderPluto.class, false);
+	public static DimensionType Pluto = GalacticraftRegistry.registerDimension("pluto", "_pluto", ConfigManagerSol.dimensionidPluto, WorldProviderPluto.class, false);
 	//public static DimensionType KuiperBelt = GalacticraftRegistry.registerDimension("kuiper_belt", "_kuiper_belt", -(Reference.MOD_ID.hashCode() + 1000), WorldProviderKuiperBelt.class, false);
 	//moons
-	public static DimensionType Io = GalacticraftRegistry.registerDimension("io", "_io", -(Reference.MOD_ID.hashCode() + 501), WorldProviderIo.class, false);
-	public static DimensionType Europa = GalacticraftRegistry.registerDimension("europa", "_europa", -(Reference.MOD_ID.hashCode() + 502), WorldProviderEuropa.class, false);
+	public static DimensionType Io = GalacticraftRegistry.registerDimension("io", "_io", ConfigManagerSol.dimensionidIo, WorldProviderIo.class, false);
+	public static DimensionType Europa = GalacticraftRegistry.registerDimension("europa", "_europa", ConfigManagerSol.dimensionidEuropa, WorldProviderEuropa.class, false);
 	
-	public static DimensionType Mimas = GalacticraftRegistry.registerDimension("mimas", "_mimas", -(Reference.MOD_ID.hashCode() + 601), WorldProviderMimas.class, false);
-	public static DimensionType Titan = GalacticraftRegistry.registerDimension("titan", "_titan", -(Reference.MOD_ID.hashCode() + 606), WorldProviderTitan.class, false);
+	public static DimensionType Mimas = GalacticraftRegistry.registerDimension("mimas", "_mimas", ConfigManagerSol.dimensionidMimas, WorldProviderMimas.class, false);
+	public static DimensionType Titan = GalacticraftRegistry.registerDimension("titan", "_titan", ConfigManagerSol.dimensionidTitan, WorldProviderTitan.class, false);
 
-	public static DimensionType Ariel = GalacticraftRegistry.registerDimension("ariel", "_ariel", -(Reference.MOD_ID.hashCode() + 701), WorldProviderAriel.class, false);
+	public static DimensionType Ariel = GalacticraftRegistry.registerDimension("ariel", "_ariel", ConfigManagerSol.dimensionidAriel, WorldProviderAriel.class, false);
 }

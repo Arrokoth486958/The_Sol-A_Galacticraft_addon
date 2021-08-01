@@ -142,7 +142,7 @@ public class SolEventHandlerClient {
         public void onRingRender(CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre renderEvent)
         {
             CelestialBody body = renderEvent.celestialBody;
-            if (body.equals(TheSol.planetCeres) || body.equals(TheSol.planetPluto) || body.equals(TheSol.planetSedna)) {
+            if (body.equals(TheSol.planetCeres) || body.equals(TheSol.planetPluto) || body.equals(TheSol.planetSedna) || body.equals(TheSol.planetHaumea) || body.equals(TheSol.planetMakemake) || body.equals(TheSol.planetEris)) {
                 renderEvent.setCanceled(true);
             }
         	else if (body.equals(GalacticraftCore.planetOverworld))
