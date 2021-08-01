@@ -1,59 +1,95 @@
-item.translation_info.name=Translation Info: Needs translate!
+#######################################
+#    The Sol - A Galacticraft addon   #
+#          en_US translation          #
+#######################################
 
-///////////////////////////////////////
-//   The Sol - A Galacticraft addon  //
-//         en_US translation         //
-///////////////////////////////////////
-
-// Creative Tabs(Item Groups)
+# Creative Tabs(Item Groups)
 itemGroup.sol_items=The Sol - Items
 itemGroup.sol_blocks=The Sol - Blocks
 
-// Celestialbodies
+# Celestialbodies
+planet.ceres=Ceres
+planet.pluto=Pluto
+planet.kuiper_belt=Kuiper Belt
+planet.sedna=Sedna
+planet.oort_cloud=Oort Cloud
 
-////////////////           Items            ////////////////
+moon.phobos=Phobos
+moon.deimos=Deimos
 
-// Tier 4 Items
+moon.io=Io
+moon.europa=Europa
+moon.ganymede=Ganymede
+moon.callisto=Callisto
+
+moon.rings_of_saturn=Saturn Rings
+moon.mimas=Mimas
+moon.enceladus=Enceladus
+moon.tethys=Tethys
+moon.dione=Dione
+moon.rhea=Rhea
+moon.titan=Titan
+
+moon.ariel=Ariel
+moon.umbriel=Umbriel
+moon.oberon=Oberon
+
+moon.triton=Triton
+
+moon.charon=Charon
+
+# Entities
+entity.mercury_blaze_boss=Mercury Blaze Boss
+entity.jupiter_ghast_boss=Jupiter Ghast Boss
+entity.saturn_stray_boss=Saturn Stray Boss
+entity.uranus_slime_boss=Uranus Slime Boss
+
+# Fluid
+fluid.liquid_methane=Liquid Methane
+
+#////////////////           Items            ////////////////#
+
+# Tier 4 Items
 item.reinforced_plate_t4.name=Tier 4 Duty-Plate
 item.rocket_fins_t4.name=Tier 4 Rocket Fins
 item.engine_booster_t4.name=Tier 4 Rocket Booster
 
-// Tier 5 Items
+# Tier 5 Items
 item.rocket_engine_t5.name=Tier 5 Rocket Engine
 item.reinforced_plate_t5.name=Tier 5 Duty-Plate
 item.nose_cone_t5.name=Tier 5 Nose Cone
 item.rocket_fins_t5.name=Tier 5 Rocket Fins
 item.engine_booster_t5.name=Tier 5 Booster
 
-// Tier 5 Items
+# Tier 5 Items
 item.rocket_engine_t6.name=Tier 6 Rocket Engine
 item.reinforced_plate_t6.name=Tier 6 Duty-Plate
 item.nose_cone_t6.name=Tier 6 Nose Cone
 item.rocket_fins_t6.name=Tier 6 Rocket Fins
 item.engine_booster_t6.name=Tier 6 Booster
 
-// Keys
+# Keys
 key_t4.name=Tier 4 Dungeon Key
 key_t5.name=Tier 5 Dungeon Key
 key_t6.name=Tier 6 Dungeon Key
 key_t7.name=Tier 7 Dungeon Key
 
-// Schematics
+# Schematics
 item.schematic_rocket_t4.name=Nasa Workbench Schematic (Tier 4 Rocket)
 item.schematic_rocket_t5.name=Nasa Workbench Schematic (Tier 5 Rocket)
 item.schematic_rocket_t6.name=Nasa Workbench Schematic (Tier 6 Rocket)
 item.schematic_rocket_t7.name=Nasa Workbench Schematic (Tier 7 Rocket)
 
-// Rockets
+# Rockets
 item.rocket_t4.t4Rocket.name=Tier 4 Rocket
 item.rocket_t5.t5Rocket.name=Tier 5 Rocket
 item.rocket_t6.t6Rocket.name=Tier 6 Rocket
 
-// Battery
+# Battery
 item.advanced_battery_t1.name=Advanced Battery (Tier 1)
 item.advanced_battery_t2.name=Advanced Battery (Tier 2)
 
-// Crafting Material
+# Crafting Material
 item.ingot_sulfur.name=Sulfur Ingot
 item.ingot_manganese.name=Manganese Ingot
 item.ingot_lithium.name=Lithium Ingot
@@ -67,7 +103,7 @@ item.compressed_lithium=Compressed Lithium
 item.stick_sulfur.name=Sulfur Stick
 item.stick_manganese.name=Manganese Stick
 
-// Armor
+# Armor
 item.sulfur_helmet.name=Sulfur Helmet
 item.sulfur_chestplate.name=Sulfur Chestplate
 item.sulfur_leggings=Manganese Leggings
@@ -78,7 +114,7 @@ item.manganese_chestplate.name=Manganese Chestplate
 item.manganese_leggings.name=Manganese Leggings
 item.manganese_boots.name=Manganese Boots
 
-// Tools
+# Tools
 item.sulfur_axe.name=Sulfur Axe
 item.sulfur_hoe.name=Sulfur Hoe
 item.sulfur_pickaxe.name=Sulfur Pickaxe
@@ -91,9 +127,9 @@ item.manganese_pickaxe.name=Manganese Pickaxe
 item.manganese_shovel.name=Manganese Shovel
 item.manganese_sword.name=Manganese Sword
 
-////////////////           Blocks            ////////////////
+########           Blocks            ########
 
-// Mercury
+# Mercury
 tile.mercury_turf.name=Mercury Turf
 tile.mercury_dirt.name=Mercury Dirt
 tile.mercury_rock.name=Mercury Rock
@@ -107,7 +143,7 @@ tile.mercury_tin_ore.name=Tin Ore (Mercury)
 tile.mercury_dungeon_brick.name=Mercury Dungeon Brick
 tile.treasure_t4.name=Tier 4 Treasure Chest
 
-// Io
+# Io
 tile.io_surface_rock.name=Io Surface Rock
 tile.io_sulfur_block.name=Io Sulfur Block
 tile.io_ash_rock.name=Io Ash Rock
@@ -118,7 +154,7 @@ tile.io_copper_ore.name=Copper Ore (Io)
 tile.io_iron_ore.name=Iron Ore (Io)
 tile.io_sulfur_ore.name=Sulfur Ore (Io)
 
-// Europa
+# Europa
 tile.europa_surface_rock.name=Europa Surface Rock
 tile.europa_sub_surface_rock.name=Europa Sub-surface Rock
 tile.europa_rock.name=Europa Rock
@@ -126,11 +162,11 @@ tile.europa_aluminum_ore.name=Aluminum Ore (Europa)
 tile.europa_copper_ore.name=Copper Ore (Europa)
 tile.europa_iron_ore.name=Iron Ore (Europa)
 
-// Jupiter Misc
+# Jupiter Misc
 tile.jupiter_dungeon_brick.name=Jupiter Dungeon Brick
 tile.treasure_t5.name=Tier 5 Treasure Chest
 
-// Io
+# Io
 tile.mimas_turf.name=Mimas Turf
 tile.mimas_dirt.name=Mimas Dirt
 tile.mimas_rock.name=Mimas Rock
@@ -140,7 +176,7 @@ tile.mimas_iron_ore.name=Iron Ore (Mimas)
 tile.mimas_manganese_ore.name=Manganese Ore (Mimas)
 tile.mimas_tin_ore.name=Tin Ore (Mimas)
 
-// Europa
+# Europa
 tile.titan_surface_rock.name=Titan Surface Rock
 tile.titan_sub_surface_rock.name=Titan Sub-surface Rock
 tile.titan_rock.name=Titan Rock
@@ -150,11 +186,11 @@ tile.titan_iron_ore.name=Iron Ore (Titan)
 tile.titan_manganese_ore.name=Manganese Ore (Titan)
 tile.titan_tin_ore.name=Tin Ore (Titan)
 
-// Saturn Misc
+# Saturn Misc
 tile.saturn_dungeon_brick.name=Saturn Dungeon Brick
 tile.treasure_t6.name=Tier 6 Treasure Chest
 
-// Mercury
+# Mercury
 tile.ariel_turf.name=Ariel Turf
 tile.ariel_dirt.name=Ariel Dirt
 tile.ariel_rock.name=Ariel Rock
@@ -166,11 +202,11 @@ tile.ariel_lithium_ore.name=Lithium Ore (Ariel)
 tile.ariel_tin_ore.name=Silicon Ore (Ariel)
 tile.carbon_dioxide.name=Carbon Dioxide
 
-// Uranus Misc
+# Uranus Misc
 tile.uranus_dungeon_brick.name=Uranus Dungeon Brick
 tile.treasure_t7.name=Tier 7 Treasure Chest
 
-// Pluto
+# Pluto
 tile.pluto_surface_rock.name=Pluto Surface Rock
 tile.pluto_sub_surface_rock.name=Pluto Sub-surface Rock
 tile.pluto_rock.name=Pluto Rock
