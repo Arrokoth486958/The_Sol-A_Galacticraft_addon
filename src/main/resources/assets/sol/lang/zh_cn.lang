@@ -98,7 +98,7 @@ item.shard_sulfur.name=硫碎片
 
 item.compressed_sulfur.name=致密硫板
 item.compressed_manganese.name=致密锰板
-item.compressed_lithium=致密锂板
+item.compressed_lithium.name=致密锂板
 
 item.stick_sulfur.name=硫棒
 item.stick_manganese.name=锰棒

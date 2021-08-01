@@ -98,7 +98,7 @@ item.shard_sulfur.name=Sulfur Shard
 
 item.compressed_sulfur.name=Compressed Sulfur
 item.compressed_manganese.name=Compressed Manganese
-item.compressed_lithium=Compressed Lithium
+item.compressed_lithium.name=Compressed Lithium
 
 item.stick_sulfur.name=Sulfur Stick
 item.stick_manganese.name=Manganese Stick
