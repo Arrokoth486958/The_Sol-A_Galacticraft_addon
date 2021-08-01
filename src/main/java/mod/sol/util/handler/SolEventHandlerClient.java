@@ -135,7 +135,7 @@ public class SolEventHandlerClient {
                 }
             }
         }
-        
+
         @SideOnly(Side.CLIENT)
         @SubscribeEvent
         public void onRingRender(CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre renderEvent)
