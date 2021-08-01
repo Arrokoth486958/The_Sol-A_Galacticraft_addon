@@ -1,7 +1,7 @@
 {
     "pools": [
         {
-			"name": "dungeon_tier_5",
+			"name": "dungeon_tier_6",
             "rolls": {
                 "min": 6,
                 "max": 9
