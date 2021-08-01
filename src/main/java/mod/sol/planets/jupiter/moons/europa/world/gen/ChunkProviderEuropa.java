@@ -36,7 +36,7 @@ public class ChunkProviderEuropa extends ChunkProviderBase
 {
     public static final IBlockState BLOCK_FILL = SolBlocks.EUROPA_ROCK.getDefaultState();
 
-    private final BiomeDecoratorEuropa biomeDecoratorVenus = new BiomeDecoratorEuropa();
+    private final BiomeDecoratorEuropa biomeDecorator = new BiomeDecoratorEuropa();
     private Random rand;
     private NoiseGeneratorOctaves noiseGen1;
     private NoiseGeneratorOctaves noiseGen2;
@@ -204,6 +204,18 @@ public class ChunkProviderEuropa extends ChunkProviderBase
         	}
     	}
     }
+
+    private void generateSnow(ChunkPrimer primer) {
+        for (int localX = 0; localX < 16; ++localX) {
+            for (int localZ = 0; localZ < 16; ++localZ) {
+                for (int localY = 0; localY < 255; ++localY) {
+                    if (primer.getBlockState(localX, localY, localZ) == SolBlocks.EUROPA_SURFACE_ROCK.getDefaultState() && primer.getBlockState(localX, localY + 1, localZ) == Blocks.AIR.getDefaultState()) {
+                        primer.setBlockState(localX, localY + 1, localZ, Blocks.SNOW_LAYER.getDefaultState());
+                    }
+                }
+            }
+        }
+    }
     
     @Override
     public Chunk generateChunk(int x, int z)
@@ -218,6 +230,7 @@ public class ChunkProviderEuropa extends ChunkProviderBase
         this.caveGenerator.generate(this.world, x, z, chunkprimer);
         this.generateSurface(chunkprimer);
         this.generateOcean(78, chunkprimer);
+        this.generateSnow(chunkprimer);
         
         //this.dungeonGenerator.generate(this.world, x, z, chunkprimer);
 

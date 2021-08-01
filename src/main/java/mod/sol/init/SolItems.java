@@ -21,7 +21,6 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class SolItems
 {
-	
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	// unused
 	// public static final Item TRANSLATION_INFO = new ItemBase("translation_info", TheSol.ITEM_TAB);

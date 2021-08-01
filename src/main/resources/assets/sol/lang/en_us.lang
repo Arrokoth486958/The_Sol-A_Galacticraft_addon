@@ -1,1 +1,64 @@
 item.translation_info.name=Translation Info: Needs translate!
+
+///////////////////////////////////////
+//   The Sol - A Galacticraft addon  //
+//         en_US translation         //
+///////////////////////////////////////
+
+// Creative Tabs(Item Groups)
+itemGroup.sol_items=The Sol - Items
+itemGroup.sol_blocks=The Sol - Blocks
+
+// Celestialbodies
+
+
+// Items
+
+// Tier 4 Items
+item.reinforced_plate_t4.name=Tier 4 Duty-Plate
+item.rocket_fins_t4.name=Tier 4 Rocket Fins
+item.engine_booster_t4.name=Tier 4 Rocket Booster
+
+// Tier 5 Items
+item.rocket_engine_t5.name=Tier 5 Rocket Engine
+item.reinforced_plate_t5.name=Tier 5 Duty-Plate
+item.nose_cone_t5.name=Tier 5 Nose Cone
+item.rocket_fins_t5.name=Tier 5 Rocket Fins
+item.engine_booster_t5.name=Tier 5 Booster
+
+// Tier 5 Items
+item.rocket_engine_t6.name=Tier 6 Rocket Engine
+item.reinforced_plate_t6.name=Tier 6 Duty-Plate
+item.nose_cone_t6.name=Tier 6 Nose Cone
+item.rocket_fins_t6.name=Tier 6 Rocket Fins
+item.engine_booster_t6.name=Tier 6 Booster
+
+// Keys
+key_t4.name=Tier 4 Dungeon Key
+key_t5.name=Tier 5 Dungeon Key
+key_t6.name=Tier 6 Dungeon Key
+key_t7.name=Tier 7 Dungeon Key
+
+// Schematics
+item.schematic_rocket_t4.name=Nasa Workbench Schematic (Tier 4 Rocket)
+item.schematic_rocket_t5.name=Nasa Workbench Schematic (Tier 5 Rocket)
+item.schematic_rocket_t6.name=Nasa Workbench Schematic (Tier 6 Rocket)
+item.schematic_rocket_t7.name=Nasa Workbench Schematic (Tier 7 Rocket)
+
+// Rockets
+item.rocket_t4.t4Rocket.name=Tier 4 Rocket
+item.rocket_t5.t5Rocket.name=Tier 5 Rocket
+item.rocket_t6.t6Rocket.name=Tier 6 Rocket
+
+// Battery
+item.advanced_battery_t1.name=Advanced Battery (Tier 1)
+item.advanced_battery_t2.name=Advanced Battery (Tier 2)
+
+// Crafting Material
+item.ingot_sulfur.name=Sulfur Ingot
+item.ingot_manganese.name=Manganese Ingot
+item.ingot_lithium.name=Lithium Ingot
+
+item.compressed_sulfur.name=Compressed Sulfur
+item.compressed_manganese.name=Compressed Manganese
+item.compressed_lithium=Compressed Lithium

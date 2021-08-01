@@ -40,7 +40,7 @@ public class ChunkProviderAriel extends ChunkProviderBase
 
     private final World world;
 
-    private final MapGenDungeonUranus dungeonGeneratorMoon = new MapGenDungeonUranus(new DungeonConfiguration(SolBlocks.URANUS_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossUranus.class, RoomTreasureUranus.class));
+    private final MapGenDungeonUranus dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(SolBlocks.URANUS_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossUranus.class, RoomTreasureUranus.class));
 
     private Biome[] biomesForGeneration = { BiomeAdaptive.biomeDefault };
 
@@ -181,7 +181,7 @@ public class ChunkProviderAriel extends ChunkProviderBase
 
         this.caveGenerator.generate(this.world, x, z, chunkprimer);
 
-        this.dungeonGeneratorMoon.generate(this.world, x, z, chunkprimer);
+        this.dungeonGenerator.generate(this.world, x, z, chunkprimer);
 
         Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
         byte[] abyte = chunk.getBiomeArray();
@@ -277,7 +277,7 @@ public class ChunkProviderAriel extends ChunkProviderBase
         long l = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed((long) x * k + (long) z * l ^ this.world.getSeed());
 
-        this.dungeonGeneratorMoon.generateStructure(this.world, this.rand, new ChunkPos(x, z));
+        this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(x, z));
 
         biomegenbase.decorate(this.world, this.rand, new BlockPos(i, 0, j));
         BlockFalling.fallInstantly = false;
@@ -293,6 +293,6 @@ public class ChunkProviderAriel extends ChunkProviderBase
     @Override
     public void recreateStructures(Chunk chunk, int x, int z)
     {
-        this.dungeonGeneratorMoon.generate(this.world, x, z, null);
+        this.dungeonGenerator.generate(this.world, x, z, null);
     }
 }

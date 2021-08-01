@@ -3,23 +3,11 @@ package mod.sol.planets.saturn.moons.mimas.world.gen;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.api.world.ChunkProviderBase;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockBasicMoon;
 import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
-import micdoodle8.mods.galacticraft.core.world.gen.MapGenVillageMoon;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import mod.sol.init.SolBlocks;
-import mod.sol.planets.mercury.biome.BiomeMercury;
-import mod.sol.planets.mercury.world.gen.MapGenDungeonMercury;
-import mod.sol.planets.mercury.world.gen.RoomBossMercury;
-import mod.sol.planets.mercury.world.gen.RoomTreasureMercury;
-import mod.sol.planets.pluto.biome.BiomePluto;
 import mod.sol.planets.saturn.world.gen.MapGenDungeonSaturn;
 import mod.sol.planets.saturn.world.gen.RoomBossSaturn;
 import mod.sol.planets.saturn.world.gen.RoomTreasureSaturn;
@@ -51,7 +39,7 @@ public class ChunkProviderMimas extends ChunkProviderBase
     private final NoiseModule noiseGen4;
 
     private final World world;
-    //private final MapGenVillageMoon villageGenerator = new MapGenVillageMoon();
+    //private final MapGenVillage villageGenerator = new MapGenVillage();
 
     private final MapGenDungeonSaturn dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(SolBlocks.MERCURY_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossSaturn.class, RoomTreasureSaturn.class));
 
@@ -291,7 +279,7 @@ public class ChunkProviderMimas extends ChunkProviderBase
         long l = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed((long) x * k + (long) z * l ^ this.world.getSeed());
 
-        /*if (!ConfigManagerCore.disableMoonVillageGen)
+        /*if (!ConfigManagerCore.disableVillageGen)
         {
             this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(x, z));
         }*/
@@ -312,7 +300,7 @@ public class ChunkProviderMimas extends ChunkProviderBase
     @Override
     public void recreateStructures(Chunk chunk, int x, int z)
     {
-        /*if (!ConfigManagerCore.disableMoonVillageGen)
+        /*if (!ConfigManagerCore.disableVillageGen)
         {
             this.villageGenerator.generate(this.world, x, z, null);
         }*/

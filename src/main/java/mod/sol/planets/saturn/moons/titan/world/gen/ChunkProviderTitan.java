@@ -4,8 +4,6 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.api.world.ChunkProviderBase;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 import mod.sol.init.SolBlocks;
 import mod.sol.planets.saturn.moons.titan.biome.BiomeDecoratorTitan;
 import mod.sol.planets.saturn.moons.titan.biome.BiomeGenTitanOcean;
@@ -14,7 +12,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldEntitySpawner;
@@ -33,7 +30,7 @@ public class ChunkProviderTitan extends ChunkProviderBase
 {
     public static final IBlockState BLOCK_FILL = SolBlocks.TITAN_ROCK.getDefaultState();
 
-    private final BiomeDecoratorTitan biomeDecoratorVenus = new BiomeDecoratorTitan();
+    private final BiomeDecoratorTitan biomeDecorator = new BiomeDecoratorTitan();
     private Random rand;
     private NoiseGeneratorOctaves noiseGen1;
     private NoiseGeneratorOctaves noiseGen2;
