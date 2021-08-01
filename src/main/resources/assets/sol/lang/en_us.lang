@@ -165,3 +165,7 @@ tile.ariel_ilmenite_ore.name=Ilmenite Ore (Ariel)
 tile.ariel_lithium_ore.name=Lithium Ore (Ariel)
 tile.ariel_tin_ore.name=Silicon Ore (Ariel)
 tile.carbon_dioxide.name=Carbon Dioxide
+
+// Uranus Misc
+tile.uranus_dungeon_brick.name=Uranus Dungeon Brick
+tile.treasure_t7.name=Tier 7 Treasure Chest
