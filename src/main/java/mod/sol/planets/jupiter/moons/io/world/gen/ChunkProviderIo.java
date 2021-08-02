@@ -3,23 +3,15 @@ package mod.sol.planets.jupiter.moons.io.world.gen;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.api.world.ChunkProviderBase;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockBasic;
 import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import mod.sol.init.SolBlocks;
 import mod.sol.planets.jupiter.world.gen.MapGenDungeonJupiter;
 import mod.sol.planets.jupiter.world.gen.RoomBossJupiter;
 import mod.sol.planets.jupiter.world.gen.RoomTreasureJupiter;
-import mod.sol.planets.pluto.biome.BiomeFlatPluto;
-import mod.sol.planets.pluto.biome.BiomePluto;
-import mod.sol.planets.pluto.biome.BiomeSnowfieldPluto;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
@@ -28,7 +20,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeStoneBeach;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
@@ -87,8 +78,8 @@ public class ChunkProviderIo extends ChunkProviderBase
         {
             for (int z = 0; z < ChunkProviderIo.CHUNK_SIZE_Z; z++)
             {
-                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 64;
-                final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
+                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 48;
+                final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 64;
                 double d3 = this.noiseGen3.getNoise(x + chunkX * 16, z + chunkZ * 16) - 0.1;
                 d3 *= 6;
 
@@ -292,6 +283,15 @@ public class ChunkProviderIo extends ChunkProviderBase
         long l = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed((long) x * k + (long) z * l ^ this.world.getSeed());
 
+        int i2;
+        int k3;
+        int l2;
+        if (this.rand.nextInt(3) == 0) {
+            i2 = this.rand.nextInt(16) + 8;
+            k3 = this.rand.nextInt(this.rand.nextInt(248) + 8);
+            l2 = this.rand.nextInt(16) + 8;
+            (new MapGenLavaLakesIo()).generate(this.world, this.rand, blockpos.add(i2, k3, l2));
+        }
         this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(x, z));
 
         biomegenbase.decorate(this.world, this.rand, new BlockPos(i, 0, j));

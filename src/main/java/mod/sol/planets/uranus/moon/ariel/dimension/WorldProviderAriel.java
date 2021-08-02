@@ -135,7 +135,7 @@ public class WorldProviderAriel extends WorldProviderSpace implements IGalacticr
     @Override
     public double getSolarEnergyMultiplier()
     {
-        return 0.60D;
+        return 0.36D;
     }
 
     @Override

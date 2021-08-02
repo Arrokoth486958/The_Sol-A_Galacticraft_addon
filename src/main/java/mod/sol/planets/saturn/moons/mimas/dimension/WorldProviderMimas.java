@@ -137,7 +137,7 @@ public class WorldProviderMimas extends WorldProviderSpace implements IGalacticr
     @Override
     public double getSolarEnergyMultiplier()
     {
-        return 4.0D;
+        return 0.38D;
     }
 
     @Override

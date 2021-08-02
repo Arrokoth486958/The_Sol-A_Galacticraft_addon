@@ -174,7 +174,7 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
     @Override
     public double getSolarEnergyMultiplier()
     {
-        return 0.65D;
+        return 0.37;
     }
 
     @Override

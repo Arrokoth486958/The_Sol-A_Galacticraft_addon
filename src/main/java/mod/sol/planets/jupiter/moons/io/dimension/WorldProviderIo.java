@@ -153,7 +153,7 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
     @Override
     public double getSolarEnergyMultiplier()
     {
-        return 0.65D;
+        return 0.4D;
     }
 
     @Override

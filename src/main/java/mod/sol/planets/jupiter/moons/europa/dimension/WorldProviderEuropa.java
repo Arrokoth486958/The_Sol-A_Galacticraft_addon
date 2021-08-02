@@ -151,7 +151,7 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
     @Override
     public double getSolarEnergyMultiplier()
     {
-        return 0.65D;
+        return 0.4D;
     }
 
     @Override
