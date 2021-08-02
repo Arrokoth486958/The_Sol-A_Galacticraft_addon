@@ -37,6 +37,7 @@ import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.TeleportTypeVenus;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 import micdoodle8.mods.galacticraft.planets.venus.world.gen.BiomeVenus;
+import mod.sol.api.galaxy.DwarfPlanet;
 import mod.sol.client.gui.screen.SolCelestialSelection;
 import mod.sol.config.ConfigManagerSol;
 import mod.sol.entities.boss.EntityUranusBossSlime;
@@ -161,13 +162,13 @@ public class TheSol
 	//public static Planet planetMars;
 	// planets
 	public static Planet planetMercury;
-	public static Planet planetCeres;
-	public static Planet planetPluto;
+	public static DwarfPlanet planetCeres;
+	public static DwarfPlanet planetPluto;
 	public static Planet planetKuiperBelt;
-	public static Planet planetHaumea;
-	public static Planet planetEris;
-	public static Planet planetMakemake;
-	public static Planet planetSedna;
+	public static DwarfPlanet planetHaumea;
+	public static DwarfPlanet planetEris;
+	public static DwarfPlanet planetMakemake;
+	public static DwarfPlanet planetSedna;
 	public static Planet planetOortCloud;
 	// override
 	public static Planet planetAsteroids;
@@ -316,13 +317,13 @@ public class TheSol
 		TheSol.planetMercury.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		TheSol.planetMercury.setDimensionSuffix("_mercury");
 		// ceres
-		TheSol.planetCeres = (Planet) new Planet("ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(2.48F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.5F, 1.5F)).setRelativeOrbitTime(5.2433153256534542F);
+		TheSol.planetCeres = (DwarfPlanet) new DwarfPlanet("ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(2.48F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.5F, 1.5F)).setRelativeOrbitTime(5.2433153256534542F);
 		TheSol.planetCeres.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/ceres.png"));
 		TheSol.planetCeres.setAtmosphere(new AtmosphereInfo(false, false, false, -1.7F, 0.0F, 0.0F));
 		TheSol.planetCeres.setRelativeSize(0.1294F);
 		TheSol.planetCeres.setDimensionSuffix("_ceres");
 		// pluto
-		TheSol.planetPluto = (Planet) new Planet("pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(3.25F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.0F, 3.0F)).setRelativeOrbitTime(5.2433153256534542F);
+		TheSol.planetPluto = (DwarfPlanet) new DwarfPlanet("pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(3.25F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.0F, 3.0F)).setRelativeOrbitTime(5.2433153256534542F);
 		TheSol.planetPluto.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/pluto.png"));
 		//TheSol.planetPluto.setAtmosphere(new AtmosphereInfo(false, false, false, -6.0F, 0.0F, 0.0F));
 		TheSol.planetPluto.setRelativeSize(0.1294F);
@@ -335,19 +336,19 @@ public class TheSol
 		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));*/
 		TheSol.planetPluto.setDimensionSuffix("_pluto");
 		// haumea
-		TheSol.planetHaumea = (Planet) new Planet("haumea").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(3.92F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.65F, 3.65F)).setRelativeOrbitTime(15.1415926F);
+		TheSol.planetHaumea = (DwarfPlanet) new DwarfPlanet("haumea").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(3.92F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.65F, 3.65F)).setRelativeOrbitTime(15.1415926F);
 		TheSol.planetHaumea.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/haumea.png"));
 		TheSol.planetHaumea.setAtmosphere(new AtmosphereInfo(false, false, false, -6.0F, 0.0F, 0.0F));
 		TheSol.planetHaumea.setRelativeSize(0.0294F);
 		TheSol.planetHaumea.setDimensionSuffix("_haumea");
 		// eris
-		TheSol.planetEris = (Planet) new Planet("eris").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(2.42F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.4F, 3.4F)).setRelativeOrbitTime(16.1415926F);
+		TheSol.planetEris = (DwarfPlanet) new DwarfPlanet("eris").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(2.42F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.4F, 3.4F)).setRelativeOrbitTime(16.1415926F);
 		TheSol.planetEris.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/eris.png"));
 		TheSol.planetEris.setAtmosphere(new AtmosphereInfo(false, false, false, -6.0F, 0.0F, 0.0F));
 		TheSol.planetEris.setRelativeSize(0.0294F);
 		TheSol.planetEris.setDimensionSuffix("_eris");
 		// makemake
-		TheSol.planetMakemake = (Planet) new Planet("makemake").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(9.81F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.8F, 3.8F)).setRelativeOrbitTime(11.1415926F);
+		TheSol.planetMakemake = (DwarfPlanet) new DwarfPlanet("makemake").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(9.81F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.8F, 3.8F)).setRelativeOrbitTime(11.1415926F);
 		TheSol.planetMakemake.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/makemake.png"));
 		TheSol.planetMakemake.setAtmosphere(new AtmosphereInfo(false, false, false, -6.0F, 0.0F, 0.0F));
 		TheSol.planetMakemake.setRelativeSize(0.0294F);
@@ -357,7 +358,7 @@ public class TheSol
 		TheSol.planetKuiperBelt.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/kuiper_belt.png"));
 		TheSol.planetKuiperBelt.setDimensionSuffix("_kuiper_belt");
 		// sedna
-		TheSol.planetSedna = (Planet) new Planet("sedna").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(14.421412354F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5F, 5F)).setRelativeOrbitTime(39.143442132456F);
+		TheSol.planetSedna = (DwarfPlanet) new DwarfPlanet("sedna").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(14.421412354F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5F, 5F)).setRelativeOrbitTime(39.143442132456F);
 		TheSol.planetSedna.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/sedna.png"));
 		TheSol.planetSedna.setDimensionSuffix("_sedna");
 		// oortcloud

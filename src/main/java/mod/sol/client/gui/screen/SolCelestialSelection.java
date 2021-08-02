@@ -2,13 +2,13 @@ package mod.sol.client.gui.screen;
 
 import com.google.common.collect.Maps;
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.galaxies.IChildBody;
-import micdoodle8.mods.galacticraft.api.galaxies.Star;
+import micdoodle8.mods.galacticraft.api.galaxies.*;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
+import mod.sol.api.galaxy.DwarfPlanet;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.input.Mouse;
@@ -133,6 +133,24 @@ public class SolCelestialSelection extends GuiCelestialSelection {
             if (alpha > 0.0F) {
                 GlStateManager.pushMatrix();
                 Matrix4f worldMatrixLocal = this.setupMatrix(body, worldMatrix, fb, hasParent ? 0.25F : 1.0F);
+
+//                if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
+//                    if(body.getBodyIcon() != null) {
+//                        this.drawString(this.fontRenderer, body.getLocalizedName(), 5, 0, 14737632);
+//                    }
+//                } else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
+//                    if(body.getBodyIcon() != null) {
+//                        this.drawString(this.fontRenderer, body.getLocalizedName(), 5, 0, 14737632);
+//                    }
+//                }
+
+                if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star) && !(body instanceof DwarfPlanet)) {
+                    if (body.getBodyIcon() != null) {this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0 , 5, 14737632);}
+                }
+                else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star) && !(body instanceof DwarfPlanet)) {
+                    if (body.getBodyIcon() != null) {this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0 , 5, 14737632);}
+                }
+
                 CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(body, body.getBodyIcon(), 16);
                 MinecraftForge.EVENT_BUS.post(preEvent);
                 GL11.glColor4f(1.0F, 1.0F, 1.0F, alpha);
@@ -185,5 +203,40 @@ public class SolCelestialSelection extends GuiCelestialSelection {
         }*/
 
         GL11.glEnd();
+    }
+
+    @Override
+    protected void drawSelectionCursor(FloatBuffer fb, Matrix4f worldMatrix) {
+        GL11.glPushMatrix();
+        float div;
+        switch(this.selectionState) {
+            case SELECTED:
+                if (this.selectedBody != null) {
+                    this.setupMatrix(this.selectedBody, worldMatrix, fb);
+                    fb.clear();
+                    GL11.glScalef(0.06666667F, 0.06666667F, 1.0F);
+                    this.mc.renderEngine.bindTexture(guiMain0);
+                    div = this.getZoomAdvanced() < 4.9F ? (float)(Math.sin((double)(this.ticksSinceSelectionF / 2.0F)) * 0.5D + 0.5D) : 1.0F;
+                    GL11.glColor4f(1.0F, 1.0F, 0.0F, 1.0F * div);
+                    int width = (int)Math.floor((double)this.getWidthForCelestialBody(this.selectedBody) / 2.0D * (this.selectedBody instanceof IChildBody ? 9.0D : 30.0D));
+                    this.drawTexturedModalRect(-width, -width, width * 2, width * 2, 266, 29, 100, 100, false, false);
+                }
+                break;
+            case ZOOMED:
+                if (this.selectedBody != null) {
+                    this.setupMatrix(this.selectedBody, worldMatrix, fb);
+                    fb.clear();
+                    div = this.zoom + 1.0F - this.planetZoom;
+                    float scale = Math.max(0.3F, 1.5F / (this.ticksSinceSelectionF / 5.0F)) * 2.0F / div;
+                    GL11.glScalef(scale, scale, 1.0F);
+                    this.mc.renderEngine.bindTexture(guiMain0);
+                    float colMod = this.getZoomAdvanced() < 4.9F ? (float)(Math.sin((double)(this.ticksSinceSelectionF / 1.0F)) * 0.5D + 0.5D) : 1.0F;
+                    GL11.glColor4f(0.4F, 0.8F, 1.0F, 1.0F * colMod);
+                    int width = this.getWidthForCelestialBody(this.selectedBody) * 13;
+                    this.drawTexturedModalRect(-width, -width, width * 2, width * 2, 266, 29, 100, 100, false, false);
+                }
+        }
+
+        GL11.glPopMatrix();
     }
 }
