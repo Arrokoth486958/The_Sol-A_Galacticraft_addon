@@ -148,7 +148,7 @@ public class WorldProviderPluto extends WorldProviderSpace implements IGalacticr
     @Override
     public double getSolarEnergyMultiplier()
     {
-        return 0.04D;
+        return 0.26D;
     }
 
     @Override
