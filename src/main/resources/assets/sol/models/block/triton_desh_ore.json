@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "sol:blocks/triton_desh_ore"
+    }
+}

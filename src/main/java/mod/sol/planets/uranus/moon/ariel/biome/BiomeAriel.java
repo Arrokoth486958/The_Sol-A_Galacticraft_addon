@@ -33,8 +33,6 @@ public class BiomeAriel extends BiomeGenBaseGC
     @Override
     public void genTerrainBlocks(World worldIn, Random rand, ChunkPrimer chunkPrimerIn, int x, int z, double noiseVal)
     {
-        this.fillerBlock = ChunkProviderMercury.BLOCK_LOWER;
-        this.topBlock = ChunkProviderMercury.BLOCK_TOP;
         super.genTerrainBlocks(worldIn, rand, chunkPrimerIn, x, z, noiseVal);
     }
 }

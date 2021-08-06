@@ -10,7 +10,10 @@ itemGroup.sol_blocks=太阳系 | 方块
 # Celestialbodies
 planet.ceres=谷神星
 planet.pluto=冥王星
+planet.eris=阋神星
 planet.kuiper_belt=柯伊伯带
+planet.haumea=妊神星
+planet.makemake=鸟神星
 planet.sedna=小行星90377
 planet.oort_cloud=奥尔特云
 
@@ -176,7 +179,7 @@ tile.mimas_iron_ore.name=铁矿石（土卫一）
 tile.mimas_manganese_ore.name=锰矿石（土卫一）
 tile.mimas_tin_ore.name=锡矿石（土卫一）
 
-# Europa
+# Titan
 tile.titan_surface_rock.name=土卫六表层岩
 tile.titan_sub_surface_rock.name=土卫六浅层岩
 tile.titan_rock.name=土卫六岩石
@@ -190,7 +193,7 @@ tile.titan_tin_ore.name=锡矿石（土卫六）
 tile.saturn_dungeon_brick.name=土星地牢砖块
 tile.treasure_t6.name=六阶珍宝箱
 
-# Mercury
+# Ariel
 tile.ariel_turf.name=天卫一表层土
 tile.ariel_dirt.name=天卫一浅层土
 tile.ariel_rock.name=天卫一岩石
@@ -206,10 +209,27 @@ tile.carbon_dioxide.name=二氧化碳
 tile.uranus_dungeon_brick.name=天王星地牢砖
 tile.treasure_t7.name=七阶珍宝箱
 
+# Triton
+tile.triton_soft_rock.name=海卫一软质岩
+tile.triton_surface_rock.name=海卫一表层岩
+tile.triton_turf.name=海卫一表层土
+tile.triton_dirt.name=海卫一浅层土
+tile.triton_rock.name=海卫一岩石
+tile.triton_aluminum_ore.name=铝矿石（海卫一）
+tile.triton_desh_ore.name=戴斯矿石（海卫一）
+tile.triton_iron_ore.name=铁矿石（海卫一）
+tile.triton_ilmenite_ore.name=钛铁矿石（海卫一）
+tile.triton_lithium_ore.name=锂矿石（海卫一）
+tile.triton_silicon_ore.name=硅矿石（海卫一）
+tile.triton_tin_ore.name=锡矿石（海卫一）
+
 # Pluto
 tile.pluto_surface_rock.name=冥王星表层岩
 tile.pluto_sub_surface_rock.name=冥王星浅层岩
 tile.pluto_rock.name=冥王星岩石
 tile.pluto_copper_ore.name=铜矿石（冥王星）
 tile.pluto_iron_ore.name=铁矿石（冥王星）
-tile.pluto_tin_ore.name=锡矿石（冥王星）
+
+planet.eris=Eris
+planet.haumea=Haumea
+planet.makemake=Makemaketile.pluto_tin_ore.name=锡矿石（冥王星）

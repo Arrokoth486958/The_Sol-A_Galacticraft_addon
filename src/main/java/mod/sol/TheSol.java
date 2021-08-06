@@ -44,6 +44,9 @@ import mod.sol.config.ConfigManagerSol;
 import mod.sol.entities.boss.EntityUranusBossSlime;
 import mod.sol.planets.kuiper_belt.biome.BiomeKuiperBelt;
 import mod.sol.planets.kuiper_belt.dimension.WorldProviderKuiperBelt;
+import mod.sol.planets.neptune.triton.biome.BiomeTriton;
+import mod.sol.planets.neptune.triton.dimension.TeleportTypeTriton;
+import mod.sol.planets.neptune.triton.dimension.WorldProviderTriton;
 import mod.sol.planets.pluto.biome.BiomePluto;
 import mod.sol.planets.uranus.moon.ariel.biome.BiomeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
@@ -511,6 +514,13 @@ public class TheSol
 		TheSol.moonTriton = (Moon) new Moon("triton").setParentPlanet(TheSol.planetNeptune).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift((float) Math.PI).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(12.5F, 12.5F)).setRelativeOrbitTime(35.51F);
 		TheSol.moonTriton.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/triton.png"));
 		TheSol.moonTriton.setAtmosphere(new AtmosphereInfo(false, false, false, -2.5F, 0.0F, 0.0F));
+		TheSol.moonTriton.setBiomeInfo(BiomeTriton.tritonFlat);
+		TheSol.moonTriton.setDimensionInfo(ConfigManagerSol.dimensionidTriton, WorldProviderTriton.class).setTierRequired(8);
+		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 10, 2, 3));
+		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 10, 2, 3));
+		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 10, 2, 3));
+		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 10, 2, 3));
+		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 12, 1, 4));
 		TheSol.moonTriton.setRelativeSize(0.4312F);
 		TheSol.moonTriton.setDimensionSuffix("_triton");
 		// pluto
@@ -583,8 +593,9 @@ public class TheSol
     	GalaxyRegistry.registerMoon(TheSol.moonOberon);
     	
     	GalaxyRegistry.registerMoon(TheSol.moonTriton);
-    	
-    	GalaxyRegistry.registerMoon(TheSol.moonCharon);
+		GalacticraftRegistry.registerTeleportType(WorldProviderTriton.class, new TeleportTypeTriton());
+
+		GalaxyRegistry.registerMoon(TheSol.moonCharon);
     	// fake planets
     	GalaxyRegistry.registerPlanet(TheSol.planetJupiter);
     	GalaxyRegistry.registerPlanet(TheSol.planetSaturn);
@@ -658,6 +669,8 @@ public class TheSol
 		SolDimensions.Titan = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidTitan);
 
 		SolDimensions.Ariel = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidAriel);
+
+		SolDimensions.Triton = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidTriton);
 
 		SolDimensions.Pluto = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidPluto);
 		SolDimensions.KuiperBelt = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidKuiperBelt);

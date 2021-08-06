@@ -20,6 +20,7 @@ public class ConfigManagerSol {
     public static int dimensionidMimas = -(Reference.MOD_ID.hashCode() + 601);
     public static int dimensionidTitan = -(Reference.MOD_ID.hashCode() + 606);
     public static int dimensionidAriel = -(Reference.MOD_ID.hashCode() + 701);
+    public static int dimensionidTriton = -(Reference.MOD_ID.hashCode() + 801);
     public static int dimensionidPluto = -(Reference.MOD_ID.hashCode() + 900);
     public static int dimensionidKuiperBelt= -(Reference.MOD_ID.hashCode() + 1000);
 
@@ -34,6 +35,7 @@ public class ConfigManagerSol {
         dimensionidMimas = config.getInt("Dimension ID for Mimas", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 601), -999999999, 999999999, "None");
         dimensionidTitan = config.getInt("Dimension ID for Titan", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 606), -999999999, 999999999, "None");
         dimensionidAriel = config.getInt("Dimension ID for Ariel", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 701), -999999999, 999999999, "None");
+        dimensionidTriton = config.getInt("Dimension ID for Triton", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 801), -999999999, 999999999, "None");
         dimensionidPluto = config.getInt("Dimension ID for Pluto", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 900), -999999999, 999999999, "None");
         dimensionidPluto = config.getInt("Dimension ID for Kuiper Belt", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 1000), -999999999, 999999999, "None");
 

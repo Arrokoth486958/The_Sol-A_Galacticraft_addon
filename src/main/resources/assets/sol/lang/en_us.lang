@@ -10,7 +10,10 @@ itemGroup.sol_blocks=The Sol - Blocks
 # Celestialbodies
 planet.ceres=Ceres
 planet.pluto=Pluto
+planet.eris=Eris
 planet.kuiper_belt=Kuiper Belt
+planet.haumea=Haumea
+planet.makemake=Makemake
 planet.sedna=Sedna
 planet.oort_cloud=Oort Cloud
 
@@ -166,7 +169,7 @@ tile.europa_iron_ore.name=Iron Ore (Europa)
 tile.jupiter_dungeon_brick.name=Jupiter Dungeon Brick
 tile.treasure_t5.name=Tier 5 Treasure Chest
 
-# Io
+# Mimas
 tile.mimas_turf.name=Mimas Turf
 tile.mimas_dirt.name=Mimas Dirt
 tile.mimas_rock.name=Mimas Rock
@@ -176,7 +179,7 @@ tile.mimas_iron_ore.name=Iron Ore (Mimas)
 tile.mimas_manganese_ore.name=Manganese Ore (Mimas)
 tile.mimas_tin_ore.name=Tin Ore (Mimas)
 
-# Europa
+# Titan
 tile.titan_surface_rock.name=Titan Surface Rock
 tile.titan_sub_surface_rock.name=Titan Sub-surface Rock
 tile.titan_rock.name=Titan Rock
@@ -190,7 +193,7 @@ tile.titan_tin_ore.name=Tin Ore (Titan)
 tile.saturn_dungeon_brick.name=Saturn Dungeon Brick
 tile.treasure_t6.name=Tier 6 Treasure Chest
 
-# Mercury
+# Ariel
 tile.ariel_turf.name=Ariel Turf
 tile.ariel_dirt.name=Ariel Dirt
 tile.ariel_rock.name=Ariel Rock
@@ -205,6 +208,20 @@ tile.carbon_dioxide.name=Carbon Dioxide
 # Uranus Misc
 tile.uranus_dungeon_brick.name=Uranus Dungeon Brick
 tile.treasure_t7.name=Tier 7 Treasure Chest
+
+# Triton
+tile.triton_soft_rock.name=Triton Soft Rock
+tile.triton_surface_rock.name=Triton Surface Rock
+tile.triton_turf.name=Triton Turf
+tile.triton_dirt.name=Triton Dirt
+tile.triton_rock.name=Triton Rock
+tile.triton_aluminum_ore.name=Aluminum Ore (Triton)
+tile.triton_desh_ore.name=Desh Ore (Triton)
+tile.triton_iron_ore.name=Iron Ore (Triton)
+tile.triton_ilmenite_ore.name=Ilmenite Ore (Triton)
+tile.triton_lithium_ore.name=Lithium Ore (Triton)
+tile.triton_silicon_ore.name=Silicon Ore (Triton)
+tile.triton_tin_ore.name=Tin Ore (Triton)
 
 # Pluto
 tile.pluto_surface_rock.name=Pluto Surface Rock

@@ -30,4 +30,6 @@ public class SolDimensions
 	public static DimensionType Titan = GalacticraftRegistry.registerDimension("titan", "_titan", ConfigManagerSol.dimensionidTitan, WorldProviderTitan.class, false);
 
 	public static DimensionType Ariel = GalacticraftRegistry.registerDimension("ariel", "_ariel", ConfigManagerSol.dimensionidAriel, WorldProviderAriel.class, false);
+
+	public static DimensionType Triton = GalacticraftRegistry.registerDimension("triton", "_triton", ConfigManagerSol.dimensionidAriel, WorldProviderAriel.class, false);
 }

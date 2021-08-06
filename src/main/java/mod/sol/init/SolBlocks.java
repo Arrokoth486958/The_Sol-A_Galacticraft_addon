@@ -91,6 +91,19 @@ public class SolBlocks
 	//uranus misc
 	public static final Block URANUS_DUNGEON_BRICK = new BlockBase("uranus_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
 	public static final Block TREASURE_CHEST_T7 = new BlockTier7TreasureChest("treasure_t7");
+	//triton
+	public static final Block TRITON_SOFT_ROCK = new BlockBase("triton_soft_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
+	public static final Block TRITON_SURFACE_ROCK = new BlockBase("triton_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
+	public static final Block TRITON_TURF = new BlockBase("triton_turf", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
+	public static final Block TRITON_DIRT = new BlockBase("triton_dirt", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);
+	public static final Block TRITON_ROCK = new BlockBase("triton_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(2F).setResistance(6F);
+	public static final Block TRITON_ALUMINUM_ORE = new BlockBaseAluminumOre("triton_aluminum_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	public static final Block TRITON_DESH_ORE = new BlockBaseDeshOre("triton_desh_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	public static final Block TRITON_IRON_ORE = new BlockBaseIronOre("triton_iron_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	public static final Block TRITON_ILMENITE_ORE = new BlockBaseIlmeniteOre("triton_ilmenite_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	public static final Block TRITON_LITHIUM_ORE = new BlockBaseLithiumOre("triton_lithium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block TRITON_SILICON_ORE = new BlockBaseSiliconOre("triton_silicon_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	public static final Block TRITON_TIN_ORE = new BlockBaseTinOre("triton_tin_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	//pluto
 	public static final Block PLUTO_SURFACE_ROCK = new BlockBase("pluto_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
 	public static final Block PLUTO_SUB_SURFACE_ROCK = new BlockBase("pluto_sub_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);
