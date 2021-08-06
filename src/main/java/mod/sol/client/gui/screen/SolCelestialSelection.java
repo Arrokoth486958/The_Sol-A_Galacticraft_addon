@@ -8,7 +8,9 @@ import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.*;
 import mod.sol.api.galaxy.DwarfPlanet;
+import mod.sol.api.galaxy.GasPlanet;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
@@ -170,12 +172,11 @@ public class SolCelestialSelection extends GuiCelestialSelection {
                 GL11.glColor4f(1.0F, 1.0F, 1.0F, alpha);
                 if (preEvent.celestialBodyTexture != null) {
                     this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
-                    //this.drawCenteredString(fontRenderer, body.getLocalizedName(), (int) body.getRelativeSize(), (int) body.getRelativeSize() + 5, 14737632);
                 }
 
                 if (!preEvent.isCanceled()) {
                     int size = this.getWidthForCelestialBody(body);
-                    this.drawTexturedModalRect((float)(-size / 2), (float)(-size / 2), (float)size, (float)size, 0.0F, 0.0F, (float)preEvent.textureSize, (float)preEvent.textureSize, false, false, (float)preEvent.textureSize, (float)preEvent.textureSize);
+                    this.drawTexturedModalRect((float)(-size / 2), (float)(-size / 2), (float) size, (float) size, 0.0F, 0.0F, (float)preEvent.textureSize, (float)preEvent.textureSize, false, false, (float)preEvent.textureSize, (float)preEvent.textureSize);
                     matrixMap.put(body, worldMatrixLocal);
                 }
 
@@ -186,6 +187,12 @@ public class SolCelestialSelection extends GuiCelestialSelection {
         }
 
         return matrixMap;
+    }
+
+    @Override
+    public int getWidthForCelestialBody(CelestialBody celestialBody) {
+        boolean zoomed = celestialBody == this.selectedBody && this.selectionState == GuiCelestialSelection.EnumSelection.SELECTED;
+        return celestialBody instanceof Star ? (zoomed ? 18 : 14) : (celestialBody instanceof GasPlanet ? (zoomed ? 10 : 6) : (celestialBody instanceof DwarfPlanet ? (zoomed ? 4 : 2) : (celestialBody instanceof Planet ? (zoomed ? 6 : 4) : (celestialBody instanceof IChildBody ? (zoomed ? 6 : 4) : 2))));
     }
 
     @Override
@@ -252,6 +259,18 @@ public class SolCelestialSelection extends GuiCelestialSelection {
         }
 
         GL11.glPopMatrix();
+    }
+
+    @Override
+    public void drawBorder() {
+        Gui.drawRect(0, 0, BORDER_SIZE, this.height, GREY2);
+        Gui.drawRect(this.width - BORDER_SIZE, 0, this.width, this.height, GREY2);
+        Gui.drawRect(0, 0, this.width, BORDER_SIZE, GREY2);
+        Gui.drawRect(0, this.height - BORDER_SIZE, this.width, this.height, GREY2);
+        Gui.drawRect(BORDER_SIZE, BORDER_SIZE, BORDER_SIZE + BORDER_EDGE_SIZE, this.height - BORDER_SIZE, GREY0);
+        Gui.drawRect(BORDER_SIZE, BORDER_SIZE, this.width - BORDER_SIZE, BORDER_SIZE + BORDER_EDGE_SIZE, GREY0);
+        Gui.drawRect(this.width - BORDER_SIZE - BORDER_EDGE_SIZE, BORDER_SIZE, this.width - BORDER_SIZE, this.height - BORDER_SIZE, GREY1);
+        Gui.drawRect(BORDER_SIZE + BORDER_EDGE_SIZE, this.height - BORDER_SIZE - BORDER_EDGE_SIZE, this.width - BORDER_SIZE, this.height - BORDER_SIZE, GREY1);
     }
 
     @Override

@@ -18,8 +18,8 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 public class BiomePluto extends BiomeGenBaseGC
 {
-    public static final Biome plutoFlat = new BiomeFlatPluto(new BiomeProperties("Pluto Flat").setBaseHeight(1.5F).setHeightVariation(0.4F).setRainfall(0.0F));
-    public static final Biome plutoSnowfield = new BiomeSnowfieldPluto(new BiomeProperties("Pluto Snowfield").setBaseHeight(1.5F).setHeightVariation(0.4F).setRainfall(0.0F));
+    public static final Biome plutoFlat = new BiomeFlatPluto(new BiomeProperties("Pluto Flat").setBaseHeight(1.0F).setHeightVariation(0.4F).setRainfall(0.0F));
+    public static final Biome plutoSnowfield = new BiomeSnowfieldPluto(new BiomeProperties("Pluto Snowfield").setBaseHeight(1.0F).setHeightVariation(0.4F).setRainfall(0.0F));
 
     BiomePluto(BiomeProperties properties)
     {

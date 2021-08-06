@@ -38,9 +38,13 @@ import micdoodle8.mods.galacticraft.planets.venus.dimension.TeleportTypeVenus;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 import micdoodle8.mods.galacticraft.planets.venus.world.gen.BiomeVenus;
 import mod.sol.api.galaxy.DwarfPlanet;
+import mod.sol.api.galaxy.GasPlanet;
 import mod.sol.client.gui.screen.SolCelestialSelection;
 import mod.sol.config.ConfigManagerSol;
 import mod.sol.entities.boss.EntityUranusBossSlime;
+import mod.sol.planets.kuiper_belt.biome.BiomeKuiperBelt;
+import mod.sol.planets.kuiper_belt.dimension.WorldProviderKuiperBelt;
+import mod.sol.planets.pluto.biome.BiomePluto;
 import mod.sol.planets.uranus.moon.ariel.biome.BiomeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
@@ -173,10 +177,10 @@ public class TheSol
 	// override
 	public static Planet planetAsteroids;
 	// fake
-	public static Planet planetJupiter;
-	public static Planet planetSaturn;
-	public static Planet planetUranus;
-	public static Planet planetNeptune;
+	public static GasPlanet planetJupiter;
+	public static GasPlanet planetSaturn;
+	public static GasPlanet planetUranus;
+	public static GasPlanet planetNeptune;
 	// moons
 	// mars
 	public static Moon moonPhobos;
@@ -263,19 +267,19 @@ public class TheSol
         GalacticraftRegistry.registerTeleportType(WorldProviderVenus.class, new TeleportTypeVenus());
 
 		// fake planets
-		TheSol.planetJupiter = (Planet) new Planet("jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetJupiter = (GasPlanet) new GasPlanet("jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetJupiter.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift((float) Math.PI).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(11.861993428258488499452354874042F);
 		TheSol.planetJupiter.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/jupiter.png"));
 
-		TheSol.planetSaturn = (Planet) new Planet("saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetSaturn = (GasPlanet) new GasPlanet("saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetSaturn.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(5.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.25F, 2.25F)).setRelativeOrbitTime(29.463307776560788608981380065717F);
 		TheSol.planetSaturn.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png"));
 
-		TheSol.planetUranus = (Planet) new Planet("uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetUranus = (GasPlanet) new GasPlanet("uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetUranus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.38F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.5F, 2.5F)).setRelativeOrbitTime(84.063526834611171960569550930997F);
 		TheSol.planetUranus.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus.png"));
 
-		TheSol.planetNeptune = (Planet) new Planet("neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetNeptune = (GasPlanet) new GasPlanet("neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetNeptune.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.0F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F, 2.75F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 		TheSol.planetNeptune.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png"));
 		// override
@@ -327,13 +331,13 @@ public class TheSol
 		TheSol.planetPluto.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/pluto.png"));
 		//TheSol.planetPluto.setAtmosphere(new AtmosphereInfo(false, false, false, -6.0F, 0.0F, 0.0F));
 		TheSol.planetPluto.setRelativeSize(0.1294F);
-		/*TheSol.planetPluto.setDimensionInfo(ConfigManagerSol.dimensionidPluto, WorldProviderPluto.class).setTierRequired(8);
-		TheSol.planetPluto.setBiomeInfo(BiomePluto.plutoFlat, BiomePluto.plutoSnowfield);
-		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));*/
+//		TheSol.planetPluto.setDimensionInfo(ConfigManagerSol.dimensionidPluto, WorldProviderPluto.class).setTierRequired(8);
+//		TheSol.planetPluto.setBiomeInfo(BiomePluto.plutoFlat, BiomePluto.plutoSnowfield);
+//		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+//		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+//		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+//		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+//		TheSol.planetPluto.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		TheSol.planetPluto.setDimensionSuffix("_pluto");
 		// haumea
 		TheSol.planetHaumea = (DwarfPlanet) new DwarfPlanet("haumea").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(255.0F, 0.0F, 0.0F).setPhaseShift(3.92F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.65F, 3.65F)).setRelativeOrbitTime(15.1415926F);
@@ -356,6 +360,8 @@ public class TheSol
 		// kuiperbelt
 		TheSol.planetKuiperBelt = (Planet) new Planet("kuiper_belt").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift((float) (Math.random() * (2 * Math.PI))).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.55F, 3.55F)).setRelativeOrbitTime(90.0F);
 		TheSol.planetKuiperBelt.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/kuiper_belt.png"));
+//		TheSol.planetKuiperBelt.setDimensionInfo(ConfigManagerSol.dimensionidKuiperBelt, WorldProviderKuiperBelt.class).setTierRequired(8);
+//		TheSol.planetKuiperBelt.setBiomeInfo(BiomeKuiperBelt.kuiper_belt);
 		TheSol.planetKuiperBelt.setDimensionSuffix("_kuiper_belt");
 		// sedna
 		TheSol.planetSedna = (DwarfPlanet) new DwarfPlanet("sedna").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(14.421412354F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5F, 5F)).setRelativeOrbitTime(39.143442132456F);
@@ -644,7 +650,6 @@ public class TheSol
 	public static void PostInit(FMLPostInitializationEvent event)
 	{
 		SolDimensions.Mercury = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidMercury);
-		SolDimensions.Pluto = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidPluto);
 
 		SolDimensions.Io = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidIo);
 		SolDimensions.Europa = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidEuropa);
@@ -654,7 +659,10 @@ public class TheSol
 
 		SolDimensions.Ariel = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidAriel);
 
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier4.class, new TileEntityTreasureTier4ChestRenderer());
+		SolDimensions.Pluto = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidPluto);
+		SolDimensions.KuiperBelt = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidKuiperBelt);
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier4.class, new TileEntityTreasureTier4ChestRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier5.class, new TileEntityTreasureTier5ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier7.class, new TileEntityTreasureTier7ChestRenderer());

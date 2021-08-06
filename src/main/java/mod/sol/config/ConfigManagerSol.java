@@ -21,6 +21,7 @@ public class ConfigManagerSol {
     public static int dimensionidTitan = -(Reference.MOD_ID.hashCode() + 606);
     public static int dimensionidAriel = -(Reference.MOD_ID.hashCode() + 701);
     public static int dimensionidPluto = -(Reference.MOD_ID.hashCode() + 900);
+    public static int dimensionidKuiperBelt= -(Reference.MOD_ID.hashCode() + 1000);
 
     public static void init(File file) {
         config = new Configuration(file);
@@ -33,7 +34,8 @@ public class ConfigManagerSol {
         dimensionidMimas = config.getInt("Dimension ID for Mimas", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 601), -999999999, 999999999, "None");
         dimensionidTitan = config.getInt("Dimension ID for Titan", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 606), -999999999, 999999999, "None");
         dimensionidAriel = config.getInt("Dimension ID for Ariel", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 701), -999999999, 999999999, "None");
-        dimensionidPluto = config.getInt("Dimension ID for Ariel", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 900), -999999999, 999999999, "None");
+        dimensionidPluto = config.getInt("Dimension ID for Pluto", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 900), -999999999, 999999999, "None");
+        dimensionidPluto = config.getInt("Dimension ID for Kuiper Belt", categoryDimensionids, -(Reference.MOD_ID.hashCode() + 1000), -999999999, 999999999, "None");
 
         config.addCustomCategoryComment(categoryDimensionids, "IDs for dimensions of the mod 'The Sol'");
         enableCustomGalaxymap = config.getBoolean("Enable Custom Galaxymap?", categoryMisc, true, "If this config is true, it will override Galacticraft default Galaxymap");

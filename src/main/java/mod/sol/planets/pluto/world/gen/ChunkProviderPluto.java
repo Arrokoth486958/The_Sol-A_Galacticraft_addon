@@ -71,22 +71,25 @@ public class ChunkProviderPluto extends ChunkProviderBase
         this.noiseGen4 = new Gradient(this.rand.nextLong(), 1, 0.5F);
     }
 
-    public void setBlocksInChunk(int chunkX, int chunkZ, ChunkPrimer primer)
+    public void setBlocksInChunk(int chunkX, int chunkZ, ChunkPrimer primer, Biome[] par4ArrayOfBiome)
     {
         this.noiseGen1.setFrequency(0.00625F);
         this.noiseGen2.setFrequency(0.0075F);
         this.noiseGen3.setFrequency(0.005F);
         this.noiseGen4.setFrequency(0.01F);
-        this.biomesForGeneration = this.world.getBiomeProvider().getBiomesForGeneration(this.biomesForGeneration, chunkX * 4 - 2, chunkZ * 4 - 2, 10, 10);
+        //this.biomesForGeneration = this.world.getBiomeProvider().getBiomesForGeneration(this.biomesForGeneration, chunkX * 4 - 2, chunkZ * 4 - 2, 10, 10);
 
         for (int x = 0; x < ChunkProviderPluto.CHUNK_SIZE_X; x++)
         {
             for (int z = 0; z < ChunkProviderPluto.CHUNK_SIZE_Z; z++)
             {
-                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 8;
-                final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 24;
+                Biome biomegenbase = par4ArrayOfBiome[x + z * 16];
+
+                final double d = this.noiseGen1.getNoise(x + chunkX * 16, z + chunkZ * 16) * 32;
+                final double d2 = this.noiseGen2.getNoise(x + chunkX * 16, z + chunkZ * 16) * 64;
                 double d3 = this.noiseGen3.getNoise(x + chunkX * 16, z + chunkZ * 16) - 0.1;
-                d3 *= 4;
+//                d3 *= 4;
+                d3 *= biomegenbase.getBaseHeight() * 4;
 
                 double yDev;
 
@@ -188,8 +191,8 @@ public class ChunkProviderPluto extends ChunkProviderBase
     {
         this.rand.setSeed((long) x * 341873128712L + (long) z * 132897987541L);
         ChunkPrimer chunkprimer = new ChunkPrimer();
-        this.setBlocksInChunk(x, z, chunkprimer);
         this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, x * 16, z * 16, 16, 16);
+        this.setBlocksInChunk(x, z, chunkprimer, this.biomesForGeneration);
         this.createCraters(x, z, chunkprimer);
         this.replaceBlocksForBiome(x, z, chunkprimer, this.biomesForGeneration);
 
