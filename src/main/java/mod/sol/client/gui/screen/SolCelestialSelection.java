@@ -3,27 +3,19 @@ package mod.sol.client.gui.screen;
 import com.google.common.collect.Maps;
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
 import micdoodle8.mods.galacticraft.api.galaxies.*;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.*;
 import mod.sol.api.galaxy.DwarfPlanet;
-import mod.sol.api.galaxy.GasPlanet;
-import net.minecraft.client.Minecraft;
+import mod.sol.api.galaxy.GasGiant;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.BufferUtils;
-import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
-import org.lwjgl.util.vector.Vector2f;
-import org.lwjgl.util.vector.Vector3f;
-import org.lwjgl.util.vector.Vector4f;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.nio.FloatBuffer;
 import java.util.*;
@@ -192,7 +184,7 @@ public class SolCelestialSelection extends GuiCelestialSelection {
     @Override
     public int getWidthForCelestialBody(CelestialBody celestialBody) {
         boolean zoomed = celestialBody == this.selectedBody && this.selectionState == GuiCelestialSelection.EnumSelection.SELECTED;
-        return celestialBody instanceof Star ? (zoomed ? 18 : 14) : (celestialBody instanceof GasPlanet ? (zoomed ? 10 : 6) : (celestialBody instanceof DwarfPlanet ? (zoomed ? 4 : 2) : (celestialBody instanceof Planet ? (zoomed ? 6 : 4) : (celestialBody instanceof IChildBody ? (zoomed ? 6 : 4) : 2))));
+        return celestialBody instanceof Star ? (zoomed ? 18 : 14) : (celestialBody instanceof GasGiant ? (zoomed ? 10 : 6) : (celestialBody instanceof DwarfPlanet ? (zoomed ? 4 : 2) : (celestialBody instanceof Planet ? (zoomed ? 6 : 4) : (celestialBody instanceof IChildBody ? (zoomed ? 6 : 4) : 2))));
     }
 
     @Override

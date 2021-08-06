@@ -28,26 +28,19 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
 import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
-import micdoodle8.mods.galacticraft.planets.mars.ConfigManagerMars;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import micdoodle8.mods.galacticraft.planets.mars.dimension.TeleportTypeMars;
-import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
-import micdoodle8.mods.galacticraft.planets.mars.world.gen.BiomeMars;
 import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.TeleportTypeVenus;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 import micdoodle8.mods.galacticraft.planets.venus.world.gen.BiomeVenus;
 import mod.sol.api.galaxy.DwarfPlanet;
-import mod.sol.api.galaxy.GasPlanet;
+import mod.sol.api.galaxy.GasGiant;
 import mod.sol.client.gui.screen.SolCelestialSelection;
 import mod.sol.config.ConfigManagerSol;
 import mod.sol.entities.boss.EntityUranusBossSlime;
-import mod.sol.planets.kuiper_belt.biome.BiomeKuiperBelt;
-import mod.sol.planets.kuiper_belt.dimension.WorldProviderKuiperBelt;
 import mod.sol.planets.neptune.triton.biome.BiomeTriton;
 import mod.sol.planets.neptune.triton.dimension.TeleportTypeTriton;
 import mod.sol.planets.neptune.triton.dimension.WorldProviderTriton;
-import mod.sol.planets.pluto.biome.BiomePluto;
 import mod.sol.planets.uranus.moon.ariel.biome.BiomeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
@@ -71,14 +64,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.SpawnListEntry;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
-import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.model.IModelState;
 import net.minecraftforge.common.model.TRSRTransformation;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -180,10 +170,10 @@ public class TheSol
 	// override
 	public static Planet planetAsteroids;
 	// fake
-	public static GasPlanet planetJupiter;
-	public static GasPlanet planetSaturn;
-	public static GasPlanet planetUranus;
-	public static GasPlanet planetNeptune;
+	public static GasGiant planetJupiter;
+	public static GasGiant planetSaturn;
+	public static GasGiant planetUranus;
+	public static GasGiant planetNeptune;
 	// moons
 	// mars
 	public static Moon moonPhobos;
@@ -270,19 +260,19 @@ public class TheSol
         GalacticraftRegistry.registerTeleportType(WorldProviderVenus.class, new TeleportTypeVenus());
 
 		// fake planets
-		TheSol.planetJupiter = (GasPlanet) new GasPlanet("jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetJupiter = (GasGiant) new GasGiant("jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetJupiter.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift((float) Math.PI).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(11.861993428258488499452354874042F);
 		TheSol.planetJupiter.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/jupiter.png"));
 
-		TheSol.planetSaturn = (GasPlanet) new GasPlanet("saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetSaturn = (GasGiant) new GasGiant("saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetSaturn.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(5.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.25F, 2.25F)).setRelativeOrbitTime(29.463307776560788608981380065717F);
 		TheSol.planetSaturn.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png"));
 
-		TheSol.planetUranus = (GasPlanet) new GasPlanet("uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetUranus = (GasGiant) new GasGiant("uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetUranus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.38F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.5F, 2.5F)).setRelativeOrbitTime(84.063526834611171960569550930997F);
 		TheSol.planetUranus.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus.png"));
 
-		TheSol.planetNeptune = (GasPlanet) new GasPlanet("neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+		TheSol.planetNeptune = (GasGiant) new GasGiant("neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 		TheSol.planetNeptune.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.0F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F, 2.75F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 		TheSol.planetNeptune.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png"));
 		// override
