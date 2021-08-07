@@ -14,8 +14,9 @@ import net.minecraft.item.ItemStack;
 public class RecipeUtilSol {
 	private static List<INasaWorkbenchRecipe> rocketBenchT4Recipes = new ArrayList<INasaWorkbenchRecipe>();
 	private static List<INasaWorkbenchRecipe> rocketBenchT5Recipes = new ArrayList<INasaWorkbenchRecipe>();
-	private static List<INasaWorkbenchRecipe> rocketBenchT6Recipes = new ArrayList<INasaWorkbenchRecipe>();
-    
+    private static List<INasaWorkbenchRecipe> rocketBenchT6Recipes = new ArrayList<INasaWorkbenchRecipe>();
+    private static List<INasaWorkbenchRecipe> rocketBenchT7Recipes = new ArrayList<INasaWorkbenchRecipe>();
+
     public static void addT4RocketRecipe(INasaWorkbenchRecipe recipe)
     {
         RecipeUtilSol.rocketBenchT4Recipes.add(recipe);
@@ -55,27 +56,48 @@ public class RecipeUtilSol {
     {
         return RecipeUtilSol.rocketBenchT5Recipes;
     }
-    
+
     public static void addT6RocketRecipe(INasaWorkbenchRecipe recipe)
     {
         RecipeUtilSol.rocketBenchT6Recipes.add(recipe);
     }
-    
+
     public static void removeT6RocketRecipe(INasaWorkbenchRecipe recipe)
     {
     	RecipeUtilSol.rocketBenchT6Recipes.remove(recipe);
     }
-    
+
     public static void removeAllT6RocketRecipes()
     {
     	RecipeUtilSol.rocketBenchT6Recipes.clear();
     }
-    
+
+    public static List<INasaWorkbenchRecipe> getRocketT7Recipes()
+    {
+        return RecipeUtilSol.rocketBenchT7Recipes;
+    }
+
     public static List<INasaWorkbenchRecipe> getRocketT6Recipes()
     {
-        return RecipeUtilSol.rocketBenchT6Recipes;
+        return RecipeUtilSol.rocketBenchT5Recipes;
     }
-    
+
+
+    public static void addT7RocketRecipe(INasaWorkbenchRecipe recipe)
+    {
+        RecipeUtilSol.rocketBenchT7Recipes.add(recipe);
+    }
+
+    public static void removeT7RocketRecipe(INasaWorkbenchRecipe recipe)
+    {
+        RecipeUtilSol.rocketBenchT7Recipes.remove(recipe);
+    }
+
+    public static void removeAllT7RocketRecipes()
+    {
+        RecipeUtilSol.rocketBenchT7Recipes.clear();
+    }
+
     @Nonnull
     public static ItemStack findMatchingSpaceshipT4Recipe(InventorySchematicTier4Rocket inventoryRocketBench)
     {
@@ -108,6 +130,20 @@ public class RecipeUtilSol {
     public static ItemStack findMatchingSpaceshipT6Recipe(InventorySchematicTier6Rocket inventoryRocketBench)
     {
         for (INasaWorkbenchRecipe recipe : RecipeUtilSol.getRocketT6Recipes())
+        {
+            if (recipe.matches(inventoryRocketBench))
+            {
+                return recipe.getRecipeOutput();
+            }
+        }
+
+        return ItemStack.EMPTY;
+    }
+
+    @Nonnull
+    public static ItemStack findMatchingSpaceshipT7Recipe(InventorySchematicTier4Rocket inventoryRocketBench)
+    {
+        for (INasaWorkbenchRecipe recipe : RecipeUtilSol.getRocketT7Recipes())
         {
             if (recipe.matches(inventoryRocketBench))
             {

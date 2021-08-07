@@ -38,6 +38,7 @@ import mod.sol.api.galaxy.GasGiant;
 import mod.sol.client.gui.screen.SolCelestialSelection;
 import mod.sol.config.ConfigManagerSol;
 import mod.sol.entities.boss.EntityUranusBossSlime;
+import mod.sol.entities.rocket.EntityTier7Rocket;
 import mod.sol.planets.neptune.triton.biome.BiomeTriton;
 import mod.sol.planets.neptune.triton.dimension.TeleportTypeTriton;
 import mod.sol.planets.neptune.triton.dimension.WorldProviderTriton;
@@ -48,9 +49,11 @@ import mod.sol.render.entity.*;
 import mod.sol.render.model.item.ItemModelRocketT4;
 import mod.sol.render.model.item.ItemModelRocketT5;
 import mod.sol.render.model.item.ItemModelRocketT6;
+import mod.sol.render.model.item.ItemModelRocketT7;
 import mod.sol.render.rocket.RenderTier4Rocket;
 import mod.sol.render.rocket.RenderTier5Rocket;
 import mod.sol.render.rocket.RenderTier6Rocket;
+import mod.sol.render.rocket.RenderTier7Rocket;
 import mod.sol.render.tile.TileEntityTreasureTier7ChestRenderer;
 import mod.sol.tile.*;
 import mod.sol.util.Reference;
@@ -216,6 +219,7 @@ public class TheSol
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
 		MinecraftForge.EVENT_BUS.register(this);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityHugeFireball.class, (RenderManager manager) -> new RenderHugeFireball(manager, 1));
@@ -505,7 +509,7 @@ public class TheSol
 		TheSol.moonTriton.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/triton.png"));
 		TheSol.moonTriton.setAtmosphere(new AtmosphereInfo(false, false, false, -2.5F, 0.0F, 0.0F));
 		TheSol.moonTriton.setBiomeInfo(BiomeTriton.tritonFlat);
-		TheSol.moonTriton.setDimensionInfo(ConfigManagerSol.dimensionidTriton, WorldProviderTriton.class).setTierRequired(8);
+		TheSol.moonTriton.setDimensionInfo(ConfigManagerSol.dimensionidTriton, WorldProviderTriton.class).setTierRequired(7);
 		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 10, 2, 3));
 		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 10, 2, 3));
 		TheSol.moonTriton.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 10, 2, 3));
@@ -603,7 +607,8 @@ public class TheSol
 
         TheSol.registerNonMobEntity(EntityTier4Rocket.class, "rocket_t4", 150, 1, false);
         TheSol.registerNonMobEntity(EntityTier5Rocket.class, "rocket_t5", 150, 1, false);
-        TheSol.registerNonMobEntity(EntityTier6Rocket.class, "rocket_t6", 150, 1, false);
+		TheSol.registerNonMobEntity(EntityTier6Rocket.class, "rocket_t6", 150, 1, false);
+		TheSol.registerNonMobEntity(EntityTier7Rocket.class, "rocket_t7", 150, 1, false);
         // TheSol.registerNonMobEntity(EntityTier8Rocket.class, "rocket_t8", 150, 1, false);
         // schematic
         SchematicRegistry.registerSchematicRecipe(new SchematicRocketT4());
@@ -705,6 +710,7 @@ public class TheSol
 		replaceModelDefault(event, "rocket_t4", "tier4rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT4.class, TRSRTransformation.identity());
 		replaceModelDefault(event, "rocket_t5", "tier5rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT5.class, TRSRTransformation.identity());
 		replaceModelDefault(event, "rocket_t6", "tier6rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT6.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t7", "tier7rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT7.class, TRSRTransformation.identity());
 	}
 
 	private void replaceModelDefault(ModelBakeEvent event, String resLoc, String objLoc, List<String> visibleGroups, Class<? extends ModelTransformWrapper> clazz, IModelState parentState, String... variants)
@@ -719,6 +725,7 @@ public class TheSol
 		registerTexture(event, "tier4rocket");
 		registerTexture(event, "tier5rocket");
 		registerTexture(event, "tier6rocket");
+		registerTexture(event, "tier7rocket");
 	}
 
 	private void registerTexture(TextureStitchEvent.Pre event, String texture)

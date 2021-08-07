@@ -122,9 +122,9 @@ public class ChunkProviderTriton extends ChunkProviderBase
 
                 for (int var16 = 127; var16 >= 0; --var16)
                 {
-                    if (var16 >= rand.nextInt(4) + 60)
+                    if (var16 >= rand.nextInt(4) + 64)
                         state0 = BLOCK_TOP_LIGHT;
-                    else if (var16 >= rand.nextInt(6) + 52)
+                    else if (var16 >= rand.nextInt(6) + 56)
                         state0 = BLOCK_TOP_DARK;
                     else
                         state0 = BLOCK_TOP_DEFAULT;

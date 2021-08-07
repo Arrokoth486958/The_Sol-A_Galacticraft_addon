@@ -10,6 +10,7 @@ import mod.sol.items.armor.sulfur.ItemArmorSulfur;
 import mod.sol.items.rocket.ItemTier4Rocket;
 import mod.sol.items.rocket.ItemTier5Rocket;
 import mod.sol.items.rocket.ItemTier6Rocket;
+import mod.sol.items.rocket.ItemTier7Rocket;
 import mod.sol.items.tools.*;
 import mod.sol.items.tools.ItemHoeBase;
 import net.minecraft.init.SoundEvents;
@@ -51,17 +52,15 @@ public class SolItems
 	public static final Item SCHEMATIC_T6 = new ItemSchematicTier6("schematic_rocket_t6");
 	public static final Item ROCKET_T6 = new ItemTier6Rocket("rocket_t6");
 	// t7
-	/**public static final Item ROCKET_ENGINE_T7 = new ItemBase("rocket_engine_t7", TheSol.ITEM_TAB);
+	public static final Item ROCKET_ENGINE_T7 = new ItemBase("rocket_engine_t7", TheSol.ITEM_TAB);
 	public static final Item REINFORCED_PLATE_T7 = new ItemBase("reinforced_plate_t7", TheSol.ITEM_TAB);
 	public static final Item NOSE_CONE_T7 = new ItemBase("nose_cone_t7", TheSol.ITEM_TAB);
 	public static final Item ROCKET_FINS_T7 = new ItemBase("rocket_fins_t7", TheSol.ITEM_TAB);
-	public static final Item ENGINE_BOOSTER_T7 = new ItemBase("engine_booster_t7", TheSol.ITEM_TAB);**/
-	/*public static final Item KEY_TIER_7 = new ItemKeyTier7("key_t7");
-	public static final Item SCHEMATIC_T7 = new ItemSchematicTier7("schematic_rocket_t7");
-	public static final Item ROCKET_T7 = new ItemTier7Rocket("rocket_t7");*/
+	public static final Item ENGINE_BOOSTER_T7 = new ItemBase("engine_booster_t7", TheSol.ITEM_TAB);
+//	public static final Item SCHEMATIC_T7 = new ItemSchematicTier7("schematic_rocket_t7");
 	public static final Item KEY_TIER_7 = new ItemKeyTier7("key_t7");
 	public static final Item SCHEMATIC_T7 = new ItemBase("schematic_rocket_t7", TheSol.ITEM_TAB);
-	//public static final Item ROCKET_T7 = new ItemBase("rocket_t7", TheSol.ITEM_TAB);
+	public static final Item ROCKET_T7 = new ItemTier7Rocket("rocket_t7");
 	// t8
 	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
 	// battery
