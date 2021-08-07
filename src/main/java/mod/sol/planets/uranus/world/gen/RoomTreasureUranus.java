@@ -19,9 +19,9 @@ import java.util.Random;
 
 public class RoomTreasureUranus extends RoomTreasure
 {
-    public static ResourceLocation UranusCHEST = new ResourceLocation(Reference.MOD_ID, "dungeon_tier_6");
-    // public static ResourceLocation MERCURYCHEST = new ResourceLocation("galacticraftcore", "dungeon_tier_3");
-    public static final ResourceLocation TABLE_TIER_6_DUNGEON = LootTableList.register(UranusCHEST);
+    public static ResourceLocation URANUS_CHEST = new ResourceLocation(Reference.MOD_ID, "dungeon_tier_6");
+
+    public static final ResourceLocation TABLE_TIER_6_DUNGEON = LootTableList.register(URANUS_CHEST);
 	
     public RoomTreasureUranus()
     {

@@ -5,6 +5,7 @@ import java.util.List;
 
 import mod.sol.TheSol;
 import mod.sol.items.*;
+import mod.sol.items.armor.ItemMagnetBoots;
 import mod.sol.items.armor.manganese.ItemArmorManganese;
 import mod.sol.items.armor.sulfur.ItemArmorSulfur;
 import mod.sol.items.rocket.ItemTier4Rocket;
@@ -57,9 +58,8 @@ public class SolItems
 	public static final Item NOSE_CONE_T7 = new ItemBase("nose_cone_t7", TheSol.ITEM_TAB);
 	public static final Item ROCKET_FINS_T7 = new ItemBase("rocket_fins_t7", TheSol.ITEM_TAB);
 	public static final Item ENGINE_BOOSTER_T7 = new ItemBase("engine_booster_t7", TheSol.ITEM_TAB);
-//	public static final Item SCHEMATIC_T7 = new ItemSchematicTier7("schematic_rocket_t7");
 	public static final Item KEY_TIER_7 = new ItemKeyTier7("key_t7");
-	public static final Item SCHEMATIC_T7 = new ItemBase("schematic_rocket_t7", TheSol.ITEM_TAB);
+	public static final Item SCHEMATIC_T7 = new ItemSchematicTier7("schematic_rocket_t7");
 	public static final Item ROCKET_T7 = new ItemTier7Rocket("rocket_t7");
 	// t8
 	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
@@ -81,6 +81,9 @@ public class SolItems
 	// lithium
 	public static final Item LITHIUM_INGOT = new ItemBase("ingot_lithium", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_LITHIUM = new ItemBase("compressed_lithium", TheSol.ITEM_TAB);
+	// magnet
+	public static final Item MEGNET_INGOT = new ItemBase("ingot_magnet", TheSol.ITEM_TAB);
+	public static final Item COMPRESSED_MEGNET = new ItemBase("compressed_magnet", TheSol.ITEM_TAB);
 	// armor
 	public static final ArmorMaterial ARMOR_SULFUR  = EnumHelper.addArmorMaterial("SULFUR", "", 42, new int[] { 5, 8, 9, 5 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F);
 	public static final Item SULFUR_HELMET = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.HEAD).setUnlocalizedName("sulfur_helmet").setRegistryName("sulfur_helmet");
@@ -108,4 +111,7 @@ public class SolItems
 	public static final Item MANGANESE_PICKAXE = new ItemPickaxeBase(SolItems.TOOL_MANGANESE).setUnlocalizedName("manganese_pickaxe").setRegistryName("manganese_pickaxe");
 	public static final Item MANGANESE_SHOVEL = new ItemShovelBase(SolItems.TOOL_MANGANESE).setUnlocalizedName("manganese_shovel").setRegistryName("manganese_shovel");
 	public static final Item MANGANESE_SWORD = new ItemSwordBase(SolItems.TOOL_MANGANESE).setUnlocalizedName("manganese_sword").setRegistryName("manganese_sword");
+
+	// magnet boots
+	public static final Item MAGNET_BOOTS = new ItemMagnetBoots("magnet_boots", ArmorMaterial.IRON, 7);
 }

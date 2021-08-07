@@ -381,7 +381,6 @@ public class EntitySaturnBossStray extends EntityBossBase implements IEntityBrea
     @Override
     public void setSwingingArms(boolean swingingArms)
     {
-    	// TODO Auto-generated method stub
         //Unused in this Galacticraft entity
     }
 }

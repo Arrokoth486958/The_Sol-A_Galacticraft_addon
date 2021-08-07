@@ -6,17 +6,12 @@ import micdoodle8.mods.galacticraft.api.world.ChunkProviderBase;
 import micdoodle8.mods.galacticraft.core.perlin.NoiseModule;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
 import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import mod.sol.init.SolBlocks;
-import mod.sol.planets.uranus.world.gen.MapGenDungeonUranus;
-import mod.sol.planets.uranus.world.gen.RoomBossUranus;
-import mod.sol.planets.uranus.world.gen.RoomTreasureUranus;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
@@ -42,7 +37,7 @@ public class ChunkProviderTriton extends ChunkProviderBase
 
     private final World world;
 
-    private final MapGenDungeonUranus dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(SolBlocks.URANUS_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossUranus.class, RoomTreasureUranus.class));
+//    private final MapGenDungeonUranus dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(SolBlocks.URANUS_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossUranus.class, RoomTreasureUranus.class));
 
     private Biome[] biomesForGeneration = { BiomeAdaptive.biomeDefault };
 
@@ -189,7 +184,7 @@ public class ChunkProviderTriton extends ChunkProviderBase
 
         this.caveGenerator.generate(this.world, x, z, chunkprimer);
 
-        this.dungeonGenerator.generate(this.world, x, z, chunkprimer);
+//        this.dungeonGenerator.generate(this.world, x, z, chunkprimer);
 
         Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
         byte[] abyte = chunk.getBiomeArray();
@@ -285,7 +280,7 @@ public class ChunkProviderTriton extends ChunkProviderBase
         long l = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed((long) x * k + (long) z * l ^ this.world.getSeed());
 
-        this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(x, z));
+//        this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(x, z));
 
         biomegenbase.decorate(this.world, this.rand, new BlockPos(i, 0, j));
         BlockFalling.fallInstantly = false;
@@ -301,6 +296,6 @@ public class ChunkProviderTriton extends ChunkProviderBase
     @Override
     public void recreateStructures(Chunk chunk, int x, int z)
     {
-        this.dungeonGenerator.generate(this.world, x, z, null);
+//        this.dungeonGenerator.generate(this.world, x, z, null);
     }
 }

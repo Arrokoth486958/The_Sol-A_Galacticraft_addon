@@ -1,9 +1,6 @@
 package mod.sol.inventory;
 
-import mod.sol.inventory.SlotSchematicTier4Rocket;
-
 import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
-import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import mod.sol.util.RecipeUtilSol;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -16,13 +13,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class ContainerSchematicTier4Rocket extends Container
+public class ContainerSchematicTier7Rocket extends Container
 {
-    public InventorySchematicTier4Rocket craftMatrix = new InventorySchematicTier4Rocket(this);
+    public InventorySchematicTier7Rocket craftMatrix = new InventorySchematicTier7Rocket(this);
     public IInventory craftResult = new InventoryCraftResult();
     private final World world;
 
-    public ContainerSchematicTier4Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos)
+    public ContainerSchematicTier7Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos)
     {
         final int change = 27;
         this.world = par1InventoryPlayer.player.world;
@@ -31,39 +28,39 @@ public class ContainerSchematicTier4Rocket extends Container
         int var7;
 
         // Cone
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 1, 48, -8 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 1, 48, -8 + change, pos, par1InventoryPlayer.player));
 
         // Body
         for (var6 = 0; var6 < 5; ++var6)
         {
-            this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
+            this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
         }
 
         // Body Right
         for (var6 = 0; var6 < 5; ++var6)
         {
-            this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
+            this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
         }
 
         // Left fins
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 12, 21, 64 + change, pos, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 13, 21, 82 + change, pos, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 14, 21, 100 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 12, 21, 64 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 13, 21, 82 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 14, 21, 100 + change, pos, par1InventoryPlayer.player));
 
         // Engine
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 15, 48, 100 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 15, 48, 100 + change, pos, par1InventoryPlayer.player));
 
         // Right fins
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 16, 75, 64 + change, pos, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 17, 75, 82 + change, pos, par1InventoryPlayer.player));
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 18, 75, 100 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 16, 75, 64 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 17, 75, 82 + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 18, 75, 100 + change, pos, par1InventoryPlayer.player));
 
         // Addons
         for (int var8 = 0; var8 < 3; var8++)
         {
-            this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, pos, par1InventoryPlayer.player));
+            this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, pos, par1InventoryPlayer.player));
         }
-        
+
         // Player inv:
 
         for (var6 = 0; var6 < 3; ++var6)
@@ -80,7 +77,7 @@ public class ContainerSchematicTier4Rocket extends Container
         }
         
         // input rocket
-        this.addSlotToContainer(new SlotSchematicTier4Rocket(this.craftMatrix, 22, 145, -15 + change + change, pos, par1InventoryPlayer.player));
+        this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 22, 145, -15 + change + change, pos, par1InventoryPlayer.player));
 
         this.onCraftMatrixChanged(this.craftMatrix);
     }
@@ -107,7 +104,7 @@ public class ContainerSchematicTier4Rocket extends Container
     @Override
     public void onCraftMatrixChanged(IInventory par1IInventory)
     {
-        this.craftResult.setInventorySlotContents(0, RecipeUtilSol.findMatchingSpaceshipT4Recipe(this.craftMatrix));
+        this.craftResult.setInventorySlotContents(0, RecipeUtilSol.findMatchingSpaceshipT7Recipe(this.craftMatrix));
     }
 
     @Override
@@ -128,7 +125,7 @@ public class ContainerSchematicTier4Rocket extends Container
             var2 = var4.copy();
 
             boolean done = false;
-            if (par1 <= 22)
+            if (par1 <= 21)
             {
                 if (!this.mergeItemStack(var4, 22, 58, false))
                 {

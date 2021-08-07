@@ -1,0 +1,30 @@
+{
+  "result": {
+    "item": "sol:rocket_engine_t6",
+    "data": 0
+  },
+  "pattern": [
+    "VY ",
+    "XWX",
+    "XZX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "V": {
+      "item": "minecraft:stone_button"
+    },
+    "W": {
+      "item": "galacticraftcore:canister",
+      "data": 32767
+    },
+    "X": {
+      "item": "sol:reinforced_plate_t6"
+    },
+    "Y": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "Z": {
+      "item": "galacticraftcore:air_vent"
+    }
+  }
+}

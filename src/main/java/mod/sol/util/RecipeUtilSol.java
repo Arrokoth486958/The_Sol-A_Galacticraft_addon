@@ -9,6 +9,7 @@ import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import mod.sol.inventory.InventorySchematicTier4Rocket;
 import mod.sol.inventory.InventorySchematicTier5Rocket;
 import mod.sol.inventory.InventorySchematicTier6Rocket;
+import mod.sol.inventory.InventorySchematicTier7Rocket;
 import net.minecraft.item.ItemStack;
 
 public class RecipeUtilSol {
@@ -141,7 +142,7 @@ public class RecipeUtilSol {
     }
 
     @Nonnull
-    public static ItemStack findMatchingSpaceshipT7Recipe(InventorySchematicTier4Rocket inventoryRocketBench)
+    public static ItemStack findMatchingSpaceshipT7Recipe(InventorySchematicTier7Rocket inventoryRocketBench)
     {
         for (INasaWorkbenchRecipe recipe : RecipeUtilSol.getRocketT7Recipes())
         {

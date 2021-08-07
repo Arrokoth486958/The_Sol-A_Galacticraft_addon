@@ -20,6 +20,9 @@ public class SolBlocks
 	public static final Block METHANE_FLUID_BLOCK = new BlockFluidBase("liquid_methane", SolFluid.METHANE, Material.WATER);
 	//machine
 	//public static final Block STABLE_SOLAR = new BlockBase("stayble_solar", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(0.75F).setResistance(2F);
+	//misc
+	public static final Block IRON_DECORATION_BLOCK = new BlockBase("iron_decoration_block", Material.IRON, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1F).setResistance(4F);
+	public static final Block IRON_WALL_BLOCK = new BlockBase("iron_wall_block", Material.IRON, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1F).setResistance(4F);
 	//mercury
 	public static final Block MERCURY_TURF = new BlockBase("mercury_turf", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(0.75F).setResistance(2F);
 	public static final Block MERCURY_DIRT = new BlockBase("mercury_dirt", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1F).setResistance(3F);
@@ -102,6 +105,7 @@ public class SolBlocks
 	public static final Block TRITON_IRON_ORE = new BlockBaseIronOre("triton_iron_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TRITON_ILMENITE_ORE = new BlockBaseIlmeniteOre("triton_ilmenite_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TRITON_LITHIUM_ORE = new BlockBaseLithiumOre("triton_lithium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block TRITON_MAGNET_ORE = new BlockBaseMagnetOre("triton_magnet_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.25F).setResistance(8F);
 	public static final Block TRITON_SILICON_ORE = new BlockBaseSiliconOre("triton_silicon_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TRITON_TIN_ORE = new BlockBaseTinOre("triton_tin_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	//pluto
@@ -111,5 +115,4 @@ public class SolBlocks
 	public static final Block PLUTO_COPPER_ORE = new BlockBase("pluto_copper_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block PLUTO_IRON_ORE = new BlockBase("pluto_iron_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block PLUTO_TIN_ORE = new BlockBase("pluto_tin_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
-	//misc
 }

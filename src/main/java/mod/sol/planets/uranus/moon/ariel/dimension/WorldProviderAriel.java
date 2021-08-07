@@ -18,6 +18,7 @@ import mod.sol.TheSol;
 import mod.sol.init.SolBlocks;
 import mod.sol.init.SolDimensions;
 import mod.sol.planets.uranus.moon.ariel.world.gen.ChunkProviderAriel;
+import mod.sol.planets.uranus.world.gen.RoomTreasureUranus;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
@@ -165,7 +166,7 @@ public class WorldProviderAriel extends WorldProviderSpace implements IGalacticr
     @Override
     public ResourceLocation getDungeonChestType()
     {
-        return RoomTreasure.MOONCHEST;
+        return RoomTreasureUranus.URANUS_CHEST;
     }
 
     @Override

@@ -21,7 +21,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @EventBusSubscriber
 public class RegistryHandler 
 {
-	
+
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> event)
 	{
@@ -66,6 +66,9 @@ public class RegistryHandler
 			}
 			if (block instanceof BlockBaseIlmeniteOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(AsteroidsItems.basicItem, 1, 0), 1F);
+			}
+			if (block instanceof BlockBaseMagnetOre) {
+				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.MEGNET_INGOT), 1F);
 			}
 			if (block instanceof BlockBaseManganeseOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.MANGANESE_INGOT), 1F);
