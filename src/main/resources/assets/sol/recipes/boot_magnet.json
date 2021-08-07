@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "* *",
+        "# #"
+    ],
+    
+    "key":
+    {
+        "*":
+        {
+            "item": "sol:ingot_magnet"
+        },
+        "#":
+        {
+            "item": "sol:compressed_magnet"
+        }
+    },
+    
+    "result":
+    {
+        "item":  "sol:sulfur_helmet",
+        "count": 1
+    }
+}

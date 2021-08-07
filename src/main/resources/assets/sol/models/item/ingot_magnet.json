@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "sol:items/ingot_magnet"
+    },
+    "display": { }
+}
