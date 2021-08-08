@@ -37,9 +37,9 @@ import mod.sol.api.galaxy.DwarfPlanet;
 import mod.sol.api.galaxy.GasGiant;
 import mod.sol.client.gui.screen.SolCelestialSelection;
 import mod.sol.config.ConfigManagerSol;
-import mod.sol.entities.boss.EntityUranusBossSlime;
-import mod.sol.entities.rocket.EntityTier7Rocket;
-import mod.sol.items.ItemSchematicTier7;
+import mod.sol.entities.boss.*;
+import mod.sol.entities.rocket.*;
+import mod.sol.items.*;
 import mod.sol.planets.neptune.triton.biome.BiomeTriton;
 import mod.sol.planets.neptune.triton.dimension.TeleportTypeTriton;
 import mod.sol.planets.neptune.triton.dimension.WorldProviderTriton;
@@ -48,16 +48,10 @@ import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
 import mod.sol.recipe.*;
 import mod.sol.render.entity.*;
-import mod.sol.render.model.item.ItemModelRocketT4;
-import mod.sol.render.model.item.ItemModelRocketT5;
-import mod.sol.render.model.item.ItemModelRocketT6;
-import mod.sol.render.model.item.ItemModelRocketT7;
-import mod.sol.render.rocket.RenderTier4Rocket;
-import mod.sol.render.rocket.RenderTier5Rocket;
-import mod.sol.render.rocket.RenderTier6Rocket;
-import mod.sol.render.rocket.RenderTier7Rocket;
-import mod.sol.render.tile.TileEntityTreasureTier7ChestRenderer;
-import mod.sol.schematic.SchematicRocketT7;
+import mod.sol.render.model.item.*;
+import mod.sol.render.rocket.*;
+import mod.sol.render.tile.*;
+import mod.sol.schematic.*;
 import mod.sol.tile.*;
 import mod.sol.util.Reference;
 import mod.sol.util.SolEntityRegistry;
@@ -91,19 +85,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import mod.sol.entities.EntityHugeFireball;
-import mod.sol.entities.boss.EntityJupiterBossGhast;
-import mod.sol.entities.boss.EntityMercuryBossBlaze;
-import mod.sol.entities.boss.EntitySaturnBossStray;
-import mod.sol.entities.rocket.EntityTier4Rocket;
-import mod.sol.entities.rocket.EntityTier5Rocket;
-import mod.sol.entities.rocket.EntityTier6Rocket;
 import mod.sol.init.SolBlocks;
 import mod.sol.init.SolDimensions;
 import mod.sol.init.SolItems;
 import mod.sol.init.SolOreDict;
-import mod.sol.items.ItemSchematicTier4;
-import mod.sol.items.ItemSchematicTier5;
-import mod.sol.items.ItemSchematicTier6;
 import mod.sol.planets.jupiter.moons.europa.biome.BiomeEuropa;
 import mod.sol.planets.jupiter.moons.europa.dimension.TeleportTypeEuropa;
 import mod.sol.planets.jupiter.moons.europa.dimension.WorldProviderEuropa;
@@ -122,12 +107,6 @@ import mod.sol.planets.saturn.moons.titan.biome.BiomeTitan;
 import mod.sol.planets.saturn.moons.titan.dimension.TeleportTypeTitan;
 import mod.sol.planets.saturn.moons.titan.dimension.WorldProviderTitan;
 import mod.sol.proxy.SolCommonProxy;
-import mod.sol.render.tile.TileEntityTreasureTier4ChestRenderer;
-import mod.sol.render.tile.TileEntityTreasureTier5ChestRenderer;
-import mod.sol.render.tile.TileEntityTreasureTier6ChestRenderer;
-import mod.sol.schematic.SchematicRocketT4;
-import mod.sol.schematic.SchematicRocketT5;
-import mod.sol.schematic.SchematicRocketT6;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -218,6 +197,7 @@ public class TheSol
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, (RenderManager manager) -> new RenderTier8Rocket(manager));
 		MinecraftForge.EVENT_BUS.register(this);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityHugeFireball.class, (RenderManager manager) -> new RenderHugeFireball(manager, 1));
@@ -226,6 +206,7 @@ public class TheSol
         RenderingRegistry.registerEntityRenderingHandler(EntityJupiterBossGhast.class, (RenderManager manager) -> new RenderJupiterBossGhast(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySaturnBossStray.class, (RenderManager manager) -> new RenderSaturnBossStray(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityUranusBossSlime.class, (RenderManager manager) -> new RenderUranusBossSlime(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityNeptuneBossSpider.class, (RenderManager manager) -> new RenderNeptuneBossSpider(manager));
 	}
 
 	@EventHandler
@@ -607,7 +588,7 @@ public class TheSol
         TheSol.registerNonMobEntity(EntityTier5Rocket.class, "rocket_t5", 150, 1, false);
 		TheSol.registerNonMobEntity(EntityTier6Rocket.class, "rocket_t6", 150, 1, false);
 		TheSol.registerNonMobEntity(EntityTier7Rocket.class, "rocket_t7", 150, 1, false);
-        // TheSol.registerNonMobEntity(EntityTier8Rocket.class, "rocket_t8", 150, 1, false);
+		TheSol.registerNonMobEntity(EntityTier8Rocket.class, "rocket_t8", 150, 1, false);
         // schematic
         SchematicRegistry.registerSchematicRecipe(new SchematicRocketT4());
         ItemSchematicTier4.registerSchematicItems();
@@ -621,10 +602,14 @@ public class TheSol
 		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT7());
 		ItemSchematicTier7.registerSchematicItems();
 		ItemSchematicTier7.registerTextures();
+		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT8());
+		ItemSchematicTier8.registerSchematicItems();
+		ItemSchematicTier8.registerTextures();
 		RecipeManagerRocketsTier4.addUniversalRecipes();
         RecipeManagerRocketsTier5.addUniversalRecipes();
         RecipeManagerRocketsTier6.addUniversalRecipes();
 		RecipeManagerRocketsTier7.addUniversalRecipes();
+		RecipeManagerRocketsTier8.addUniversalRecipes();
     	// skyRegistry
         MinecraftForge.EVENT_BUS.register(new SolEventHandlerClient.TickHandlerClient());
     	// Recipe
@@ -639,6 +624,7 @@ public class TheSol
         GalacticraftRegistry.addDungeonLoot(5, new ItemStack(SolItems.SCHEMATIC_T5, 1));
 		GalacticraftRegistry.addDungeonLoot(6, new ItemStack(SolItems.SCHEMATIC_T6, 1));
 		GalacticraftRegistry.addDungeonLoot(7, new ItemStack(SolItems.SCHEMATIC_T7, 1));
+		GalacticraftRegistry.addDungeonLoot(8, new ItemStack(SolItems.SCHEMATIC_T8, 1));
         // entity
         SolEntityRegistry.register();
         // dungeon
@@ -650,10 +636,12 @@ public class TheSol
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_SATURN);
 		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, "Sol Uranus Dungeon Spawner");
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_URANUS);
+		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, "Sol Neptune Dungeon Spawner");
+		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_NEPTUNE);
 
 		MinecraftForge.EVENT_BUS.register(new TheSol());
 	}
-	
+
 	@EventHandler
 	public static void PostInit(FMLPostInitializationEvent event)
 	{
@@ -676,6 +664,7 @@ public class TheSol
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier5.class, new TileEntityTreasureTier5ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier7.class, new TileEntityTreasureTier7ChestRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier8.class, new TileEntityTreasureTier8ChestRenderer());
 	}
 
 	@SubscribeEvent
@@ -694,8 +683,8 @@ public class TheSol
 //		}
 		if (((event.getGui() instanceof GuiCelestialSelection))) {
 			if (ConfigManagerSol.enableCustomGalaxymap) {
-//				if (event.getGui().getClass().getName().equalsIgnoreCase("asmodeuscore.core.astronomy.gui.screen.NewGuiCelestialSelection"))
-//					MessageUtilities.throwCrashError("Please disable the following option: enableNewGalaxyMap in configs/AsmodeusCore/core.conf");
+ 				if (event.getGui().getClass().getName().equalsIgnoreCase("asmodeuscore.core.astronomy.gui.screen.NewGuiCelestialSelection"))
+					System.err.println("Please disable Asmodeuscore's Galaxymap in configs/AsmodeusCore/core.conf");
 				if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap)) {
 					event.setGui(new SolCelestialSelection(true, ((GuiCelestialSelection) event.getGui()).possibleBodies, ((GuiCelestialSelection) event.getGui()).canCreateStations));
 				} else {
@@ -713,6 +702,7 @@ public class TheSol
 		replaceModelDefault(event, "rocket_t5", "tier5rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT5.class, TRSRTransformation.identity());
 		replaceModelDefault(event, "rocket_t6", "tier6rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT6.class, TRSRTransformation.identity());
 		replaceModelDefault(event, "rocket_t7", "tier7rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT7.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t8", "tier8rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT8.class, TRSRTransformation.identity());
 	}
 
 	private void replaceModelDefault(ModelBakeEvent event, String resLoc, String objLoc, List<String> visibleGroups, Class<? extends ModelTransformWrapper> clazz, IModelState parentState, String... variants)
@@ -728,6 +718,7 @@ public class TheSol
 		registerTexture(event, "tier5rocket");
 		registerTexture(event, "tier6rocket");
 		registerTexture(event, "tier7rocket");
+		registerTexture(event, "tier8rocket");
 	}
 
 	private void registerTexture(TextureStitchEvent.Pre event, String texture)

@@ -5,7 +5,6 @@ import mod.sol.TheSol;
 import mod.sol.init.SolBlocks;
 import mod.sol.init.SolItems;
 import mod.sol.itemblock.ItemBlockBaseSol;
-import mod.sol.tile.TileEntityDungeonSpawnerSaturn;
 import mod.sol.tile.TileEntityDungeonSpawnerUranus;
 import mod.sol.util.IHasModel;
 import net.minecraft.block.Block;

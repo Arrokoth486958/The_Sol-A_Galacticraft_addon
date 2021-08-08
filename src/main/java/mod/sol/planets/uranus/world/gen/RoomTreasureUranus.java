@@ -19,9 +19,9 @@ import java.util.Random;
 
 public class RoomTreasureUranus extends RoomTreasure
 {
-    public static ResourceLocation URANUS_CHEST = new ResourceLocation(Reference.MOD_ID, "dungeon_tier_6");
+    public static ResourceLocation URANUS_CHEST = new ResourceLocation(Reference.MOD_ID, "dungeon_tier_7");
 
-    public static final ResourceLocation TABLE_TIER_6_DUNGEON = LootTableList.register(URANUS_CHEST);
+    public static final ResourceLocation TABLE_TIER_7_DUNGEON = LootTableList.register(URANUS_CHEST);
 	
     public RoomTreasureUranus()
     {
@@ -103,7 +103,7 @@ public class RoomTreasureUranus extends RoomTreasure
                             TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) worldIn.getTileEntity(blockpos);
                             if (treasureChest != null)
                             {
-                                ResourceLocation chesttype = TABLE_TIER_6_DUNGEON;
+                                ResourceLocation chesttype = TABLE_TIER_7_DUNGEON;
                                 if (worldIn.provider instanceof IGalacticraftWorldProvider)
                                 {
                                     chesttype = ((IGalacticraftWorldProvider)worldIn.provider).getDungeonChestType();

@@ -41,7 +41,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-public class ItemTier8Rocket extends Item implements IHoldableItem, ISortableItem
+public class ItemTier8Rocket extends Item implements IHoldableItem, ISortableItem, IHasModel
 {
     public ItemTier8Rocket(String assetName)
     {
@@ -240,5 +240,12 @@ public class ItemTier8Rocket extends Item implements IHoldableItem, ISortableIte
         }
         
         return true;
+    }
+
+    @Override
+    public void registerModels() {
+        for (int i = 0; i < 5; ++i) {
+            TheSol.proxy.registerItemRenderer(this, i, "inventory");
+        }
     }
 }

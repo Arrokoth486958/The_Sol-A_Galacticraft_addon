@@ -19,6 +19,9 @@ import mod.sol.client.jei.tier6rocket.Tier6RocketRecipeWrapper;
 import mod.sol.client.jei.tier7rocket.Tier7RocketRecipeCategory;
 import mod.sol.client.jei.tier7rocket.Tier7RocketRecipeMaker;
 import mod.sol.client.jei.tier7rocket.Tier7RocketRecipeWrapper;
+import mod.sol.client.jei.tier8rocket.Tier8RocketRecipeCategory;
+import mod.sol.client.jei.tier8rocket.Tier8RocketRecipeMaker;
+import mod.sol.client.jei.tier8rocket.Tier8RocketRecipeWrapper;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -30,6 +33,9 @@ public class SolJeiManager extends BlankModPlugin
     public static final String ROCKET_T5_ID = "sol.rocketT5";
     public static final String ROCKET_T6_ID = "sol.rocketT6";
     public static final String ROCKET_T7_ID = "sol.rocketT7";
+    public static final String ROCKET_T8_ID = "sol.rocketT8";
+    public static final String ROCKET_T9_ID = "sol.rocketT9";
+    public static final String ROCKET_T10_ID = "sol.rocketT10";
 
     @Override
     public void register(@Nonnull IModRegistry registry)
@@ -38,16 +44,19 @@ public class SolJeiManager extends BlankModPlugin
         registry.handleRecipes(INasaWorkbenchRecipe.class, Tier5RocketRecipeWrapper::new, SolJeiManager.ROCKET_T5_ID);
         registry.handleRecipes(INasaWorkbenchRecipe.class, Tier6RocketRecipeWrapper::new, SolJeiManager.ROCKET_T6_ID);
         registry.handleRecipes(INasaWorkbenchRecipe.class, Tier7RocketRecipeWrapper::new, SolJeiManager.ROCKET_T7_ID);
+        registry.handleRecipes(INasaWorkbenchRecipe.class, Tier8RocketRecipeWrapper::new, SolJeiManager.ROCKET_T8_ID);
 
         registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList(), SolJeiManager.ROCKET_T4_ID);
         registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList(), SolJeiManager.ROCKET_T5_ID);
         registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList(), SolJeiManager.ROCKET_T6_ID);
         registry.addRecipes(Tier7RocketRecipeMaker.getRecipesList(), SolJeiManager.ROCKET_T7_ID);
+        registry.addRecipes(Tier8RocketRecipeMaker.getRecipesList(), SolJeiManager.ROCKET_T8_ID);
 
         registry.addRecipeCatalyst(new ItemStack(GCBlocks.nasaWorkbench), SolJeiManager.ROCKET_T4_ID);
         registry.addRecipeCatalyst(new ItemStack(GCBlocks.nasaWorkbench), SolJeiManager.ROCKET_T5_ID);
         registry.addRecipeCatalyst(new ItemStack(GCBlocks.nasaWorkbench), SolJeiManager.ROCKET_T6_ID);
         registry.addRecipeCatalyst(new ItemStack(GCBlocks.nasaWorkbench), SolJeiManager.ROCKET_T7_ID);
+        registry.addRecipeCatalyst(new ItemStack(GCBlocks.nasaWorkbench), SolJeiManager.ROCKET_T8_ID);
     }
 
     @Override
@@ -58,5 +67,6 @@ public class SolJeiManager extends BlankModPlugin
         registry.addRecipeCategories(new Tier5RocketRecipeCategory(guiHelper));
         registry.addRecipeCategories(new Tier6RocketRecipeCategory(guiHelper));
         registry.addRecipeCategories(new Tier7RocketRecipeCategory(guiHelper));
+        registry.addRecipeCategories(new Tier8RocketRecipeCategory(guiHelper));
     }
 }

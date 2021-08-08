@@ -8,10 +8,7 @@ import mod.sol.items.*;
 import mod.sol.items.armor.ItemMagnetBoots;
 import mod.sol.items.armor.manganese.ItemArmorManganese;
 import mod.sol.items.armor.sulfur.ItemArmorSulfur;
-import mod.sol.items.rocket.ItemTier4Rocket;
-import mod.sol.items.rocket.ItemTier5Rocket;
-import mod.sol.items.rocket.ItemTier6Rocket;
-import mod.sol.items.rocket.ItemTier7Rocket;
+import mod.sol.items.rocket.*;
 import mod.sol.items.tools.*;
 import mod.sol.items.tools.ItemHoeBase;
 import net.minecraft.init.SoundEvents;
@@ -62,6 +59,15 @@ public class SolItems
 	public static final Item SCHEMATIC_T7 = new ItemSchematicTier7("schematic_rocket_t7");
 	public static final Item ROCKET_T7 = new ItemTier7Rocket("rocket_t7");
 	// t8
+	public static final Item ROCKET_ENGINE_T8 = new ItemBase("rocket_engine_t8", TheSol.ITEM_TAB);
+	public static final Item REINFORCED_PLATE_T8 = new ItemBase("reinforced_plate_t8", TheSol.ITEM_TAB);
+	public static final Item NOSE_CONE_T8 = new ItemBase("nose_cone_t8", TheSol.ITEM_TAB);
+	public static final Item ROCKET_FINS_T8 = new ItemBase("rocket_fins_t8", TheSol.ITEM_TAB);
+	public static final Item ENGINE_BOOSTER_T8 = new ItemBase("engine_booster_t8", TheSol.ITEM_TAB);
+	public static final Item KEY_TIER_8 = new ItemKeyTier8("key_t8");
+	public static final Item SCHEMATIC_T8 = new ItemSchematicTier8("schematic_rocket_t8");
+	public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
+	// t8
 	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
 	// battery
 	public static final Item ADVANCED_BATTERY_TIER_1 = new ItemAdvancedBattery("advanced_battery_t1", 1);
@@ -84,6 +90,11 @@ public class SolItems
 	// magnet
 	public static final Item MAGNET_INGOT = new ItemBase("ingot_magnet", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_MAGNET = new ItemBase("compressed_magnet", TheSol.ITEM_TAB);
+	// magnesium
+	public static final Item MAGNESIUM_INGOT = new ItemBase("ingot_magnesium", TheSol.ITEM_TAB);
+	public static final Item COMPRESSED_MAGNESIUM = new ItemBase("compressed_magnesium", TheSol.ITEM_TAB);
+	// shield
+//	public static final Item HEAVY_SHIELD = new ItemHeavyShield("shield_heavy", TheSol.ITEM_TAB);
 	// armor
 	public static final ArmorMaterial ARMOR_SULFUR  = EnumHelper.addArmorMaterial("SULFUR", "", 42, new int[] { 5, 8, 9, 5 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F);
 	public static final Item SULFUR_HELMET = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.HEAD).setUnlocalizedName("sulfur_helmet").setRegistryName("sulfur_helmet");

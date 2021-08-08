@@ -67,6 +67,9 @@ public class RegistryHandler
 			if (block instanceof BlockBaseIlmeniteOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(AsteroidsItems.basicItem, 1, 0), 1F);
 			}
+			if (block instanceof BlockBaseMagnesiumOre) {
+				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.MAGNESIUM_INGOT), 1F);
+			}
 			if (block instanceof BlockBaseMagnetOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.MAGNET_INGOT), 1F);
 			}

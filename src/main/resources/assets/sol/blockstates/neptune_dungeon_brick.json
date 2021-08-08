@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "sol:neptune_dungeon_brick" }
+    }
+}

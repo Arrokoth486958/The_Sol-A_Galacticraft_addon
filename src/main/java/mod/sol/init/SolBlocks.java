@@ -16,6 +16,7 @@ public class SolBlocks
 	public static Block BOSS_SPAWNER_JUPITER = new BlockBossSpawnerJupiter("boss_spawner_jupiter");
 	public static Block BOSS_SPAWNER_SATURN = new BlockBossSpawnerSaturn("boss_spawner_saturn");
 	public static Block BOSS_SPAWNER_URANUS = new BlockBossSpawnerUranus("boss_spawner_uranus");
+	public static Block BOSS_SPAWNER_NEPTUNE = new BlockBossSpawnerNeptune("boss_spawner_neptune");
 	//fluid
 	public static final Block METHANE_FLUID_BLOCK = new BlockFluidBase("liquid_methane", SolFluid.METHANE, Material.WATER);
 	//machine
@@ -105,9 +106,13 @@ public class SolBlocks
 	public static final Block TRITON_IRON_ORE = new BlockBaseIronOre("triton_iron_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TRITON_ILMENITE_ORE = new BlockBaseIlmeniteOre("triton_ilmenite_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TRITON_LITHIUM_ORE = new BlockBaseLithiumOre("triton_lithium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block TRITON_MAGNESIUM_ORE = new BlockBaseMagnesiumOre("triton_magnesium_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TRITON_MAGNET_ORE = new BlockBaseMagnetOre("triton_magnet_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.25F).setResistance(8F);
 	public static final Block TRITON_SILICON_ORE = new BlockBaseSiliconOre("triton_silicon_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TRITON_TIN_ORE = new BlockBaseTinOre("triton_tin_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	//uranus misc
+	public static final Block NEPTUNE_DUNGEON_BRICK = new BlockBase("neptune_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
+	public static final Block TREASURE_CHEST_T8 = new BlockTier8TreasureChest("treasure_t8");
 	//pluto
 	public static final Block PLUTO_SURFACE_ROCK = new BlockBase("pluto_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
 	public static final Block PLUTO_SUB_SURFACE_ROCK = new BlockBase("pluto_sub_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);

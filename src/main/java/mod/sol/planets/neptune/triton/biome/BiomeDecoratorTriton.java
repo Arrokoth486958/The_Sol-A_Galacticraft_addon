@@ -29,6 +29,7 @@ public class BiomeDecoratorTriton extends BiomeDecorator
     private WorldGenerator ilmenitGen;
     private WorldGenerator ironGen;
     private WorldGenerator lithiumGen;
+    private WorldGenerator magnesiumGen;
     private WorldGenerator magnetGen;
     private WorldGenerator siliconGen;
     private WorldGenerator tinGen;
@@ -40,6 +41,7 @@ public class BiomeDecoratorTriton extends BiomeDecorator
         this.ironGen = new WorldGenMinableMeta(SolBlocks.TRITON_IRON_ORE, 6, 0, true, SolBlocks.TRITON_ROCK, 0);
         this.ilmenitGen = new WorldGenMinableMeta(SolBlocks.TRITON_ILMENITE_ORE, 6, 0, true, SolBlocks.TRITON_ROCK, 0);
         this.lithiumGen = new WorldGenMinableMeta(SolBlocks.TRITON_LITHIUM_ORE, 4, 0, true, SolBlocks.TRITON_ROCK, 0);
+        this.magnesiumGen = new WorldGenMinableMeta(SolBlocks.TRITON_MAGNESIUM_ORE, 6, 0, true, SolBlocks.TRITON_ROCK, 0);
         this.magnetGen = new WorldGenMinableMeta(SolBlocks.TRITON_MAGNET_ORE, 5, 0, true, SolBlocks.TRITON_ROCK, 0);
         this.siliconGen = new WorldGenMinableMeta(SolBlocks.TRITON_SILICON_ORE, 6, 0, true, SolBlocks.TRITON_ROCK, 0);
         this.tinGen = new WorldGenMinableMeta(SolBlocks.TRITON_TIN_ORE, 6, 0, true, SolBlocks.TRITON_ROCK, 0);
@@ -82,6 +84,7 @@ public class BiomeDecoratorTriton extends BiomeDecorator
         this.genStandardOre(16, this.ilmenitGen, 0, 60);
         this.genStandardOre(18, this.ironGen, 0, 60);
         this.genStandardOre(12, this.lithiumGen, 0, 60);
+        this.genStandardOre(16, this.magnesiumGen, 0, 60);
         this.genStandardOre(14, this.magnetGen, 0, 60);
         this.genStandardOre(26, this.siliconGen, 0, 60);
         this.genStandardOre(26, this.tinGen, 0, 60);
