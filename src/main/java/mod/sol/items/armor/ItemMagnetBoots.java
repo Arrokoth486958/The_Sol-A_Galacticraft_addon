@@ -1,20 +1,15 @@
 package mod.sol.items.armor;
 
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderSpaceStation;
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import mod.sol.TheSol;
-import mod.sol.client.jei.SolJeiManager;
 import mod.sol.init.SolItems;
 import mod.sol.util.IHasModel;
 import mod.sol.util.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -22,10 +17,8 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.lwjgl.Sys;
 
 public class ItemMagnetBoots extends ItemArmor implements IArmorGravity, ISortableItem, IHasModel {
     private final ArmorMaterial material;
@@ -112,7 +105,7 @@ public class ItemMagnetBoots extends ItemArmor implements IArmorGravity, ISortab
     @Override
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
-        return repair.getItem() == SolItems.MEGNET_INGOT;
+        return repair.getItem() == SolItems.MAGNET_INGOT;
     }
 
     @Override

@@ -50,7 +50,7 @@ public class InventorySchematicTier6Rocket implements IInventory
             this.markDirty();
             this.eventHandler.onCraftMatrixChanged(this);
         }
-    	return oldstack;
+        return oldstack;
     }
 
     @Override
@@ -149,7 +149,7 @@ public class InventorySchematicTier6Rocket implements IInventory
     @Override
     public void clear()
     {
-    	
+
     }
 
     @Override

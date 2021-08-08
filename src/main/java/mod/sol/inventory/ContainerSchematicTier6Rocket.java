@@ -75,7 +75,7 @@ public class ContainerSchematicTier6Rocket extends Container
         {
             this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 18 + 169 + change));
         }
-        
+
         // input rocket
         this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 22, 145, -15 + change + change, pos, par1InventoryPlayer.player));
 

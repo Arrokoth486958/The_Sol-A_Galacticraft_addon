@@ -64,12 +64,19 @@ item.nose_cone_t5.name=Tier 5 Nose Cone
 item.rocket_fins_t5.name=Tier 5 Rocket Fins
 item.engine_booster_t5.name=Tier 5 Booster
 
-# Tier 5 Items
+# Tier 6 Items
 item.rocket_engine_t6.name=Tier 6 Rocket Engine
 item.reinforced_plate_t6.name=Tier 6 Duty-Plate
 item.nose_cone_t6.name=Tier 6 Nose Cone
 item.rocket_fins_t6.name=Tier 6 Rocket Fins
 item.engine_booster_t6.name=Tier 6 Booster
+
+# Tier 7 Items
+item.rocket_engine_t7.name=Tier 7 Rocket Engine
+item.reinforced_plate_t7.name=Tier 7 Duty-Plate
+item.nose_cone_t7.name=Tier 7 Nose Cone
+item.rocket_fins_t7.name=Tier 7 Rocket Fins
+item.engine_booster_t7.name=Tier 7 Booster
 
 # Keys
 key_t4.name=Tier 4 Dungeon Key
@@ -87,6 +94,7 @@ item.schematic_rocket_t7.name=Nasa Workbench Schematic (Tier 7 Rocket)
 item.rocket_t4.t4Rocket.name=Tier 4 Rocket
 item.rocket_t5.t5Rocket.name=Tier 5 Rocket
 item.rocket_t6.t6Rocket.name=Tier 6 Rocket
+item.rocket_t7.t7Rocket.name=Tier 7 Rocket
 
 # Battery
 item.advanced_battery_t1.name=Advanced Battery (Tier 1)
@@ -96,12 +104,14 @@ item.advanced_battery_t2.name=Advanced Battery (Tier 2)
 item.ingot_sulfur.name=Sulfur Ingot
 item.ingot_manganese.name=Manganese Ingot
 item.ingot_lithium.name=Lithium Ingot
+item.ingot_magnet.name=Magnet Ingot
 
 item.shard_sulfur.name=Sulfur Shard
 
 item.compressed_sulfur.name=Compressed Sulfur
 item.compressed_manganese.name=Compressed Manganese
 item.compressed_lithium.name=Compressed Lithium
+item.compressed_magnet.name=Compressed Magnet
 
 item.stick_sulfur.name=Sulfur Stick
 item.stick_manganese.name=Manganese Stick
@@ -116,6 +126,8 @@ item.manganese_helmet.name=Manganese Helmet
 item.manganese_chestplate.name=Manganese Chestplate
 item.manganese_leggings.name=Manganese Leggings
 item.manganese_boots.name=Manganese Boots
+
+item.magnet_boots.name=Magnet Boots
 
 # Tools
 item.sulfur_axe.name=Sulfur Axe
@@ -218,6 +230,7 @@ tile.triton_rock.name=Triton Rock
 tile.triton_aluminum_ore.name=Aluminum Ore (Triton)
 tile.triton_desh_ore.name=Desh Ore (Triton)
 tile.triton_iron_ore.name=Iron Ore (Triton)
+tile.triton_magnet_ore.name=Magnet Ore (Triton)
 tile.triton_ilmenite_ore.name=Ilmenite Ore (Triton)
 tile.triton_lithium_ore.name=Lithium Ore (Triton)
 tile.triton_silicon_ore.name=Silicon Ore (Triton)
@@ -230,3 +243,6 @@ tile.pluto_rock.name=Pluto Rock
 tile.pluto_copper_ore.name=Copper Ore (Pluto)
 tile.pluto_iron_ore.name=Iron Ore (Pluto)
 tile.pluto_tin_ore.name=Tin Ore (Pluto)
+
+tile.iron_decoration_block.name=Iron Decoration Block
+tile.iron_wall_block.name=Iron Wall Block

@@ -82,8 +82,8 @@ public class SolItems
 	public static final Item LITHIUM_INGOT = new ItemBase("ingot_lithium", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_LITHIUM = new ItemBase("compressed_lithium", TheSol.ITEM_TAB);
 	// magnet
-	public static final Item MEGNET_INGOT = new ItemBase("ingot_magnet", TheSol.ITEM_TAB);
-	public static final Item COMPRESSED_MEGNET = new ItemBase("compressed_magnet", TheSol.ITEM_TAB);
+	public static final Item MAGNET_INGOT = new ItemBase("ingot_magnet", TheSol.ITEM_TAB);
+	public static final Item COMPRESSED_MAGNET = new ItemBase("compressed_magnet", TheSol.ITEM_TAB);
 	// armor
 	public static final ArmorMaterial ARMOR_SULFUR  = EnumHelper.addArmorMaterial("SULFUR", "", 42, new int[] { 5, 8, 9, 5 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F);
 	public static final Item SULFUR_HELMET = new ItemArmorSulfur(SolItems.ARMOR_SULFUR, 7, EntityEquipmentSlot.HEAD).setUnlocalizedName("sulfur_helmet").setRegistryName("sulfur_helmet");

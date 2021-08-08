@@ -73,14 +73,14 @@ public class RecipeUtilSol {
     	RecipeUtilSol.rocketBenchT6Recipes.clear();
     }
 
+    public static List<INasaWorkbenchRecipe> getRocketT6Recipes()
+    {
+        return RecipeUtilSol.rocketBenchT6Recipes;
+    }
+
     public static List<INasaWorkbenchRecipe> getRocketT7Recipes()
     {
         return RecipeUtilSol.rocketBenchT7Recipes;
-    }
-
-    public static List<INasaWorkbenchRecipe> getRocketT6Recipes()
-    {
-        return RecipeUtilSol.rocketBenchT5Recipes;
     }
 
 

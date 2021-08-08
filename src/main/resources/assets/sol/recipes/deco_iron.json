@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "sol:iron_decoration_block",
+    "count": 4
+  },
+  "pattern": [
+    "XX ",
+    "XXY",
+    "   "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "stone"
+    },
+    "Y": {
+      "type": "forge:ore_dict",
+      "ore": "compressedIron"
+    }
+  }
+}
