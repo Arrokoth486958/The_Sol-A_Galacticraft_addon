@@ -8,6 +8,7 @@ import javax.annotation.Nullable;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import mod.sol.init.SolItems;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLiving;
@@ -112,7 +113,7 @@ public class EntityNeptuneBossSpider extends EntityBossBase implements IEntityBr
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(850.0F);
+        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(850.0F * ConfigManagerCore.dungeonBossHealthMod);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.30000001192092896D);
         this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(17.5D);
     }

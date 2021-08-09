@@ -46,9 +46,12 @@ entity.mercury_blaze_boss.name=水星烈焰人之王
 entity.jupiter_ghast_boss.name=木星恶魂之王
 entity.saturn_stray_boss.name=土星流浪者之王
 entity.uranus_slime_boss.name=天王星史莱姆之王
+entity.neptune_spider_boss.name=海王星蜘蛛之王
+entity.silverfish_boss.name=蠹虫之王
 
 # Fluid
 fluid.liquid_methane=液态甲烷
+tile.fluid.methane.name=液态甲烷
 
 #////////////////           Items            ////////////////#
 
@@ -78,23 +81,42 @@ item.nose_cone_t7.name=七阶火箭鼻锥
 item.rocket_fins_t7.name=七阶火箭尾翼
 item.engine_booster_t7.name=七阶火箭助推器
 
+# Tier 8 Items
+item.rocket_engine_t8.name=八阶火箭引擎
+item.reinforced_plate_t8.name=八阶重装板
+item.nose_cone_t8.name=八阶火箭鼻锥
+item.rocket_fins_t8.name=八阶火箭尾翼
+item.engine_booster_t8.name=八阶火箭助推器
+
+# Tier 9 Items
+item.rocket_engine_t9.name=九阶火箭引擎
+item.reinforced_plate_t9.name=九阶重装板
+item.nose_cone_t9.name=九阶火箭鼻锥
+item.rocket_fins_t9.name=九阶火箭尾翼
+item.engine_booster_t9.name=九阶火箭助推器
+
 # Keys
 key_t4.name=四阶地牢钥匙
 key_t5.name=五阶地牢钥匙
 key_t6.name=六阶地牢钥匙
 key_t7.name=七阶地牢钥匙
+key_t8.name=八阶地牢钥匙
+key_t9.name=九阶地牢钥匙
 
 # Schematics
 item.schematic_rocket_t4.name=CNSA工作台图纸（四阶火箭）
 item.schematic_rocket_t5.name=CNSA工作台图纸（五阶火箭）
 item.schematic_rocket_t6.name=CNSA工作台图纸（六阶火箭）
 item.schematic_rocket_t7.name=CNSA工作台图纸（七阶火箭）
+item.schematic_rocket_t8.name=CNSA工作台图纸（八阶火箭）
+item.schematic_rocket_t9.name=CNSA工作台图纸（九阶火箭）
 
 # Rockets
 item.rocket_t4.t4Rocket.name=四阶火箭
 item.rocket_t5.t5Rocket.name=五阶火箭
 item.rocket_t6.t6Rocket.name=六阶火箭
 item.rocket_t7.t7Rocket.name=七阶火箭
+item.rocket_t8.t8Rocket.name=八阶火箭
 
 # Battery
 item.advanced_battery_t1.name=硫电池
@@ -104,12 +126,16 @@ item.advanced_battery_t2.name=锂电池
 item.ingot_sulfur.name=硫锭
 item.ingot_manganese.name=锰锭
 item.ingot_lithium.name=锂锭
+item.ingot_magnet.name=磁铁锭
+item.ingot_magnesium.name=镁锭
 
 item.shard_sulfur.name=硫碎片
 
 item.compressed_sulfur.name=致密硫板
 item.compressed_manganese.name=致密锰板
 item.compressed_lithium.name=致密锂板
+item.compressed_magnet.name=致密磁铁
+item.compressed_magnesium.name=致密镁板
 
 item.stick_sulfur.name=硫棒
 item.stick_manganese.name=锰棒
@@ -117,7 +143,7 @@ item.stick_manganese.name=锰棒
 # Armor
 item.sulfur_helmet.name=硫头盔
 item.sulfur_chestplate.name=硫胸甲
-item.sulfur_leggings=硫护腿
+item.sulfur_leggings.name=硫护腿
 item.sulfur_boots.name=硫战靴
 
 item.manganese_helmet.name=锰头盔
@@ -228,10 +254,16 @@ tile.triton_rock.name=海卫一岩石
 tile.triton_aluminum_ore.name=铝矿石（海卫一）
 tile.triton_desh_ore.name=戴斯矿石（海卫一）
 tile.triton_iron_ore.name=铁矿石（海卫一）
+tile.triton_magnet_ore.name=磁铁矿石（海卫一）
+tile.triton_magnesium_ore.name=镁矿石（海卫一）
 tile.triton_ilmenite_ore.name=钛铁矿石（海卫一）
 tile.triton_lithium_ore.name=锂矿石（海卫一）
 tile.triton_silicon_ore.name=硅矿石（海卫一）
 tile.triton_tin_ore.name=锡矿石（海卫一）
+
+# Neptune Misc
+tile.neptune_dungeon_brick.name=天王星地牢砖
+tile.treasure_t8.name=八阶珍宝箱
 
 # Pluto
 tile.pluto_surface_rock.name=冥王星表层岩
@@ -240,6 +272,8 @@ tile.pluto_rock.name=冥王星岩石
 tile.pluto_copper_ore.name=铜矿石（冥王星）
 tile.pluto_iron_ore.name=铁矿石（冥王星）
 tile.pluto_tin_ore.name=锡矿石（冥王星）
+tile.pluto_dungeon_brick.name=冥王星地牢砖块
+tile.treasure_t9.name=九阶珍宝箱
 
 tile.iron_decoration_block.name=铁饰建材
 tile.iron_wall_block.name=铁饰墙砖

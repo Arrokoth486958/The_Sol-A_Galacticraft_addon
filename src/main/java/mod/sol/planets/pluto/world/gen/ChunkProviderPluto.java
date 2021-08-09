@@ -47,7 +47,7 @@ public class ChunkProviderPluto extends ChunkProviderBase
 
     private final World world;
 
-    private final MapGenDungeon dungeonGeneratorMoon = new MapGenDungeon(new DungeonConfiguration(GCBlocks.blockMoon.getDefaultState().withProperty(BlockBasicMoon.BASIC_TYPE_MOON, BlockBasicMoon.EnumBlockBasicMoon.MOON_DUNGEON_BRICK), 25, 8, 16, 5, 6, RoomBoss.class, RoomTreasure.class));
+    private final MapGenDungeonPluto dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(SolBlocks.PLUTO_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossPluto.class, RoomTreasurePluto.class));
 
     private Biome[] biomesForGeneration = { BiomeAdaptive.biomeDefault };
 
@@ -198,7 +198,7 @@ public class ChunkProviderPluto extends ChunkProviderBase
 
         this.caveGenerator.generate(this.world, x, z, chunkprimer);
 
-        this.dungeonGeneratorMoon.generate(this.world, x, z, chunkprimer);
+        this.dungeonGenerator.generate(this.world, x, z, chunkprimer);
 
         Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
         byte[] abyte = chunk.getBiomeArray();
@@ -294,7 +294,7 @@ public class ChunkProviderPluto extends ChunkProviderBase
         long l = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed((long) x * k + (long) z * l ^ this.world.getSeed());
 
-        this.dungeonGeneratorMoon.generateStructure(this.world, this.rand, new ChunkPos(x, z));
+        this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(x, z));
 
         biomegenbase.decorate(this.world, this.rand, new BlockPos(i, 0, j));
         BlockFalling.fallInstantly = false;
@@ -310,6 +310,6 @@ public class ChunkProviderPluto extends ChunkProviderBase
     @Override
     public void recreateStructures(Chunk chunk, int x, int z)
     {
-        this.dungeonGeneratorMoon.generate(this.world, x, z, null);
+        this.dungeonGenerator.generate(this.world, x, z, null);
     }
 }

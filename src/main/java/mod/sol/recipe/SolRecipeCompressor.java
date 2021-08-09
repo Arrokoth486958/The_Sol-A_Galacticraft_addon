@@ -17,6 +17,7 @@ public class SolRecipeCompressor {
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.REINFORCED_PLATE_T5, 2), new ItemStack(SolItems.COMPRESSED_SULFUR, 1, 0), new ItemStack(SolItems.REINFORCED_PLATE_T4, 1, 0));
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.REINFORCED_PLATE_T6, 2), new ItemStack(SolItems.COMPRESSED_MANGANESE, 1, 0), new ItemStack(SolItems.REINFORCED_PLATE_T5, 1, 0));
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.REINFORCED_PLATE_T7, 2), new ItemStack(SolItems.COMPRESSED_LITHIUM, 1, 0), new ItemStack(SolItems.REINFORCED_PLATE_T6, 1, 0));
+		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.REINFORCED_PLATE_T8, 2), new ItemStack(SolItems.COMPRESSED_MAGNESIUM, 1, 0), new ItemStack(SolItems.REINFORCED_PLATE_T7, 1, 0));
 		//sulfur
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.SULFUR_SHARD, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1), new ItemStack(SolBlocks.IO_SULFUR_BLOCK, 1));
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.COMPRESSED_SULFUR, 1), new ItemStack(SolItems.SULFUR_INGOT, 1), new ItemStack(SolItems.SULFUR_INGOT, 1));
@@ -29,5 +30,7 @@ public class SolRecipeCompressor {
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.COMPRESSED_LITHIUM), new ItemStack(SolItems.LITHIUM_INGOT), new ItemStack(SolItems.LITHIUM_INGOT));
 		//magnet
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.COMPRESSED_MAGNET), new ItemStack(SolItems.MAGNET_INGOT), new ItemStack(SolItems.MAGNET_INGOT));
+		//magnesium
+		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.COMPRESSED_MAGNESIUM), new ItemStack(SolItems.MAGNESIUM_INGOT), new ItemStack(SolItems.MAGNESIUM_INGOT));
 	}
 }

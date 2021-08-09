@@ -208,6 +208,7 @@ public class TheSol
 		RenderingRegistry.registerEntityRenderingHandler(EntitySaturnBossStray.class, (RenderManager manager) -> new RenderSaturnBossStray(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityUranusBossSlime.class, (RenderManager manager) -> new RenderUranusBossSlime(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityNeptuneBossSpider.class, (RenderManager manager) -> new RenderNeptuneBossSpider(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBossSilverfish.class, (RenderManager manager) -> new RenderBossSilverfish(manager));
 	}
 
 	@EventHandler
@@ -626,6 +627,7 @@ public class TheSol
 		GalacticraftRegistry.addDungeonLoot(6, new ItemStack(SolItems.SCHEMATIC_T6, 1));
 		GalacticraftRegistry.addDungeonLoot(7, new ItemStack(SolItems.SCHEMATIC_T7, 1));
 		GalacticraftRegistry.addDungeonLoot(8, new ItemStack(SolItems.SCHEMATIC_T8, 1));
+		GalacticraftRegistry.addDungeonLoot(9, new ItemStack(SolItems.SCHEMATIC_T9, 1));
         // entity
         SolEntityRegistry.register();
         // dungeon
@@ -639,6 +641,8 @@ public class TheSol
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_URANUS);
 		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, "Sol Neptune Dungeon Spawner");
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_NEPTUNE);
+		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, "Sol Pluto Dungeon Spawner");
+		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_PLUTO);
 
 		MinecraftForge.EVENT_BUS.register(new TheSol());
 	}
@@ -666,6 +670,7 @@ public class TheSol
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier7.class, new TileEntityTreasureTier7ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier8.class, new TileEntityTreasureTier8ChestRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier9.class, new TileEntityTreasureTier9ChestRenderer());
 	}
 
 	@SubscribeEvent

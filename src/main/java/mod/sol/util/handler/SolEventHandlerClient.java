@@ -139,7 +139,7 @@ public class SolEventHandlerClient {
                 {
                     if (world.provider.getSkyRenderer() == null)
                     {
-                        world.provider.setSkyRenderer(new SkyProviderPluto((IGalacticraftWorldProvider) world.provider));
+                        world.provider.setSkyRenderer(new SkyProviderPluto());
                     }
 
                     if (world.provider.getCloudRenderer() == null)

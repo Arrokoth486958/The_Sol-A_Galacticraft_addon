@@ -17,6 +17,7 @@ public class SolBlocks
 	public static Block BOSS_SPAWNER_SATURN = new BlockBossSpawnerSaturn("boss_spawner_saturn");
 	public static Block BOSS_SPAWNER_URANUS = new BlockBossSpawnerUranus("boss_spawner_uranus");
 	public static Block BOSS_SPAWNER_NEPTUNE = new BlockBossSpawnerNeptune("boss_spawner_neptune");
+	public static Block BOSS_SPAWNER_PLUTO = new BlockBossSpawnerPluto("boss_spawner_pluto");
 	//fluid
 	public static final Block METHANE_FLUID_BLOCK = new BlockFluidBase("liquid_methane", SolFluid.METHANE, Material.WATER);
 	//machine
@@ -120,4 +121,6 @@ public class SolBlocks
 	public static final Block PLUTO_COPPER_ORE = new BlockBase("pluto_copper_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block PLUTO_IRON_ORE = new BlockBase("pluto_iron_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block PLUTO_TIN_ORE = new BlockBase("pluto_tin_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block PLUTO_DUNGEON_BRICK = new BlockBase("pluto_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
+	public static final Block TREASURE_CHEST_T9 = new BlockTier9TreasureChest("treasure_t9");
 }

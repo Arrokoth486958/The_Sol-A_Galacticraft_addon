@@ -46,9 +46,12 @@ entity.mercury_blaze_boss.name=Mercury Blaze Boss
 entity.jupiter_ghast_boss.name=Jupiter Ghast Boss
 entity.saturn_stray_boss.name=Saturn Stray Boss
 entity.uranus_slime_boss.name=Uranus Slime Boss
+entity.neptune_spider_boss.name=Neptune Spider Boss
+entity.silverfish_boss.name=Silverfish Boss
 
 # Fluid
 fluid.liquid_methane=Liquid Methane
+tile.fluid.methane.name=Liquid Methane
 
 #////////////////           Items            ////////////////#
 
@@ -78,23 +81,43 @@ item.nose_cone_t7.name=Tier 7 Nose Cone
 item.rocket_fins_t7.name=Tier 7 Rocket Fins
 item.engine_booster_t7.name=Tier 7 Booster
 
+# Tier 8 Items
+item.rocket_engine_t8.name=Tier 8 Rocket Engine
+item.reinforced_plate_t8.name=Tier 8 Duty-Plate
+item.nose_cone_t8.name=Tier 8 Nose Cone
+item.rocket_fins_t8.name=Tier 8 Rocket Fins
+item.engine_booster_t8.name=Tier 8 Boosteritem.engine_booster_t8.name=Tier 8 Booster
+
+# Tier 9 Items
+item.rocket_engine_t9.name=Tier 9 Rocket Engine
+item.reinforced_plate_t9.name=Tier 9 Duty-Plate
+item.nose_cone_t9.name=Tier 9 Nose Cone
+item.rocket_fins_t9.name=Tier 9 Rocket Fins
+item.engine_booster_t9.name=Tier 9 Boosteritem.engine_booster_t9.name=Tier 9 Booster
+
+
 # Keys
 key_t4.name=Tier 4 Dungeon Key
 key_t5.name=Tier 5 Dungeon Key
 key_t6.name=Tier 6 Dungeon Key
 key_t7.name=Tier 7 Dungeon Key
+key_t8.name=Tier 8 Dungeon Key
+key_t9.name=Tier 9 Dungeon Key
 
 # Schematics
 item.schematic_rocket_t4.name=Nasa Workbench Schematic (Tier 4 Rocket)
 item.schematic_rocket_t5.name=Nasa Workbench Schematic (Tier 5 Rocket)
 item.schematic_rocket_t6.name=Nasa Workbench Schematic (Tier 6 Rocket)
 item.schematic_rocket_t7.name=Nasa Workbench Schematic (Tier 7 Rocket)
+item.schematic_rocket_t8.name=Nasa Workbench Schematic (Tier 8 Rocket)
+item.schematic_rocket_t9.name=Nasa Workbench Schematic (Tier 9 Rocket)
 
 # Rockets
 item.rocket_t4.t4Rocket.name=Tier 4 Rocket
 item.rocket_t5.t5Rocket.name=Tier 5 Rocket
 item.rocket_t6.t6Rocket.name=Tier 6 Rocket
 item.rocket_t7.t7Rocket.name=Tier 7 Rocket
+item.rocket_t8.t8Rocket.name=Tier 8 Rocket
 
 # Battery
 item.advanced_battery_t1.name=Advanced Battery (Tier 1)
@@ -105,6 +128,7 @@ item.ingot_sulfur.name=Sulfur Ingot
 item.ingot_manganese.name=Manganese Ingot
 item.ingot_lithium.name=Lithium Ingot
 item.ingot_magnet.name=Magnet Ingot
+item.ingot_magnesium.name=Magnesium Ingot
 
 item.shard_sulfur.name=Sulfur Shard
 
@@ -112,6 +136,7 @@ item.compressed_sulfur.name=Compressed Sulfur
 item.compressed_manganese.name=Compressed Manganese
 item.compressed_lithium.name=Compressed Lithium
 item.compressed_magnet.name=Compressed Magnet
+item.compressed_magnesium.name=Compressed Magnesium
 
 item.stick_sulfur.name=Sulfur Stick
 item.stick_manganese.name=Manganese Stick
@@ -119,7 +144,7 @@ item.stick_manganese.name=Manganese Stick
 # Armor
 item.sulfur_helmet.name=Sulfur Helmet
 item.sulfur_chestplate.name=Sulfur Chestplate
-item.sulfur_leggings=Manganese Leggings
+item.sulfur_leggings.name=Manganese Leggings
 item.sulfur_boots.name=Sulfur Boots
 
 item.manganese_helmet.name=Manganese Helmet
@@ -231,10 +256,15 @@ tile.triton_aluminum_ore.name=Aluminum Ore (Triton)
 tile.triton_desh_ore.name=Desh Ore (Triton)
 tile.triton_iron_ore.name=Iron Ore (Triton)
 tile.triton_magnet_ore.name=Magnet Ore (Triton)
+tile.triton_magnesium_ore.name=Magnesium Ore (Triton)
 tile.triton_ilmenite_ore.name=Ilmenite Ore (Triton)
 tile.triton_lithium_ore.name=Lithium Ore (Triton)
 tile.triton_silicon_ore.name=Silicon Ore (Triton)
 tile.triton_tin_ore.name=Tin Ore (Triton)
+
+# Neptune Misc
+tile.neptune_dungeon_brick.name=Neptune Dungeon Brick
+tile.treasure_t8.name=Tier 8 Treasure Chest
 
 # Pluto
 tile.pluto_surface_rock.name=Pluto Surface Rock
@@ -243,6 +273,8 @@ tile.pluto_rock.name=Pluto Rock
 tile.pluto_copper_ore.name=Copper Ore (Pluto)
 tile.pluto_iron_ore.name=Iron Ore (Pluto)
 tile.pluto_tin_ore.name=Tin Ore (Pluto)
+tile.pluto_dungeon_brick.name=Pluto Dungeon Brick
+tile.treasure_t9.name=Tier 9 Treasure Chest
 
 tile.iron_decoration_block.name=Iron Decoration Block
 tile.iron_wall_block.name=Iron Wall Block

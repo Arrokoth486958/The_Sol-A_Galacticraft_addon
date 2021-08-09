@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "sol:nose_cone_t7",
+    "data": 0
+  },
+  "pattern": [
+    " Y ",
+    " X ",
+    "X X"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "sol:reinforced_plate_t7"
+    },
+    "Y": {
+      "item": "minecraft:redstone_torch"
+    }
+  }
+}

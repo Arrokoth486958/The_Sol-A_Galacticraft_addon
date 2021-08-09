@@ -1,4 +1,4 @@
-package mod.sol.planets.neptune.world.gen;
+package mod.sol.planets.pluto.world.gen;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
@@ -17,22 +17,22 @@ import net.minecraft.world.storage.loot.LootTableList;
 
 import java.util.Random;
 
-public class RoomTreasureNeptune extends RoomTreasure
+public class RoomTreasurePluto extends RoomTreasure
 {
-    public static ResourceLocation NEPTUNE_CHEST = new ResourceLocation(Reference.MOD_ID, "dungeon_tier_8");
+    public static ResourceLocation PLUTO_CHEST = new ResourceLocation(Reference.MOD_ID, "dungeon_tier_9");
 
-    public static final ResourceLocation TABLE_TIER_8_DUNGEON = LootTableList.register(NEPTUNE_CHEST);
+    public static final ResourceLocation TABLE_TIER_9_DUNGEON = LootTableList.register(PLUTO_CHEST);
 
-    public RoomTreasureNeptune()
+    public RoomTreasurePluto()
     {
     }
 
-    public RoomTreasureNeptune(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, EnumFacing entranceDir)
+    public RoomTreasurePluto(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, EnumFacing entranceDir)
     {
         super(configuration, rand, blockPosX, blockPosZ, rand.nextInt(4) + 6, configuration.getRoomHeight(), rand.nextInt(4) + 6, entranceDir);
     }
 
-    public RoomTreasureNeptune(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir)
+    public RoomTreasurePluto(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir)
     {
         super(configuration, rand, blockPosX, blockPosZ, sizeX, sizeY, sizeZ, entranceDir);
     }
@@ -99,11 +99,11 @@ public class RoomTreasureNeptune extends RoomTreasure
                         BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
                         if (boundingBox.isVecInside(blockpos))
                         {
-                            worldIn.setBlockState(blockpos, SolBlocks.TREASURE_CHEST_T8.getDefaultState().withProperty(BlockTier6TreasureChest.FACING, this.getDirection().getOpposite()), 2);
+                            worldIn.setBlockState(blockpos, SolBlocks.TREASURE_CHEST_T9.getDefaultState().withProperty(BlockTier6TreasureChest.FACING, this.getDirection().getOpposite()), 2);
                             TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) worldIn.getTileEntity(blockpos);
                             if (treasureChest != null)
                             {
-                                ResourceLocation chesttype = TABLE_TIER_8_DUNGEON;
+                                ResourceLocation chesttype = TABLE_TIER_9_DUNGEON;
                                 if (worldIn.provider instanceof IGalacticraftWorldProvider)
                                 {
                                     chesttype = ((IGalacticraftWorldProvider)worldIn.provider).getDungeonChestType();
