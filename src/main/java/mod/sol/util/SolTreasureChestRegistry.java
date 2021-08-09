@@ -22,6 +22,7 @@ public class SolTreasureChestRegistry {
         GameRegistry.registerTileEntity(TileEntityTreasureChestTier7.class, "Sol Tier 7 Treasure Chest");
         GameRegistry.registerTileEntity(TileEntityTreasureChestTier8.class, "Sol Tier 8 Treasure Chest");
         GameRegistry.registerTileEntity(TileEntityTreasureChestTier9.class, "Sol Tier 9 Treasure Chest");
+        GameRegistry.registerTileEntity(TileEntityTreasureChestTier10.class, "Sol Tier 10 Treasure Chest");
 	}
 	
 	private static void registerBlock(Block block, Class<? extends ItemBlock> itemClass)

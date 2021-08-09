@@ -8,7 +8,6 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-import mod.sol.init.SolItems;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -21,22 +20,22 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class EntityTier8Rocket extends EntityTieredRocket
+public class EntityTier9Rocket extends EntityTieredRocket
 {
-    public EntityTier8Rocket(World par1World)
+    public EntityTier9Rocket(World par1World)
     {
         super(par1World);
         this.setSize(1.8F, 6F);
     }
 
-    public EntityTier8Rocket(World par1World, double par2, double par4, double par6, EnumRocketType rocketType)
+    public EntityTier9Rocket(World par1World, double par2, double par4, double par6, EnumRocketType rocketType)
     {
         super(par1World, par2, par4, par6);
         this.rocketType = rocketType;
         this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
     }
 
-    public EntityTier8Rocket(World par1World, double par2, double par4, double par6, boolean reversed, EnumRocketType rocketType, NonNullList<ItemStack> inv)
+    public EntityTier9Rocket(World par1World, double par2, double par4, double par6, boolean reversed, EnumRocketType rocketType, NonNullList<ItemStack> inv)
     {
         this(par1World, par2, par4, par6, rocketType);
         this.stacks = inv;
@@ -276,7 +275,7 @@ public class EntityTier8Rocket extends EntityTieredRocket
     @Override
     public int getRocketTier()
     {
-        return 8;
+        return 9;
     }
 
     @Override

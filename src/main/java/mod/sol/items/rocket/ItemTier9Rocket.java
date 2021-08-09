@@ -11,7 +11,7 @@ import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import mod.sol.TheSol;
-import mod.sol.entities.rocket.EntityTier4Rocket;
+import mod.sol.entities.rocket.EntityTier9Rocket;
 import mod.sol.init.SolItems;
 import mod.sol.util.IHasModel;
 import net.minecraft.block.Block;
@@ -34,13 +34,12 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
-import javax.annotation.Nullable;
-
-public class ItemTier4Rocket extends Item implements IHoldableItem, ISortableItem, IHasModel
+public class ItemTier9Rocket extends Item implements IHoldableItem, ISortableItem, IHasModel
 {
-    public ItemTier4Rocket(String assetName)
+    public ItemTier9Rocket(String assetName)
     {
         super();
         this.setMaxDamage(0);
@@ -59,7 +58,7 @@ public class ItemTier4Rocket extends Item implements IHoldableItem, ISortableIte
     {
         return ClientProxyCore.galacticraftItem;
     }
-    
+
     @SideOnly(Side.CLIENT)
     @Override
     public CreativeTabs getCreativeTab()
@@ -171,7 +170,7 @@ public class ItemTier4Rocket extends Item implements IHoldableItem, ISortableIte
 
         if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("RocketFuel"))
         {
-            EntityTier4Rocket rocket = new EntityTier4Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
+            EntityTier9Rocket rocket = new EntityTier9Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
             tooltip.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.fuelTank.getCapacity());
         }
     }
@@ -179,7 +178,7 @@ public class ItemTier4Rocket extends Item implements IHoldableItem, ISortableIte
     @Override
     public String getUnlocalizedName(ItemStack par1ItemStack)
     {
-        return super.getUnlocalizedName(par1ItemStack) + ".t4Rocket";
+        return super.getUnlocalizedName(par1ItemStack) + ".t9Rocket";
     }
 
     @Override
@@ -221,7 +220,7 @@ public class ItemTier4Rocket extends Item implements IHoldableItem, ISortableIte
             return false;
         }
 
-        EntityTier4Rocket rocket = new EntityTier4Rocket(worldIn, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
+        EntityTier9Rocket rocket = new EntityTier9Rocket(worldIn, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
 
         rocket.rotationYaw += 45;
         rocket.setPosition(rocket.posX, rocket.posY + rocket.getOnPadYOffset(), rocket.posZ);

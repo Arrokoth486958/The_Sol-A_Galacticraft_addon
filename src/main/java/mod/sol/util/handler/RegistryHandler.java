@@ -85,6 +85,9 @@ public class RegistryHandler
 			if (block instanceof BlockBaseLithiumOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.LITHIUM_INGOT, 1, 0), 1F);
 			}
+			if (block instanceof BlockBaseVanadiumOre) {
+				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.VANADIUM_INGOT, 1, 0), 1F);
+			}
 
 			if(block instanceof IHasModel)
 			{

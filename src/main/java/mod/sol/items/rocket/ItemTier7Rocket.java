@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.planets.asteroids.entities.EntityTier3Rocket;
 import mod.sol.TheSol;
 import mod.sol.entities.rocket.EntityTier7Rocket;
 import mod.sol.init.SolItems;
@@ -171,7 +170,7 @@ public class ItemTier7Rocket extends Item implements IHoldableItem, ISortableIte
 
         if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("RocketFuel"))
         {
-            EntityTier3Rocket rocket = new EntityTier3Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
+            EntityTier7Rocket rocket = new EntityTier7Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
             tooltip.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.fuelTank.getCapacity());
         }
     }

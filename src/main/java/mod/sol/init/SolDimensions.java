@@ -10,6 +10,7 @@ import mod.sol.planets.mercury.dimension.WorldProviderMercury;
 import mod.sol.planets.pluto.dimension.WorldProviderPluto;
 import mod.sol.planets.saturn.moons.mimas.dimension.WorldProviderMimas;
 import mod.sol.planets.saturn.moons.titan.dimension.WorldProviderTitan;
+import mod.sol.planets.sedna.dimension.WorldProviderSedna;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
 import mod.sol.util.Reference;
 import net.minecraft.world.DimensionType;
@@ -22,6 +23,7 @@ public class SolDimensions
 	public static DimensionType Mercury = GalacticraftRegistry.registerDimension("mercury", "_mercury", ConfigManagerSol.dimensionidMercury, WorldProviderMercury.class, false);
 	public static DimensionType Pluto = GalacticraftRegistry.registerDimension("pluto", "_pluto", ConfigManagerSol.dimensionidPluto, WorldProviderPluto.class, false);
 	public static DimensionType KuiperBelt = GalacticraftRegistry.registerDimension("kuiper_belt", "_kuiper_belt", ConfigManagerSol.dimensionidKuiperBelt, WorldProviderKuiperBelt.class, false);
+	public static DimensionType Sedna = GalacticraftRegistry.registerDimension("sedna", "_sedna", ConfigManagerSol.dimensionidSedna, WorldProviderSedna.class, false);
 	//moons
 	public static DimensionType Io = GalacticraftRegistry.registerDimension("io", "_io", ConfigManagerSol.dimensionidIo, WorldProviderIo.class, false);
 	public static DimensionType Europa = GalacticraftRegistry.registerDimension("europa", "_europa", ConfigManagerSol.dimensionidEuropa, WorldProviderEuropa.class, false);

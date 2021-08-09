@@ -44,6 +44,9 @@ import mod.sol.planets.neptune.triton.biome.BiomeTriton;
 import mod.sol.planets.neptune.triton.dimension.TeleportTypeTriton;
 import mod.sol.planets.neptune.triton.dimension.WorldProviderTriton;
 import mod.sol.planets.pluto.biome.BiomePluto;
+import mod.sol.planets.sedna.biome.BiomeSedna;
+import mod.sol.planets.sedna.dimension.TeleportTypeSedna;
+import mod.sol.planets.sedna.dimension.WorldProviderSedna;
 import mod.sol.planets.uranus.moon.ariel.biome.BiomeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.TeleportTypeAriel;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
@@ -199,6 +202,7 @@ public class TheSol
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, (RenderManager manager) -> new RenderTier8Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 		MinecraftForge.EVENT_BUS.register(this);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityHugeFireball.class, (RenderManager manager) -> new RenderHugeFireball(manager, 1));
@@ -344,6 +348,15 @@ public class TheSol
 		// sedna
 		TheSol.planetSedna = (DwarfPlanet) new DwarfPlanet("sedna").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(14.421412354F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5F, 5F)).setRelativeOrbitTime(39.143442132456F);
 		TheSol.planetSedna.setBodyIcon(new ResourceLocation(Reference.MOD_ID, "textures/planets/sedna.png"));
+		TheSol.planetSedna.setAtmosphere(new AtmosphereInfo(false, false, false, -6.0F, 0.0F, 0.0F));
+		TheSol.planetSedna.setRelativeSize(0.1294F);
+		TheSol.planetSedna.setDimensionInfo(ConfigManagerSol.dimensionidSedna, WorldProviderSedna.class).setTierRequired(9);
+		TheSol.planetSedna.setBiomeInfo(BiomeSedna.sednaFlat);
+		TheSol.planetSedna.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		TheSol.planetSedna.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		TheSol.planetSedna.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		TheSol.planetSedna.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		TheSol.planetSedna.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		TheSol.planetSedna.setDimensionSuffix("_sedna");
 		// oortcloud
 		TheSol.planetOortCloud = (Planet) new Planet("oort_cloud").setParentSolarSystem(GalacticraftCore.solarSystemSol).setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift((float) (Math.random() * (2 * Math.PI))).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(7.5F, 7.5F)).setRelativeOrbitTime(90.0F);
@@ -516,7 +529,7 @@ public class TheSol
 		
 		GalaxyRegistry.registerPlanet(TheSol.planetPluto);
 		GalacticraftRegistry.registerTeleportType(WorldProviderPluto.class, new TeleportTypePluto());
-		GalacticraftRegistry.registerRocketGui(WorldProviderMercury.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/pluto_rocket_gui.png"));
+		GalacticraftRegistry.registerRocketGui(WorldProviderPluto.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/pluto_rocket_gui.png"));
 
 		GalaxyRegistry.registerPlanet(TheSol.planetHaumea);
 
@@ -527,6 +540,7 @@ public class TheSol
 		GalaxyRegistry.registerPlanet(TheSol.planetKuiperBelt);
 
 		GalaxyRegistry.registerPlanet(TheSol.planetSedna);
+		GalacticraftRegistry.registerTeleportType(WorldProviderSedna.class, new TeleportTypeSedna());
 
 		GalaxyRegistry.registerPlanet(TheSol.planetOortCloud);
 		// moons
@@ -536,9 +550,11 @@ public class TheSol
 		
     	GalaxyRegistry.registerMoon(TheSol.moonIo);
 		GalacticraftRegistry.registerTeleportType(WorldProviderIo.class, new TeleportTypeIo());
+		GalacticraftRegistry.registerRocketGui(WorldProviderIo.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/io_rocket_gui.png"));
 
     	GalaxyRegistry.registerMoon(TheSol.moonEuropa);
 		GalacticraftRegistry.registerTeleportType(WorldProviderEuropa.class, new TeleportTypeEuropa());
+		GalacticraftRegistry.registerRocketGui(WorldProviderEuropa.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/europa_rocket_gui.png"));
 
     	GalaxyRegistry.registerMoon(TheSol.moonGanymede);
 
@@ -548,6 +564,7 @@ public class TheSol
 		
     	GalaxyRegistry.registerMoon(TheSol.moonMimas);
 		GalacticraftRegistry.registerTeleportType(WorldProviderMimas.class, new TeleportTypeMimas());
+		GalacticraftRegistry.registerRocketGui(WorldProviderMimas.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/mimas_rocket_gui.png"));
 
     	GalaxyRegistry.registerMoon(TheSol.moonEnceladus);
 
@@ -559,9 +576,11 @@ public class TheSol
 
     	GalaxyRegistry.registerMoon(TheSol.moonTitan);
 		GalacticraftRegistry.registerTeleportType(WorldProviderTitan.class, new TeleportTypeTitan());
-		
-    	GalaxyRegistry.registerMoon(TheSol.moonAriel);
+		GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/titan_rocket_gui.png"));
+
+		GalaxyRegistry.registerMoon(TheSol.moonAriel);
 		GalacticraftRegistry.registerTeleportType(WorldProviderAriel.class, new TeleportTypeAriel());
+		GalacticraftRegistry.registerRocketGui(WorldProviderAriel.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/ariel_rocket_gui.png"));
 
 		GalaxyRegistry.registerMoon(TheSol.moonUmbriel);
     	
@@ -569,6 +588,7 @@ public class TheSol
     	
     	GalaxyRegistry.registerMoon(TheSol.moonTriton);
 		GalacticraftRegistry.registerTeleportType(WorldProviderTriton.class, new TeleportTypeTriton());
+		GalacticraftRegistry.registerRocketGui(WorldProviderTriton.class, new ResourceLocation(Reference.MOD_ID, "textures/gui/rocketgui/triton_rocket_gui.png"));
 
 		GalaxyRegistry.registerMoon(TheSol.moonCharon);
     	// fake planets
@@ -591,6 +611,7 @@ public class TheSol
 		TheSol.registerNonMobEntity(EntityTier6Rocket.class, "rocket_t6", 150, 1, false);
 		TheSol.registerNonMobEntity(EntityTier7Rocket.class, "rocket_t7", 150, 1, false);
 		TheSol.registerNonMobEntity(EntityTier8Rocket.class, "rocket_t8", 150, 1, false);
+		TheSol.registerNonMobEntity(EntityTier9Rocket.class, "rocket_t9", 150, 1, false);
         // schematic
         SchematicRegistry.registerSchematicRecipe(new SchematicRocketT4());
         ItemSchematicTier4.registerSchematicItems();
@@ -607,11 +628,15 @@ public class TheSol
 		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT8());
 		ItemSchematicTier8.registerSchematicItems();
 		ItemSchematicTier8.registerTextures();
+		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT9());
+		ItemSchematicTier9.registerSchematicItems();
+		ItemSchematicTier9.registerTextures();
 		RecipeManagerRocketsTier4.addUniversalRecipes();
         RecipeManagerRocketsTier5.addUniversalRecipes();
         RecipeManagerRocketsTier6.addUniversalRecipes();
 		RecipeManagerRocketsTier7.addUniversalRecipes();
 		RecipeManagerRocketsTier8.addUniversalRecipes();
+		RecipeManagerRocketsTier9.addUniversalRecipes();
     	// skyRegistry
         MinecraftForge.EVENT_BUS.register(new SolEventHandlerClient.TickHandlerClient());
     	// Recipe
@@ -665,6 +690,8 @@ public class TheSol
 		SolDimensions.Pluto = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidPluto);
 		SolDimensions.KuiperBelt = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidKuiperBelt);
 
+		SolDimensions.Sedna = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidSedna);
+
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier4.class, new TileEntityTreasureTier4ChestRenderer());
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier5.class, new TileEntityTreasureTier5ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
@@ -709,6 +736,7 @@ public class TheSol
 		replaceModelDefault(event, "rocket_t6", "tier6rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT6.class, TRSRTransformation.identity());
 		replaceModelDefault(event, "rocket_t7", "tier7rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT7.class, TRSRTransformation.identity());
 		replaceModelDefault(event, "rocket_t8", "tier8rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT8.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t9", "tier9rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT9.class, TRSRTransformation.identity());
 	}
 
 	private void replaceModelDefault(ModelBakeEvent event, String resLoc, String objLoc, List<String> visibleGroups, Class<? extends ModelTransformWrapper> clazz, IModelState parentState, String... variants)
@@ -725,6 +753,7 @@ public class TheSol
 		registerTexture(event, "tier6rocket");
 		registerTexture(event, "tier7rocket");
 		registerTexture(event, "tier8rocket");
+		registerTexture(event, "tier9rocket");
 	}
 
 	private void registerTexture(TextureStitchEvent.Pre event, String texture)

@@ -68,16 +68,14 @@ public class SolItems
 	public static final Item SCHEMATIC_T8 = new ItemSchematicTier8("schematic_rocket_t8");
 	public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
 	// t9
-//	public static final Item ROCKET_ENGINE_T9 = new ItemBase("rocket_engine_t9", TheSol.ITEM_TAB);
-//	public static final Item REINFORCED_PLATE_T9 = new ItemBase("reinforced_plate_t9", TheSol.ITEM_TAB);
-//	public static final Item NOSE_CONE_T9 = new ItemBase("nose_cone_t9", TheSol.ITEM_TAB);
-//	public static final Item ROCKET_FINS_T9 = new ItemBase("rocket_fins_t9", TheSol.ITEM_TAB);
-//	public static final Item ENGINE_BOOSTER_T9 = new ItemBase("engine_booster_t9", TheSol.ITEM_TAB);
+	public static final Item ROCKET_ENGINE_T9 = new ItemBase("rocket_engine_t9", TheSol.ITEM_TAB);
+	public static final Item REINFORCED_PLATE_T9 = new ItemBase("reinforced_plate_t9", TheSol.ITEM_TAB);
+	public static final Item NOSE_CONE_T9 = new ItemBase("nose_cone_t9", TheSol.ITEM_TAB);
+	public static final Item ROCKET_FINS_T9 = new ItemBase("rocket_fins_t9", TheSol.ITEM_TAB);
+	public static final Item ENGINE_BOOSTER_T9 = new ItemBase("engine_booster_t9", TheSol.ITEM_TAB);
 	public static final Item KEY_TIER_9 = new ItemKeyTier9("key_t9");
-	public static final Item SCHEMATIC_T9 = new ItemBase("schematic_rocket_t9", TheSol.ITEM_TAB);
-//	public static final Item KEY_TIER_9 = new ItemKeyTier9("key_t9");
-//	public static final Item SCHEMATIC_T9 = new ItemSchematicTier9("schematic_rocket_t9");
-//	public static final Item ROCKET_T9 = new ItemTier9Rocket("rocket_t9");
+	public static final Item SCHEMATIC_T9 = new ItemSchematicTier9("schematic_rocket_t9");
+	public static final Item ROCKET_T9 = new ItemTier9Rocket("rocket_t9");
 	// t8
 	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
 	// battery
@@ -104,6 +102,9 @@ public class SolItems
 	// magnesium
 	public static final Item MAGNESIUM_INGOT = new ItemBase("ingot_magnesium", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_MAGNESIUM = new ItemBase("compressed_magnesium", TheSol.ITEM_TAB);
+	// magnesium
+	public static final Item VANADIUM_INGOT = new ItemBase("ingot_vanadium", TheSol.ITEM_TAB);
+	public static final Item COMPRESSED_VANADIUM = new ItemBase("compressed_vanadium", TheSol.ITEM_TAB);
 	// shield
 //	public static final Item HEAVY_SHIELD = new ItemHeavyShield("shield_heavy", TheSol.ITEM_TAB);
 	// armor

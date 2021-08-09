@@ -8,8 +8,7 @@ import mod.sol.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class SolBlocks 
-{
+public class SolBlocks {
 	public static final List<Block> Blocks = new ArrayList<Block>();
 	//spawner
 	public static Block BOSS_SPAWNER_MERCURY = new BlockBossSpawnerMercury("boss_spawner_mercury");
@@ -118,9 +117,21 @@ public class SolBlocks
 	public static final Block PLUTO_SURFACE_ROCK = new BlockBase("pluto_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
 	public static final Block PLUTO_SUB_SURFACE_ROCK = new BlockBase("pluto_sub_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);
 	public static final Block PLUTO_ROCK = new BlockBase("pluto_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(2F).setResistance(6F);
-	public static final Block PLUTO_COPPER_ORE = new BlockBase("pluto_copper_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
-	public static final Block PLUTO_IRON_ORE = new BlockBase("pluto_iron_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
-	public static final Block PLUTO_TIN_ORE = new BlockBase("pluto_tin_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block PLUTO_COPPER_ORE = new BlockBaseCopperOre("pluto_copper_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block PLUTO_IRON_ORE = new BlockBaseIronOre("pluto_iron_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block PLUTO_TIN_ORE = new BlockBaseTinOre("pluto_tin_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block PLUTO_VANADIUM_ORE = new BlockBaseVanadiumOre("pluto_vanadium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(4F).setResistance(8F);
 	public static final Block PLUTO_DUNGEON_BRICK = new BlockBase("pluto_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
 	public static final Block TREASURE_CHEST_T9 = new BlockTier9TreasureChest("treasure_t9");
+	//pluto
+	public static final Block SEDNA_TURF = new BlockBase("sedna_turf", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
+	public static final Block SEDNA_SURFACE_ROCK = new BlockBase("sedna_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.25F).setResistance(2F);
+	public static final Block SEDNA_SUB_SURFACE_ROCK = new BlockBase("sedna_sub_surface_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(1.5F).setResistance(3F);
+	public static final Block SEDNA_ROCK = new BlockBase("sedna_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(2F).setResistance(6F);
+	public static final Block SEDNA_COPPER_ORE = new BlockBaseCopperOre("sedna_copper_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block SEDNA_IRON_ORE = new BlockBaseIronOre("sedna_iron_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block SEDNA_TIN_ORE = new BlockBaseTinOre("sedna_tin_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block SEDNA_VANADIUM_ORE = new BlockBaseVanadiumOre("sedna_vanadium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(4F).setResistance(8F);
+	public static final Block SEDNA_DUNGEON_BRICK = new BlockBase("sedna_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);
+	public static final Block TREASURE_CHEST_T10 = new BlockTier10TreasureChest("treasure_t10");
 }

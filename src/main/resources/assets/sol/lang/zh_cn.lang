@@ -117,6 +117,7 @@ item.rocket_t5.t5Rocket.name=五阶火箭
 item.rocket_t6.t6Rocket.name=六阶火箭
 item.rocket_t7.t7Rocket.name=七阶火箭
 item.rocket_t8.t8Rocket.name=八阶火箭
+item.rocket_t9.t9Rocket.name=九阶火箭
 
 # Battery
 item.advanced_battery_t1.name=硫电池
@@ -128,6 +129,7 @@ item.ingot_manganese.name=锰锭
 item.ingot_lithium.name=锂锭
 item.ingot_magnet.name=磁铁锭
 item.ingot_magnesium.name=镁锭
+item.ingot_vanadium.name=钒锭
 
 item.shard_sulfur.name=硫碎片
 
@@ -136,6 +138,7 @@ item.compressed_manganese.name=致密锰板
 item.compressed_lithium.name=致密锂板
 item.compressed_magnet.name=致密磁铁
 item.compressed_magnesium.name=致密镁板
+item.compressed_vanadium.name=致密钒板
 
 item.stick_sulfur.name=硫棒
 item.stick_manganese.name=锰棒
@@ -272,6 +275,7 @@ tile.pluto_rock.name=冥王星岩石
 tile.pluto_copper_ore.name=铜矿石（冥王星）
 tile.pluto_iron_ore.name=铁矿石（冥王星）
 tile.pluto_tin_ore.name=锡矿石（冥王星）
+tile.pluto_vanadium_ore.name=钒矿石（冥王星）
 tile.pluto_dungeon_brick.name=冥王星地牢砖块
 tile.treasure_t9.name=九阶珍宝箱
 

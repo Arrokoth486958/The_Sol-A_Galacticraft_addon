@@ -118,6 +118,7 @@ item.rocket_t5.t5Rocket.name=Tier 5 Rocket
 item.rocket_t6.t6Rocket.name=Tier 6 Rocket
 item.rocket_t7.t7Rocket.name=Tier 7 Rocket
 item.rocket_t8.t8Rocket.name=Tier 8 Rocket
+item.rocket_t9.t9Rocket.name=Tier 9 Rocket
 
 # Battery
 item.advanced_battery_t1.name=Advanced Battery (Tier 1)
@@ -129,6 +130,7 @@ item.ingot_manganese.name=Manganese Ingot
 item.ingot_lithium.name=Lithium Ingot
 item.ingot_magnet.name=Magnet Ingot
 item.ingot_magnesium.name=Magnesium Ingot
+item.ingot_vanadium.name=Vanadium Ingot
 
 item.shard_sulfur.name=Sulfur Shard
 
@@ -137,6 +139,7 @@ item.compressed_manganese.name=Compressed Manganese
 item.compressed_lithium.name=Compressed Lithium
 item.compressed_magnet.name=Compressed Magnet
 item.compressed_magnesium.name=Compressed Magnesium
+item.compressed_vanadium.name=Vanadium Magnesium
 
 item.stick_sulfur.name=Sulfur Stick
 item.stick_manganese.name=Manganese Stick
@@ -272,6 +275,7 @@ tile.pluto_sub_surface_rock.name=Pluto Sub-surface Rock
 tile.pluto_rock.name=Pluto Rock
 tile.pluto_copper_ore.name=Copper Ore (Pluto)
 tile.pluto_iron_ore.name=Iron Ore (Pluto)
+tile.pluto_vanadium_ore.name=Vanadium Ore (Pluto)
 tile.pluto_tin_ore.name=Tin Ore (Pluto)
 tile.pluto_dungeon_brick.name=Pluto Dungeon Brick
 tile.treasure_t9.name=Tier 9 Treasure Chest
