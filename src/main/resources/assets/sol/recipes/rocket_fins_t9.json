@@ -1,0 +1,19 @@
+{
+	"result": {
+		"item": "sol:rocket_fins_t9"
+	},
+	"pattern": [
+		" Y ",
+		"XYX",
+		"X X"
+	],
+	"type": "forge:ore_shaped",
+	"key": {
+		"X": {
+			"item": "sol:reinforced_plate_t9"
+		},
+		"Y": {
+			"item": "sol:compressed_vanadium"
+		}
+	}
+}

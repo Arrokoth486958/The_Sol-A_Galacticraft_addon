@@ -1,0 +1,11 @@
+newmtl tier9rocket
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+d 1.000000
+map_Kd sol:rockets/tier9rocket
+
+newmtl tier9rocket_tier9rocket.png
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+d 1.000000
+map_Kd sol:rockets/tier9rocket
