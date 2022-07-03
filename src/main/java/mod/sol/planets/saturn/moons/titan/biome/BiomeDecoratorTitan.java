@@ -26,6 +26,7 @@ public class BiomeDecoratorTitan extends BiomeDecorator
     private WorldGenerator dirtGen;
     private WorldGenerator aluminumGen;
     private WorldGenerator deshGen;
+    private WorldGenerator diamondGen;
     private WorldGenerator ilmeniteGen;
     private WorldGenerator maganeseGen;
     private WorldGenerator tinGen;
@@ -34,6 +35,7 @@ public class BiomeDecoratorTitan extends BiomeDecorator
     {
         this.aluminumGen = new WorldGenMinableMeta(SolBlocks.TITAN_ALUMINUM_ORE, 6, 0, true, SolBlocks.TITAN_ROCK, 0);
         this.deshGen = new WorldGenMinableMeta(SolBlocks.TITAN_DESH_ORE, 6, 0, true, SolBlocks.TITAN_ROCK, 0);
+        this.diamondGen = new WorldGenMinableMeta(SolBlocks.TITAN_DIAMOND_ORE, 6, 0, true, SolBlocks.TITAN_ROCK, 0);
         this.ilmeniteGen = new WorldGenMinableMeta(SolBlocks.TITAN_ILMENITE_ORE, 6, 0, true, SolBlocks.TITAN_ROCK, 0);
         this.maganeseGen = new WorldGenMinableMeta(SolBlocks.TITAN_MAGANESE_ORE, 4, 0, true, SolBlocks.TITAN_ROCK, 0);
         this.tinGen = new WorldGenMinableMeta(SolBlocks.TITAN_TIN_ORE, 6, 0, true, SolBlocks.TITAN_ROCK, 0);
@@ -73,6 +75,7 @@ public class BiomeDecoratorTitan extends BiomeDecorator
         this.genStandardOre(20, this.dirtGen, 0, 200);
         this.genStandardOre(20, this.aluminumGen, 0, 100);
         this.genStandardOre(16, this.deshGen, 0, 80);
+        this.genStandardOre(8, this.diamondGen, 0, 30);
         this.genStandardOre(22, this.ilmeniteGen, 0, 120);
         this.genStandardOre(14, this.maganeseGen, 0, 40);
         this.genStandardOre(20, this.tinGen, 0, 100);

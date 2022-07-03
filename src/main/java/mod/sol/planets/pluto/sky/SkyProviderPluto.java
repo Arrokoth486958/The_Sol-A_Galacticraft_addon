@@ -31,7 +31,7 @@ public class SkyProviderPluto extends IRenderHandler
     public int glSkyList;
     public int glSkyList2;
 
-    public SkyProviderPluto()
+    public  SkyProviderPluto()
     {
         GL11.glPushMatrix();
         GL11.glNewList(this.starGLCallList, GL11.GL_COMPILE);

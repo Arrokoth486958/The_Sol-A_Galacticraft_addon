@@ -87,7 +87,7 @@ public class ItemSchematicTier9 extends ItemSchematic implements ISchematicItem,
      */
     public static void registerSchematicItems()
     {
-        indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(SolItems.SCHEMATIC_T8, 1, 0));
+        indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(SolItems.SCHEMATIC_T10, 1, 0));
     }
 
     /**

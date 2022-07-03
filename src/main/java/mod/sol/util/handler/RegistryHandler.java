@@ -17,6 +17,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @EventBusSubscriber
 public class RegistryHandler 
@@ -27,13 +29,19 @@ public class RegistryHandler
 	{
 		event.getRegistry().registerAll(SolItems.ITEMS.toArray(new Item[0]));
 	}
-	
+
 	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event)
 	{
 		SolFluid.registerFluids();
-		RenderHandler.registerCustomMeshesAndStates();
 		event.getRegistry().registerAll(SolBlocks.Blocks.toArray(new Block[0]));
+	}
+
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public static void onBlockMeshRegister(RegistryEvent.Register<Block> event)
+	{
+		RenderHandler.registerCustomMeshesAndStates();
 	}
 	
 	@SubscribeEvent
@@ -64,6 +72,9 @@ public class RegistryHandler
 			if (block instanceof BlockBaseDeshOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(MarsItems.marsItemBasic, 1, 2), 1F);
 			}
+			if (block instanceof BlockBaseDiamondOre) {
+				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(Items.DIAMOND, 2, 0), 1F);
+			}
 			if (block instanceof BlockBaseIlmeniteOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(AsteroidsItems.basicItem, 1, 0), 1F);
 			}
@@ -87,6 +98,9 @@ public class RegistryHandler
 			}
 			if (block instanceof BlockBaseVanadiumOre) {
 				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.VANADIUM_INGOT, 1, 0), 1F);
+			}
+			if (block instanceof BlockBaseOsmiumOre) {
+				GameRegistry.addSmelting(new ItemStack(block), new ItemStack(SolItems.OSMIUM_INGOT, 1, 0), 1F);
 			}
 
 			if(block instanceof IHasModel)

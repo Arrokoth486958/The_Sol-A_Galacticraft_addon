@@ -17,6 +17,7 @@ public class SolBlocks {
 	public static Block BOSS_SPAWNER_URANUS = new BlockBossSpawnerUranus("boss_spawner_uranus");
 	public static Block BOSS_SPAWNER_NEPTUNE = new BlockBossSpawnerNeptune("boss_spawner_neptune");
 	public static Block BOSS_SPAWNER_PLUTO = new BlockBossSpawnerPluto("boss_spawner_pluto");
+	public static Block BOSS_SPAWNER_SEDNA = new BlockBossSpawnerSedna("boss_spawner_sedna ");
 	//fluid
 	public static final Block METHANE_FLUID_BLOCK = new BlockFluidBase("liquid_methane", SolFluid.METHANE, Material.WATER);
 	//machine
@@ -74,6 +75,7 @@ public class SolBlocks {
 	public static final Block TITAN_ROCK = new BlockBase("titan_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(2F).setResistance(6F);
 	public static final Block TITAN_ALUMINUM_ORE = new BlockBaseAluminumOre("titan_aluminum_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TITAN_DESH_ORE = new BlockBaseDeshOre("titan_desh_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
+	public static final Block TITAN_DIAMOND_ORE = new BlockBaseDiamondOre("titan_diamond_ore", Material.ROCK, "pickaxe", 3, TheSol.BLOCK_TAB).setHardness(3.75F).setResistance(8F);
 	public static final Block TITAN_ILMENITE_ORE = new BlockBaseIlmeniteOre("titan_iron_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
 	public static final Block TITAN_MAGANESE_ORE = new BlockBaseManganeseOre("titan_manganese_ore", Material.ROCK, "pickaxe", 2, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block TITAN_TIN_ORE = new BlockBaseTinOre("titan_tin_ore", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(8F);
@@ -130,6 +132,7 @@ public class SolBlocks {
 	public static final Block SEDNA_ROCK = new BlockBase("sedna_rock", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(2F).setResistance(6F);
 	public static final Block SEDNA_COPPER_ORE = new BlockBaseCopperOre("sedna_copper_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block SEDNA_IRON_ORE = new BlockBaseIronOre("sedna_iron_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
+	public static final Block SEDNA_OSMIUM_ORE = new BlockBaseOsmiumOre("sedna_osmium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block SEDNA_TIN_ORE = new BlockBaseTinOre("sedna_tin_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(3.5F).setResistance(6F);
 	public static final Block SEDNA_VANADIUM_ORE = new BlockBaseVanadiumOre("sedna_vanadium_ore", Material.ROCK, "pickaxe", 0, TheSol.BLOCK_TAB).setHardness(4F).setResistance(8F);
 	public static final Block SEDNA_DUNGEON_BRICK = new BlockBase("sedna_dungeon_brick", Material.ROCK, "pickaxe", 1, TheSol.BLOCK_TAB).setHardness(4F).setResistance(40F);

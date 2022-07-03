@@ -25,10 +25,10 @@ public class ItemAxeBase extends ItemTool implements ISortableItem, IHasModel
 {
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] { Blocks.PLANKS, Blocks.BOOKSHELF, Blocks.LOG, Blocks.LOG2, Blocks.CHEST, Blocks.PUMPKIN, Blocks.LIT_PUMPKIN, Blocks.MELON_BLOCK, Blocks.LADDER, Blocks.WOODEN_BUTTON, Blocks.WOODEN_PRESSURE_PLATE});
 
-    public ItemAxeBase(ToolMaterial material)
+    public ItemAxeBase(ToolMaterial material, int attackDamage)
     {
         super(material, EFFECTIVE_ON);
-        this.attackDamage = 6.0F;
+        this.attackDamage = attackDamage - 1;
         this.attackSpeed = -3.0F;
         
         SolItems.ITEMS.add(this);

@@ -48,6 +48,7 @@ entity.saturn_stray_boss.name=Saturn Stray Boss
 entity.uranus_slime_boss.name=Uranus Slime Boss
 entity.neptune_spider_boss.name=Neptune Spider Boss
 entity.silverfish_boss.name=Silverfish Boss
+entity.magmacube_boss.name=Magma Cube Boss
 
 # Fluid
 fluid.liquid_methane=Liquid Methane
@@ -86,15 +87,17 @@ item.rocket_engine_t8.name=Tier 8 Rocket Engine
 item.reinforced_plate_t8.name=Tier 8 Duty-Plate
 item.nose_cone_t8.name=Tier 8 Nose Cone
 item.rocket_fins_t8.name=Tier 8 Rocket Fins
-item.engine_booster_t8.name=Tier 8 Boosteritem.engine_booster_t8.name=Tier 8 Booster
+item.engine_booster_t8.name=Tier 8 Booster
 
 # Tier 9 Items
 item.rocket_engine_t9.name=Tier 9 Rocket Engine
 item.reinforced_plate_t9.name=Tier 9 Duty-Plate
 item.nose_cone_t9.name=Tier 9 Nose Cone
 item.rocket_fins_t9.name=Tier 9 Rocket Fins
-item.engine_booster_t9.name=Tier 9 Boosteritem.engine_booster_t9.name=Tier 9 Booster
+item.engine_booster_t9.name=Tier 9 Booster
 
+# Tier 10 Items
+item.warp_engine.name=Warp Engine
 
 # Keys
 key_t4.name=Tier 4 Dungeon Key
@@ -103,6 +106,7 @@ key_t6.name=Tier 6 Dungeon Key
 key_t7.name=Tier 7 Dungeon Key
 key_t8.name=Tier 8 Dungeon Key
 key_t9.name=Tier 9 Dungeon Key
+key_t10.name=Tier 10 Dungeon Key
 
 # Schematics
 item.schematic_rocket_t4.name=Nasa Workbench Schematic (Tier 4 Rocket)
@@ -111,6 +115,7 @@ item.schematic_rocket_t6.name=Nasa Workbench Schematic (Tier 6 Rocket)
 item.schematic_rocket_t7.name=Nasa Workbench Schematic (Tier 7 Rocket)
 item.schematic_rocket_t8.name=Nasa Workbench Schematic (Tier 8 Rocket)
 item.schematic_rocket_t9.name=Nasa Workbench Schematic (Tier 9 Rocket)
+item.schematic_rocket_t10.name=Nasa Workbench Schematic (Tier 10 Rocket)
 
 # Rockets
 item.rocket_t4.t4Rocket.name=Tier 4 Rocket
@@ -131,6 +136,7 @@ item.ingot_lithium.name=Lithium Ingot
 item.ingot_magnet.name=Magnet Ingot
 item.ingot_magnesium.name=Magnesium Ingot
 item.ingot_vanadium.name=Vanadium Ingot
+item.ingot_osmium.name=Osmium Ingot
 
 item.shard_sulfur.name=Sulfur Shard
 
@@ -139,7 +145,8 @@ item.compressed_manganese.name=Compressed Manganese
 item.compressed_lithium.name=Compressed Lithium
 item.compressed_magnet.name=Compressed Magnet
 item.compressed_magnesium.name=Compressed Magnesium
-item.compressed_vanadium.name=Vanadium Magnesium
+item.compressed_vanadium.name=Compressed Vanadium
+item.compressed_osmium.name=Compressed Osmium
 
 item.stick_sulfur.name=Sulfur Stick
 item.stick_manganese.name=Manganese Stick
@@ -225,6 +232,7 @@ tile.titan_sub_surface_rock.name=Titan Sub-surface Rock
 tile.titan_rock.name=Titan Rock
 tile.titan_aluminum_ore.name=Copper Ore (Titan)
 tile.titan_desh_ore.name=Desh Ore (Titan)
+tile.titan_diamond_ore.name=Diamond Ore (Titan)
 tile.titan_iron_ore.name=Iron Ore (Titan)
 tile.titan_manganese_ore.name=Manganese Ore (Titan)
 tile.titan_tin_ore.name=Tin Ore (Titan)
@@ -279,6 +287,19 @@ tile.pluto_vanadium_ore.name=Vanadium Ore (Pluto)
 tile.pluto_tin_ore.name=Tin Ore (Pluto)
 tile.pluto_dungeon_brick.name=Pluto Dungeon Brick
 tile.treasure_t9.name=Tier 9 Treasure Chest
+
+# Sedna
+tile.sedna_turf.name=Sedna Turf
+tile.sedna_surface_rock.name=Sedna Surface Rock
+tile.sedna_sub_surface_rock.name=Sedna Sub-surface Rock
+tile.sedna_rock.name=Sedna Rock
+tile.sedna_copper_ore.name=Copper Ore (Sedna)
+tile.sedna_iron_ore.name=Iron Ore (Sedna)
+tile.sedna_osmium_ore.name=Osmium Ore (Sedna)
+tile.sedna_vanadium_ore.name=Vanadium Ore (Sedna)
+tile.sedna_tin_ore.name=Tin Ore (Sedna)
+tile.sedna_dungeon_brick.name=Sedna Dungeon Brick
+tile.treasure_t10.name=Tier 10 Treasure Chest
 
 tile.iron_decoration_block.name=Iron Decoration Block
 tile.iron_wall_block.name=Iron Wall Block

@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import mod.sol.init.SolItems;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -50,8 +51,7 @@ public class EntityTier9Rocket extends EntityTieredRocket
     @Override
     public ItemStack getPickedResult(RayTraceResult target)
     {
-        // return new ItemStack(SolItems.ROCKET_T8, 1, this.rocketType.getIndex());
-        return ItemStack.EMPTY;
+         return new ItemStack(SolItems.ROCKET_T9, 1, this.rocketType.getIndex());
     }
 
     @Override
@@ -306,8 +306,8 @@ public class EntityTier9Rocket extends EntityTieredRocket
     public List<ItemStack> getItemsDropped(List<ItemStack> droppedItems)
     {
         super.getItemsDropped(droppedItems);
-        //ItemStack rocket = new ItemStack(SolItems.ROCKET_T8, 1, this.rocketType.getIndex());
-        ItemStack rocket = ItemStack.EMPTY;
+        super.getItemsDropped(droppedItems);
+        ItemStack rocket = new ItemStack(SolItems.ROCKET_T9, 1, this.rocketType.getIndex());
         rocket.setTagCompound(new NBTTagCompound());
         rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
         droppedItems.add(rocket);

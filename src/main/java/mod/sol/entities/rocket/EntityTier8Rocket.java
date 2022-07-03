@@ -51,8 +51,7 @@ public class EntityTier8Rocket extends EntityTieredRocket
     @Override
     public ItemStack getPickedResult(RayTraceResult target)
     {
-        // return new ItemStack(SolItems.ROCKET_T8, 1, this.rocketType.getIndex());
-        return ItemStack.EMPTY;
+         return new ItemStack(SolItems.ROCKET_T8, 1, this.rocketType.getIndex());
     }
 
     @Override
@@ -307,8 +306,7 @@ public class EntityTier8Rocket extends EntityTieredRocket
     public List<ItemStack> getItemsDropped(List<ItemStack> droppedItems)
     {
         super.getItemsDropped(droppedItems);
-        //ItemStack rocket = new ItemStack(SolItems.ROCKET_T8, 1, this.rocketType.getIndex());
-        ItemStack rocket = ItemStack.EMPTY;
+        ItemStack rocket = new ItemStack(SolItems.ROCKET_T8, 1, this.rocketType.getIndex());
         rocket.setTagCompound(new NBTTagCompound());
         rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
         droppedItems.add(rocket);

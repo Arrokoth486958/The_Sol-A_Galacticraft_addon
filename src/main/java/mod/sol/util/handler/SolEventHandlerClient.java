@@ -3,6 +3,8 @@ package mod.sol.util.handler;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import mod.sol.planets.neptune.triton.dimension.WorldProviderTriton;
 import mod.sol.planets.neptune.triton.sky.SkyProviderTriton;
+import mod.sol.planets.sedna.dimension.WorldProviderSedna;
+import mod.sol.planets.sedna.sky.SkyProviderSedna;
 import mod.sol.planets.uranus.moon.ariel.dimension.WorldProviderAriel;
 import mod.sol.planets.uranus.moon.ariel.sky.SkyProviderAriel;
 import org.lwjgl.opengl.GL11;
@@ -140,6 +142,18 @@ public class SolEventHandlerClient {
                     if (world.provider.getSkyRenderer() == null)
                     {
                         world.provider.setSkyRenderer(new SkyProviderPluto());
+                    }
+
+                    if (world.provider.getCloudRenderer() == null)
+                    {
+                        world.provider.setCloudRenderer(new CloudRenderer());
+                    }
+                }
+                if (world.provider instanceof WorldProviderSedna)
+                {
+                    if (world.provider.getSkyRenderer() == null)
+                    {
+                        world.provider.setSkyRenderer(new SkyProviderSedna());
                     }
 
                     if (world.provider.getCloudRenderer() == null)

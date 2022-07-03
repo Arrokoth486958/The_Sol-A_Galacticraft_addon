@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import mod.sol.blocks.BlockTier6TreasureChest;
+import mod.sol.blocks.BlockTier8TreasureChest;
 import mod.sol.init.SolBlocks;
 import mod.sol.util.Reference;
 import net.minecraft.init.Blocks;
@@ -99,7 +100,7 @@ public class RoomTreasureNeptune extends RoomTreasure
                         BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
                         if (boundingBox.isVecInside(blockpos))
                         {
-                            worldIn.setBlockState(blockpos, SolBlocks.TREASURE_CHEST_T8.getDefaultState().withProperty(BlockTier6TreasureChest.FACING, this.getDirection().getOpposite()), 2);
+                            worldIn.setBlockState(blockpos, SolBlocks.TREASURE_CHEST_T8.getDefaultState().withProperty(BlockTier8TreasureChest.FACING, this.getDirection().getOpposite()), 2);
                             TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) worldIn.getTileEntity(blockpos);
                             if (treasureChest != null)
                             {

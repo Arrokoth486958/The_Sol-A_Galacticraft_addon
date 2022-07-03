@@ -8,7 +8,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import java.io.File;
 
-//@Config(modid = Reference.MOD_ID, name = Reference.MOD_ID)
 public class ConfigManagerSol {
     public static Configuration config;
 

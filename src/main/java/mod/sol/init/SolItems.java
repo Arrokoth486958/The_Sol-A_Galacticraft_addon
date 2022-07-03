@@ -76,8 +76,10 @@ public class SolItems
 	public static final Item KEY_TIER_9 = new ItemKeyTier9("key_t9");
 	public static final Item SCHEMATIC_T9 = new ItemSchematicTier9("schematic_rocket_t9");
 	public static final Item ROCKET_T9 = new ItemTier9Rocket("rocket_t9");
-	// t8
-	// public static final Item ROCKET_T8 = new ItemTier8Rocket("rocket_t8");
+	// t10
+	public static final Item WARP_ENGINE = new ItemBase("warp_engine", TheSol.ITEM_TAB);
+	public static final Item KEY_TIER_10 = new ItemKeyTier10("key_t10");
+	public static final Item SCHEMATIC_T10 = new ItemSchematicTier10("schematic_rocket_t10");
 	// battery
 	public static final Item ADVANCED_BATTERY_TIER_1 = new ItemAdvancedBattery("advanced_battery_t1", 1);
 	public static final Item ADVANCED_BATTERY_TIER_2 = new ItemAdvancedBattery("advanced_battery_t2", 2);
@@ -105,6 +107,9 @@ public class SolItems
 	// magnesium
 	public static final Item VANADIUM_INGOT = new ItemBase("ingot_vanadium", TheSol.ITEM_TAB);
 	public static final Item COMPRESSED_VANADIUM = new ItemBase("compressed_vanadium", TheSol.ITEM_TAB);
+	// magnesium
+	public static final Item OSMIUM_INGOT = new ItemBase("ingot_osmium", TheSol.ITEM_TAB);
+	public static final Item COMPRESSED_OSMIUM = new ItemBase("compressed_osmium", TheSol.ITEM_TAB);
 	// shield
 //	public static final Item HEAVY_SHIELD = new ItemHeavyShield("shield_heavy", TheSol.ITEM_TAB);
 	// armor
@@ -122,14 +127,14 @@ public class SolItems
 
 	// tools
 	public static final ToolMaterial TOOL_SULFUR = EnumHelper.addToolMaterial("SULFUR", 3, 780, 8.0F, 6.5F, 12);
-	public static final Item SULFUR_AXE = new ItemAxeBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_axe").setRegistryName("sulfur_axe");
+	public static final Item SULFUR_AXE = new ItemAxeBase(SolItems.TOOL_SULFUR, 10).setUnlocalizedName("sulfur_axe").setRegistryName("sulfur_axe");
 	public static final Item SULFUR_HOE = new ItemHoeBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_hoe").setRegistryName("sulfur_hoe");
 	public static final Item SULFUR_PICKAXE = new ItemPickaxeBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_pickaxe").setRegistryName("sulfur_pickaxe");
 	public static final Item SULFUR_SHOVEL = new ItemShovelBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_shovel").setRegistryName("sulfur_shovel");
 	public static final Item SULFUR_SWORD = new ItemSwordBase(SolItems.TOOL_SULFUR).setUnlocalizedName("sulfur_sword").setRegistryName("sulfur_sword");
 
 	public static final ToolMaterial TOOL_MANGANESE = EnumHelper.addToolMaterial("MANGANESE", 4, 2200, 4.0F, 8F, 8);
-	public static final Item MANGANESE_AXE = new ItemAxeBase(SolItems.TOOL_MANGANESE).setUnlocalizedName("manganese_axe").setRegistryName("manganese_axe");
+	public static final Item MANGANESE_AXE = new ItemAxeBase(SolItems.TOOL_MANGANESE, 11).setUnlocalizedName("manganese_axe").setRegistryName("manganese_axe");
 	public static final Item MANGANESE_HOE = new ItemHoeBase(SolItems.TOOL_MANGANESE).setUnlocalizedName("manganese_hoe").setRegistryName("manganese_hoe");
 	public static final Item MANGANESE_PICKAXE = new ItemPickaxeBase(SolItems.TOOL_MANGANESE).setUnlocalizedName("manganese_pickaxe").setRegistryName("manganese_pickaxe");
 	public static final Item MANGANESE_SHOVEL = new ItemShovelBase(SolItems.TOOL_MANGANESE).setUnlocalizedName("manganese_shovel").setRegistryName("manganese_shovel");

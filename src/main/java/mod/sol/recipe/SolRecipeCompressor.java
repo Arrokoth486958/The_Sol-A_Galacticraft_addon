@@ -35,5 +35,7 @@ public class SolRecipeCompressor {
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.COMPRESSED_MAGNESIUM), new ItemStack(SolItems.MAGNESIUM_INGOT), new ItemStack(SolItems.MAGNESIUM_INGOT));
 		//vanadium
 		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.COMPRESSED_VANADIUM), new ItemStack(SolItems.VANADIUM_INGOT), new ItemStack(SolItems.VANADIUM_INGOT));
+		//osmium
+		CompressorRecipes.addShapelessRecipe(new ItemStack(SolItems.COMPRESSED_OSMIUM), new ItemStack(SolItems.OSMIUM_INGOT), new ItemStack(SolItems.OSMIUM_INGOT));
 	}
 }

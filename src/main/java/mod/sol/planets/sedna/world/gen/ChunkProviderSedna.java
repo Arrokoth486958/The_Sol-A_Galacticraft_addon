@@ -41,7 +41,7 @@ public class ChunkProviderSedna extends ChunkProviderBase
 
     private final World world;
 
-    private final MapGenDungeonNeptune dungeonGenerator = new MapGenDungeonNeptune(new DungeonConfiguration(SolBlocks.NEPTUNE_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossNeptune.class, RoomTreasureNeptune.class));
+    private final MapGenDungeonSedna dungeonGenerator = new MapGenDungeonSedna(new DungeonConfiguration(SolBlocks.SEDNA_DUNGEON_BRICK.getDefaultState(), 25, 8, 16, 5, 6, RoomBossSedna.class, RoomTreasureSedna.class));
 
     private Biome[] biomesForGeneration = { BiomeAdaptive.biomeDefault };
 

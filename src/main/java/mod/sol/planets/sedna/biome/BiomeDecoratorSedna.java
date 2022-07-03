@@ -26,12 +26,14 @@ public class BiomeDecoratorSedna extends BiomeDecorator
     private WorldGenerator dirtGen;
     private WorldGenerator copperGen;
     private WorldGenerator ironGen;
+    private WorldGenerator osmiumGen;
     private WorldGenerator tinGen;
 
     public BiomeDecoratorSedna()
     {
         this.copperGen = new WorldGenMinableMeta(SolBlocks.SEDNA_COPPER_ORE, 6, 0, true, SolBlocks.SEDNA_ROCK, 0);
         this.ironGen = new WorldGenMinableMeta(SolBlocks.SEDNA_IRON_ORE, 6, 0, true, SolBlocks.SEDNA_ROCK, 0);
+        this.osmiumGen = new WorldGenMinableMeta(SolBlocks.SEDNA_OSMIUM_ORE, 4, 0, true, SolBlocks.SEDNA_ROCK, 0);
         this.tinGen = new WorldGenMinableMeta(SolBlocks.SEDNA_TIN_ORE, 6, 0, true, SolBlocks.SEDNA_ROCK, 0);
         this.dirtGen = new WorldGenMinableMeta(SolBlocks.SEDNA_SUB_SURFACE_ROCK, 10, 0, true, SolBlocks.SEDNA_ROCK, 0);
     }
@@ -66,10 +68,11 @@ public class BiomeDecoratorSedna extends BiomeDecorator
     private void generateMercury()
     {
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Pre(this.world, this.randomGenerator, chunkPos));
-        this.genStandardOre(20, this.dirtGen, 0, 200);
-        this.genStandardOre(21, this.copperGen, 0, 60);
-        this.genStandardOre(22, this.ironGen, 0, 60);
-        this.genStandardOre(21, this.tinGen, 0, 60);
+        this.genStandardOre(24, this.dirtGen, 0, 200);
+        this.genStandardOre(18, this.copperGen, 0, 60);
+        this.genStandardOre(16, this.ironGen, 0, 60);
+        this.genStandardOre(14, this.osmiumGen, 0, 60);
+        this.genStandardOre(16, this.tinGen, 0, 60);
         MinecraftForge.EVENT_BUS.post(new GCCoreEventPopulate.Post(this.world, this.randomGenerator, chunkPos));
     }
 }

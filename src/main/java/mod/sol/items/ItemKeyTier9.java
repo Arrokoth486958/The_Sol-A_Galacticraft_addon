@@ -46,7 +46,7 @@ public class ItemKeyTier9 extends Item implements IKeyItem, ISortableItem, IHasM
     @Override
     public String getUnlocalizedName(ItemStack itemStack)
     {
-        return "key_t8";
+        return "key_t9";
     }
 
     @Override

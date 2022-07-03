@@ -115,7 +115,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 //@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:galacticraftcore; required-after:realistic_galaxy_map")
-@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:galacticraftcore; required:jei")
+//@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:galacticraftcore; required:jei")
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:galacticraftcore")
 public class TheSol
 {
 	public static final CreativeTabs ITEM_TAB = new CreativeTabs("sol_items")
@@ -192,11 +193,16 @@ public class TheSol
 	public static SolCommonProxy proxy;
 
 	@EventHandler
-	public void PreInit(FMLPreInitializationEvent event)
+	public void preInit(FMLPreInitializationEvent event)
 	{
-		System.out.print(event.getModState());
+		ConfigManagerSol.registerConfig(event);
+	}
 
-        OBJLoaderGC.instance.addDomain(Reference.MOD_ID);
+	@EventHandler
+	@SideOnly(Side.CLIENT)
+	public void preInitClient(FMLPreInitializationEvent event)
+	{
+		OBJLoaderGC.instance.addDomain(Reference.MOD_ID);
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
@@ -205,14 +211,15 @@ public class TheSol
 		RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 		MinecraftForge.EVENT_BUS.register(this);
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityHugeFireball.class, (RenderManager manager) -> new RenderHugeFireball(manager, 1));
+		RenderingRegistry.registerEntityRenderingHandler(EntityHugeFireball.class, (RenderManager manager) -> new RenderHugeFireball(manager, 1));
 
-        RenderingRegistry.registerEntityRenderingHandler(EntityMercuryBossBlaze.class, (RenderManager manager) -> new RenderMercuryBossBlaze(manager));
-        RenderingRegistry.registerEntityRenderingHandler(EntityJupiterBossGhast.class, (RenderManager manager) -> new RenderJupiterBossGhast(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityMercuryBossBlaze.class, (RenderManager manager) -> new RenderMercuryBossBlaze(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityJupiterBossGhast.class, (RenderManager manager) -> new RenderJupiterBossGhast(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySaturnBossStray.class, (RenderManager manager) -> new RenderSaturnBossStray(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityUranusBossSlime.class, (RenderManager manager) -> new RenderUranusBossSlime(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityNeptuneBossSpider.class, (RenderManager manager) -> new RenderNeptuneBossSpider(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBossSilverfish.class, (RenderManager manager) -> new RenderBossSilverfish(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBossMagmaCube.class, (RenderManager manager) -> new RenderBossMagmaCube(manager));
 	}
 
 	@EventHandler
@@ -295,7 +302,6 @@ public class TheSol
 		TheSol.planetMercury.setAtmosphere(new AtmosphereInfo(false, false, false, 5.0F, 0.0F, 0.0F));
 		TheSol.planetMercury.setRelativeSize(0.4312F);
 		TheSol.planetMercury.setDimensionInfo(ConfigManagerSol.dimensionidMercury, WorldProviderMercury.class).setTierRequired(3).setBiomeInfo(BiomeMercury.mercuryFlat);
-		TheSol.planetMercury.setAtmosphere(new AtmosphereInfo(false, false, false, 5.0F, 0.0F, 0.0F));
 		TheSol.planetMercury.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 		TheSol.planetMercury.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		TheSol.planetMercury.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
@@ -615,22 +621,17 @@ public class TheSol
         // schematic
         SchematicRegistry.registerSchematicRecipe(new SchematicRocketT4());
         ItemSchematicTier4.registerSchematicItems();
-        ItemSchematicTier4.registerTextures();
         SchematicRegistry.registerSchematicRecipe(new SchematicRocketT5());
         ItemSchematicTier5.registerSchematicItems();
-        ItemSchematicTier5.registerTextures();
 		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT6());
 		ItemSchematicTier6.registerSchematicItems();
-        ItemSchematicTier6.registerTextures();
 		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT7());
 		ItemSchematicTier7.registerSchematicItems();
-		ItemSchematicTier7.registerTextures();
 		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT8());
 		ItemSchematicTier8.registerSchematicItems();
-		ItemSchematicTier8.registerTextures();
 		SchematicRegistry.registerSchematicRecipe(new SchematicRocketT9());
 		ItemSchematicTier9.registerSchematicItems();
-		ItemSchematicTier9.registerTextures();
+		ItemSchematicTier10.registerSchematicItems();
 		RecipeManagerRocketsTier4.addUniversalRecipes();
         RecipeManagerRocketsTier5.addUniversalRecipes();
         RecipeManagerRocketsTier6.addUniversalRecipes();
@@ -653,6 +654,7 @@ public class TheSol
 		GalacticraftRegistry.addDungeonLoot(7, new ItemStack(SolItems.SCHEMATIC_T7, 1));
 		GalacticraftRegistry.addDungeonLoot(8, new ItemStack(SolItems.SCHEMATIC_T8, 1));
 		GalacticraftRegistry.addDungeonLoot(9, new ItemStack(SolItems.SCHEMATIC_T9, 1));
+		GalacticraftRegistry.addDungeonLoot(10, new ItemStack(SolItems.SCHEMATIC_T10, 1));
         // entity
         SolEntityRegistry.register();
         // dungeon
@@ -668,12 +670,27 @@ public class TheSol
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_NEPTUNE);
 		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, "Sol Pluto Dungeon Spawner");
 		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_PLUTO);
-
+		GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSedna.class, "Sol Sedna Dungeon Spawner");
+		GCBlocks.hiddenBlocks.add(SolBlocks.BOSS_SPAWNER_SEDNA);
+ 
 		MinecraftForge.EVENT_BUS.register(new TheSol());
 	}
 
 	@EventHandler
-	public static void PostInit(FMLPostInitializationEvent event)
+	@SideOnly(Side.CLIENT)
+	public void initClient(FMLInitializationEvent event)
+	{
+		ItemSchematicTier4.registerTextures();
+		ItemSchematicTier5.registerTextures();
+		ItemSchematicTier6.registerTextures();
+		ItemSchematicTier7.registerTextures();
+		ItemSchematicTier8.registerTextures();
+		ItemSchematicTier9.registerTextures();
+		ItemSchematicTier10.registerTextures();
+	}
+
+	@EventHandler
+	public static void postInit(FMLPostInitializationEvent event)
 	{
 		SolDimensions.Mercury = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidMercury);
 
@@ -691,13 +708,19 @@ public class TheSol
 		SolDimensions.KuiperBelt = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidKuiperBelt);
 
 		SolDimensions.Sedna = WorldUtil.getDimensionTypeById(ConfigManagerSol.dimensionidSedna);
+	}
 
+	@EventHandler
+	@SideOnly(Side.CLIENT)
+	public static void postInitClient(FMLPostInitializationEvent event)
+	{
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier4.class, new TileEntityTreasureTier4ChestRenderer());
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier5.class, new TileEntityTreasureTier5ChestRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier5.class, new TileEntityTreasureTier5ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier6.class, new TileEntityTreasureTier6ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier7.class, new TileEntityTreasureTier7ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier8.class, new TileEntityTreasureTier8ChestRenderer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier9.class, new TileEntityTreasureTier9ChestRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTreasureChestTier10.class, new TileEntityTreasureTier10ChestRenderer());
 	}
 
 	@SubscribeEvent

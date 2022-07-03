@@ -48,6 +48,7 @@ entity.saturn_stray_boss.name=土星流浪者之王
 entity.uranus_slime_boss.name=天王星史莱姆之王
 entity.neptune_spider_boss.name=海王星蜘蛛之王
 entity.silverfish_boss.name=蠹虫之王
+entity.magmacube_boss.name=岩浆怪之王
 
 # Fluid
 fluid.liquid_methane=液态甲烷
@@ -95,6 +96,9 @@ item.nose_cone_t9.name=九阶火箭鼻锥
 item.rocket_fins_t9.name=九阶火箭尾翼
 item.engine_booster_t9.name=九阶火箭助推器
 
+# Tier 10 Items
+item.warp_engine.name=曲速引擎
+
 # Keys
 key_t4.name=四阶地牢钥匙
 key_t5.name=五阶地牢钥匙
@@ -102,6 +106,7 @@ key_t6.name=六阶地牢钥匙
 key_t7.name=七阶地牢钥匙
 key_t8.name=八阶地牢钥匙
 key_t9.name=九阶地牢钥匙
+key_t10.name=十阶地牢钥匙
 
 # Schematics
 item.schematic_rocket_t4.name=CNSA工作台图纸（四阶火箭）
@@ -110,6 +115,7 @@ item.schematic_rocket_t6.name=CNSA工作台图纸（六阶火箭）
 item.schematic_rocket_t7.name=CNSA工作台图纸（七阶火箭）
 item.schematic_rocket_t8.name=CNSA工作台图纸（八阶火箭）
 item.schematic_rocket_t9.name=CNSA工作台图纸（九阶火箭）
+item.schematic_rocket_t10.name=CNSA工作台图纸（十阶火箭）
 
 # Rockets
 item.rocket_t4.t4Rocket.name=四阶火箭
@@ -130,6 +136,7 @@ item.ingot_lithium.name=锂锭
 item.ingot_magnet.name=磁铁锭
 item.ingot_magnesium.name=镁锭
 item.ingot_vanadium.name=钒锭
+item.ingot_osmium.name=锇锭
 
 item.shard_sulfur.name=硫碎片
 
@@ -139,6 +146,7 @@ item.compressed_lithium.name=致密锂板
 item.compressed_magnet.name=致密磁铁
 item.compressed_magnesium.name=致密镁板
 item.compressed_vanadium.name=致密钒板
+item.compressed_osmium.name=致密锇板
 
 item.stick_sulfur.name=硫棒
 item.stick_manganese.name=锰棒
@@ -224,6 +232,7 @@ tile.titan_sub_surface_rock.name=土卫六浅层岩
 tile.titan_rock.name=土卫六岩石
 tile.titan_aluminum_ore.name=铝矿石（土卫六）
 tile.titan_desh_ore.name=戴斯矿石（土卫六）
+tile.titan_diamond_ore.name=钻石矿石（土卫六）
 tile.titan_iron_ore.name=铁矿石（土卫六）
 tile.titan_manganese_ore.name=锰矿石（土卫六）
 tile.titan_tin_ore.name=锡矿石（土卫六）
@@ -278,6 +287,20 @@ tile.pluto_tin_ore.name=锡矿石（冥王星）
 tile.pluto_vanadium_ore.name=钒矿石（冥王星）
 tile.pluto_dungeon_brick.name=冥王星地牢砖块
 tile.treasure_t9.name=九阶珍宝箱
+
+# Sedna
+tile.sedna_turf.name=小行星90377表层土
+tile.sedna_surface_rock.name=小行星90377表层岩
+tile.sedna_sub_surface_rock.name=小行星90377浅层岩
+tile.sedna_rock.name=小行星90377岩石
+tile.sedna_copper_ore.name=铜矿石（小行星90377）
+tile.sedna_iron_ore.name=铁矿石（小行星90377）
+tile.sedna_osmium_ore.name=锇矿石（小行星90377）
+tile.sedna_vanadium_ore.name=钒矿石（小行星90377）
+tile.sedna_tin_ore.name=锡矿石（小行星90377）
+tile.sedna_dungeon_brick.name=小行星90377地牢砖
+tile.treasure_t10.name=十阶珍宝箱
+
 
 tile.iron_decoration_block.name=铁饰建材
 tile.iron_wall_block.name=铁饰墙砖
