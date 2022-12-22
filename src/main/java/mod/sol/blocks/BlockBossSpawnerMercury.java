@@ -66,7 +66,6 @@ public class BlockBossSpawnerMercury extends BlockBossSpawner implements IHasMod
 	}
     
     @Override
-	@javax.annotation.Nullable
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
 		return NULL_AABB;
 	}

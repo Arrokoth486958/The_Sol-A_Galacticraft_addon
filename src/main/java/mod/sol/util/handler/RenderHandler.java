@@ -12,13 +12,7 @@ import net.minecraftforge.fml.relauncher.Side;
 
 public class RenderHandler {
 	public static void registerCustomMeshesAndStates() {
-		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(SolBlocks.METHANE_FLUID_BLOCK), new ItemMeshDefinition() {
-			
-			@Override
-			public ModelResourceLocation getModelLocation(ItemStack stack) {
-				return new ModelResourceLocation("sol:liquid_methane", "fluid");
-			}
-		});
+		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(SolBlocks.METHANE_FLUID_BLOCK), stack -> new ModelResourceLocation("sol:liquid_methane", "fluid"));
 		
 		ModelLoader.setCustomStateMapper(SolBlocks.METHANE_FLUID_BLOCK, new StateMapperBase() {
 			

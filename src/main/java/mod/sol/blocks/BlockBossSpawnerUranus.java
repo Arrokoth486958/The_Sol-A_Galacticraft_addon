@@ -52,7 +52,6 @@ public class BlockBossSpawnerUranus extends BlockBossSpawner implements IHasMode
 	}
     
     @Override
-	@javax.annotation.Nullable
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
 		return NULL_AABB;
 	}
